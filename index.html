@@ -9,12 +9,26 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cute+Font&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Projet Voilier</title>
   </head>
   <body>
     <div class="navbar-container">
       <div class="social-container">
+        <label class="switch">
+          <input type="checkbox" />
+          <span></span>
+        </label>
         <a href=""><img src="img/fb.png" alt="" /></a>
         <a href=""><img src="img/insta.png" alt="" /></a>
         <a href=""><img src="img/linkedin.png" alt="" /></a>
@@ -29,12 +43,12 @@
             <a>Association</a>
             <a>Contact</a>
             <button>Je donne</button>
-            <p>Compte à rebours :</p>
+            <p>Départ dans <span id="counting-days"></span> jours</p>
           </div>
         </nav>
       </div>
     </div>
-    <div class="landing-container">
+    <div class="landing-container background1">
       <div class="intro">
         <h1>
           Un tour du monde en solitaire <br />
@@ -45,7 +59,89 @@
         <button id="landing-btn">En savoir plus</button>
       </div>
     </div>
-    <div style="background-color: red; height: 500px"></div>
+    <div class="presentation-container">
+      <div class="left-side">
+        <div>
+          <img src="img/me.PNG" alt="" />
+          <h2>
+            Je suis né le 13 septembre 1971 dans l’Aveyron et j’ ai fait mes
+            premières navigations sur le lac de Pont de Salars avec la FOL.
+            <br />
+            Je réside à Pérols 34470. <br />
+            Je suis passionné de la mer, je suis moniteur de plongée sous marine
+            (MF1) et j' ai passé en 2010 une formation pour devenir skippeur
+            (capitaine 200 voile). J' accompagne dans le cadre de mon métier
+            tous les ans des groupes en voilier sur la mer Méditerranée ainsi
+            que l' océan Atlantique jusqu ' en Irlande. <br /><br />
+            Fabien Maury
+          </h2>
+        </div>
+      </div>
+      <div class="right-side">
+        <h2>Le bateau et l'équipe à la manoeuvre !</h2>
+        <img src="img/theboat.PNG" alt="" />
+        <div>
+          <img src="img/captain_icon.png" alt="" />
+          <p>Captain pirate : Fabien Maury</p>
+        </div>
+        <div>
+          <img src="img/marin_icon.png" alt="" />
+          <p>Marin à tribord : Jean Valjean</p>
+        </div>
+        <div>
+          <img src="img/cuisto_icon.png" alt="" />
+          <p>Chef cuisto : Louis Dupont</p>
+        </div>
+      </div>
+    </div>
+    <div class="actu-container">
+      <div class="grid-cards">
+        <div class="card reveal">
+          <div class="reveal-2">
+            <img src="img/timeline1.jpg" alt="" />
+            <div class="card-body">
+              <h3>Cliquer sur le bouton "réserver un court"</h3>
+              <p>
+                Et rendez-vous sur notre site partenaire de réservation en ligne
+                <a href="https://ballejaune.com/fr" target="_blank">
+                  ballejaune.com
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="arrow reveal">
+          <img src="img/flèche.png" class="reveal-2" alt="" />
+        </div>
+        <div class="card reveal">
+          <div class="reveal-3">
+            <img src="img/timeline2.jpg" alt="" />
+            <div class="card-body">
+              <h3>Connectez vous à votre compte ou créez en un</h3>
+              <p>
+                Laissez vous guider par le site BalleJaune pour créer ou vous
+                connecter à votre compte.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="arrow reveal">
+          <img src="img/flèche.png" class="reveal-2" alt="" />
+        </div>
+        <div class="card reveal">
+          <div class="reveal-4">
+            <img src="img/timeline3.jpg" alt="" />
+            <div class="card-body">
+              <h3>Choisissez et réserver un court</h3>
+              <p>
+                Sélectionner la date et la tranche horaire qui vous convient sur
+                le calandrier de réservation. Ce calandrier est tenu à jour en
+                temps réel.
+              </p>
+            </div>
+          </div>
+        </div>
+    </div>
 
     <script type="module" src="/main.js"></script>
   </body>

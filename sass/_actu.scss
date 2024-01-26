@@ -1,0 +1,131 @@
+.actu-container {
+  background: no-repeat url("img/landing2.jpg");
+  width: 100%;
+  height: 2000px;
+  .grid-cards {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2em;
+    margin: 0 100px;
+    padding-top: 100px;
+  }
+
+  .grid-cards div:nth-child(1) {
+    grid-column: 1 / span 3;
+    grid-row: 1/2;
+  }
+  .grid-cards div:nth-child(2) {
+    grid-column: 4 / span 1;
+    grid-row: 1/2;
+  }
+  .grid-cards div:nth-child(3) {
+    grid-column: 5 / span 3;
+    grid-row: 1/2;
+  }
+  .grid-cards div:nth-child(4) {
+    grid-column: 8 / span 1;
+    grid-row: 1/2;
+  }
+  .grid-cards div:nth-child(5) {
+    grid-column: 9 / span 3;
+    grid-row: 1/2;
+  }
+  .grid-cards div:nth-child(6) {
+    grid-column: 12 / span 1;
+    grid-row: 1/2;
+  }
+  .grid-cards div:nth-child(7) {
+    grid-column: 3 / span 3;
+    grid-row: 2/2;
+  }
+  .grid-cards div:nth-child(8) {
+    grid-column: 6 / span 1;
+    grid-row: 2/2;
+  }
+  .grid-cards div:nth-child(9) {
+    grid-column: 7 / span 3;
+    grid-row: 2/2;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    min-width: 15rem;
+    max-width: calc(12.5rem + 8vw);
+    background: #fff;
+    border-radius: 0.75em;
+    overflow: hidden;
+    transition: transform 270ms ease;
+    position: relative;
+    border: none !important;
+    box-shadow: 0 0.25em 0.6em #0005, 0 0.65em 1em #0004;
+
+    img {
+      display: block;
+      max-width: 100%;
+      object-fit: cover;
+      height: auto;
+      margin-bottom: 1em;
+    }
+  }
+  .card:hover {
+    transform: scale(1.05);
+  }
+
+  .arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 64px;
+      height: 64px;
+    }
+  }
+  .card-body {
+    height: auto;
+    padding: 1em 0;
+
+    h3 {
+      text-align: center;
+      color: #a8b52f;
+      font-weight: bold;
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: rgb(11, 11, 59);
+      font-style: italic;
+      font-weight: 700;
+      text-align: center;
+      margin: 1em auto;
+      padding-inline: 0.5em;
+      max-width: 35ch;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    .arrow {
+      img {
+        transform: rotate(90deg) !important;
+      }
+    }
+    .timeline {
+      h1 {
+        margin: 75px auto;
+      }
+    }
+    .grid-cards {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  @media screen and (min-width: 1560px) {
+    .flex {
+      padding: 0 280px !important;
+    }
+  }
+}

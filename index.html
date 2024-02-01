@@ -9,6 +9,10 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -98,49 +102,190 @@
       <div class="grid-cards">
         <div class="card reveal">
           <div class="reveal-2">
-            <img src="img/timeline1.jpg" alt="" />
+            <img src="img/news.jpg" alt="" />
             <div class="card-body">
-              <h3>Cliquer sur le bouton "réserver un court"</h3>
+              <h3>Article title</h3>
               <p>
-                Et rendez-vous sur notre site partenaire de réservation en ligne
-                <a href="https://ballejaune.com/fr" target="_blank">
-                  ballejaune.com
-                </a>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Veritatis dolor aut quae excepturi suscipit placeat, rerum
+                pariatur voluptate repudiandae cumque at nesciunt veniam labore
+                nulla perferendis, debitis quis vero sint.
               </p>
             </div>
           </div>
         </div>
-        <div class="arrow reveal">
-          <img src="img/flèche.png" class="reveal-2" alt="" />
+        <div class="anchor reveal">
+          <img src="img/ancre.png" class="reveal-2" alt="" />
         </div>
         <div class="card reveal">
           <div class="reveal-3">
-            <img src="img/timeline2.jpg" alt="" />
+            <img src="img/news.jpg" alt="" />
             <div class="card-body">
-              <h3>Connectez vous à votre compte ou créez en un</h3>
+              <h3>Article title</h3>
               <p>
-                Laissez vous guider par le site BalleJaune pour créer ou vous
-                connecter à votre compte.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem
+                dicta, quia nemo exercitationem quos hic sed ducimus, sint
+                placeat, quas rerum asperiores consequuntur nesciunt natus fugit
+                quae aut ullam expedita?
               </p>
             </div>
           </div>
         </div>
-        <div class="arrow reveal">
-          <img src="img/flèche.png" class="reveal-2" alt="" />
+        <div class="anchor reveal">
+          <img src="img/ancre.png" class="reveal-2" alt="" />
         </div>
         <div class="card reveal">
           <div class="reveal-4">
-            <img src="img/timeline3.jpg" alt="" />
+            <img src="img/news.jpg" alt="" />
             <div class="card-body">
-              <h3>Choisissez et réserver un court</h3>
+              <h3>Article title</h3>
               <p>
-                Sélectionner la date et la tranche horaire qui vous convient sur
-                le calandrier de réservation. Ce calandrier est tenu à jour en
-                temps réel.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. A iste
+                unde ipsum, reiciendis nihil asperiores quasi sint incidunt
+                nemo, obcaecati cumque saepe architecto necessitatibus pariatur
+                autem ipsa maxime quibusdam? Alias.
               </p>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="slider">
+      <div class="chevrons">
+        <img src="img/left-chevron.svg" alt="" id="chevron-left" />
+        <img src="img/right-chevron.svg" alt="" id="chevron-right" />
+      </div>
+      <div class="animation">
+        <div class="slide-image">
+          <img src="img/slider-1.jpg" alt="" />
+        </div>
+
+        <h1>Souvenir 1</h1>
+        <h3>Subtitle</h3>
+      </div>
+      <div class="animation hidden">
+        <div class="slide-image">
+          <img src="img/slider-2.jpg" alt="" />
+        </div>
+        <h1>Souvenir 2</h1>
+        <h3>Subtitle</h3>
+      </div>
+      <div class="animation hidden">
+        <div class="slide-image">
+          <img src="img/slider-3.jpg" alt="" />
+        </div>
+        <h1>Souvenir 3</h1>
+        <h3>Subtitle</h3>
+      </div>
+    </div>
+    <div class="newspaper-container">
+      <h1>La presse en parle...</h1>
+      <div class="images-container">
+        <div class="background-image">
+          <img src="img/news_background.png" alt="" />
+          <div class="press-article">
+            <a href=""><img src="img/article.png" alt="" /></a>
+          </div>
+        </div>
+        <div class="background-image">
+          <img src="img/news_background.png" alt="" />
+          <div class="press-article">
+            <a href=""><img src="img/article.png" alt="" /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-container">
+      <div class="contact-gauche reveal-2">
+        <div class="modal">
+          <div class="modal-header">
+            <h1>Contactez nous</h1>
+          </div>
+          <div class="modal-body">
+            <form method="post" id="contactForm">
+              <div>
+                <label for="firstname" class="form-label"
+                  >Prénom <span>*</span></label
+                >
+                <input
+                  id="firstname"
+                  type="text"
+                  name="firstname"
+                  class="form-control"
+                  placeholder="Votre prenom"
+                />
+                <p class="comments"></p>
+              </div>
+              <div>
+                <label for="name" class="form-label">Nom <span>*</span></label>
+                <input
+                  id="name"
+                  type="text"
+                  name="name"
+                  class="form-control"
+                  placeholder="Votre nom"
+                />
+                <p class="comments"></p>
+              </div>
+              <div>
+                <label for="email" class="form-label"
+                  >Email <span>*</span></label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-control"
+                  placeholder="Votre email"
+                />
+                <p class="comments"></p>
+              </div>
+              <div>
+                <label for="phone" class="form-label">Téléphone</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  class="form-control"
+                  placeholder="Votre telephone"
+                />
+                <p class="comments"></p>
+              </div>
+              <div>
+                <label for="message" class="form-label"
+                  >Message <span>*</span></label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  class="form-control"
+                  placeholder="Votre message"
+                ></textarea>
+                <p class="comments"></p>
+              </div>
+              <div>
+                <p>
+                  <strong>* Ces informations sont requises.</strong>
+                </p>
+              </div>
+              <div>
+                <input type="submit" value="Envoyer" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="contact-droite reveal-2">
+        <h4>
+          Contactez nous également par email :
+          <span>contact@voyage.com</span> <br />
+          Ou via le formulaire de contact !
+        </h4>
+        <form action="">
+          <label for="email">Inscrivez-vous à la newsletter</label>
+          <input type="email" />
+        </form>
+      </div>
     </div>
 
     <script type="module" src="/main.js"></script>

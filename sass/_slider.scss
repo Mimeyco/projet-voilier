@@ -1,0 +1,127 @@
+.slider {
+  background-color: #111;
+  margin: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 3px;
+  font-family: sans-serif;
+
+  h1 {
+    color: white;
+    font-size: 26px;
+    text-align: center;
+  }
+  h3 {
+    color: gray;
+    font-size: 20px;
+    margin: 15px 0 40px;
+    font-weight: 200;
+    text-align: center;
+  }
+
+  .chevrons {
+    position: relative;
+    width: 100%;
+  }
+  .chevrons > img {
+    position: absolute;
+    width: 60px;
+    border-radius: 50%;
+    border: 1px solid white;
+    cursor: pointer;
+    padding: 5px;
+    top: 400px;
+  }
+  .slide-image {
+    margin: 40px 0 20px;
+  }
+  .slide-image img {
+    width: 1200px;
+    height: 800px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  .hidden {
+    display: none;
+  }
+  .disparition-right {
+    animation: slideoutright 0.8s ease-in-out forwards;
+  }
+
+  .disparition-left {
+    animation: slideoutleft 0.8s ease-in-out forwards;
+  }
+
+  .apparition-right {
+    animation: slideinright 0.8s ease-in-out forwards;
+  }
+
+  .apparition-left {
+    animation: slideinleft 0.8s ease-in-out forwards;
+  }
+}
+
+#chevron-left {
+  left: 100px;
+}
+#chevron-right {
+  right: 100px;
+}
+
+@keyframes slideoutright {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  20% {
+    transform: translateX(-10px);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes slideoutleft {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  20% {
+    transform: translateX(10px);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes slideinright {
+  0% {
+    display: block;
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideinleft {
+  0% {
+    display: block;
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

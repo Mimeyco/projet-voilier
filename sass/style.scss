@@ -4,6 +4,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 @import "navbar";
@@ -13,3 +14,5 @@
 @import "slider";
 @import "newspaper";
 @import "contact";
+@import "banderole";
+@import "footer";

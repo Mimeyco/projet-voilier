@@ -52,7 +52,7 @@
         </nav>
       </div>
     </div>
-    <div class="landing-container background1">
+    <div class="landing-container background1" id="landing">
       <div class="intro">
         <h1>
           Un tour du monde en solitaire <br />
@@ -251,7 +251,7 @@
                 />
                 <p class="comments"></p>
               </div>
-              <div>
+              <div id="textArea">
                 <label for="message" class="form-label"
                   >Message <span>*</span></label
                 >
@@ -275,6 +275,9 @@
           </div>
         </div>
       </div>
+      <div class="up-arrow">
+        <a href="#landing" class="to-top">Retour en haut</a>
+      </div>
       <div class="contact-droite reveal-2">
         <h4>
           Contactez nous également par email :
@@ -282,11 +285,25 @@
           Ou via le formulaire de contact !
         </h4>
         <form action="">
-          <label for="email">Inscrivez-vous à la newsletter</label>
+          <label for="email">Inscrivez-vous à la newsletter !</label>
           <input type="email" />
+          <button>S'inscrire</button>
         </form>
       </div>
     </div>
+    <div class="banderole-container">
+      <div id="moving-text">
+        <div>
+          Nos partenaires :
+          <img src="img/banderole/logo.png" alt="" />
+          <img src="img/banderole/logo.png" alt="" />
+          <img src="img/banderole/logo.png" alt="" />
+          <img src="img/banderole/logo.png" alt="" />
+          <img src="img/banderole/logo.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <footer></footer>
 
     <script type="module" src="/main.js"></script>
   </body>

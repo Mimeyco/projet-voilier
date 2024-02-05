@@ -213,6 +213,14 @@
         margin: 20px auto;
         height: 30px;
       }
+
+      input::placeholder {
+        padding-left: 8px;
+        font-style: italic;
+      }
+      input:valid {
+        padding-left: 8px;
+      }
       button {
         width: 50%;
         margin: 0 auto;

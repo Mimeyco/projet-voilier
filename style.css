@@ -104,6 +104,7 @@
 }
 .navbar-container .navbar nav .menu a {
   margin: 0 15px;
+  text-decoration: none;
   cursor: pointer;
   color: white;
 }
@@ -397,10 +398,12 @@
 }
 .slider .slide-image {
   margin: 40px 0 20px;
+  display: flex;
+  justify-content: center;
 }
 .slider .slide-image img {
   width: 1200px;
-  height: 800px;
+  height: 700px;
   object-fit: cover;
   border-radius: 5px;
 }
@@ -480,8 +483,52 @@
     opacity: 1;
   }
 }
+@media screen and (max-width: 1200px) {
+  .slider {
+    margin: 50px 25px;
+  }
+  .slider .chevrons > img {
+    width: 40px;
+    padding: 10px;
+    top: 200px;
+  }
+  .slider .slide-image img {
+    width: 500px;
+    height: 300px;
+    border-radius: 5px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .slider {
+    margin: 20px 5px;
+  }
+  .slider h1 {
+    font-size: 15px;
+  }
+  .slider h3 {
+    font-size: 13px;
+  }
+  .slider .chevrons > img {
+    width: 20px;
+    padding: 1px;
+    top: 120px;
+  }
+  .slider #chevron-left {
+    left: 40px;
+  }
+  .slider #chevron-right {
+    right: 40px;
+  }
+  .slider .slide-image img {
+    width: 80%;
+    height: 150px;
+    border-radius: 5px;
+  }
+}
 .newspaper-container {
   margin: 50px 0;
+  max-width: 100%;
+  overflow: hidden;
 }
 .newspaper-container h1 {
   font-size: 50px;
@@ -490,42 +537,60 @@
   margin: 50px 0 40px;
   font-family: "Montserrat", sans-serif;
 }
-.newspaper-container .images-container {
+.newspaper-container .flex-news {
   display: flex;
+  justify-content: center;
 }
-.newspaper-container .images-container div {
-  width: 50vw;
-}
-.newspaper-container .images-container .background-image {
+.newspaper-container .flex-news .images-container {
   position: relative;
-  margin: 0 100px;
+  width: 45%;
+  margin: 30px 0;
 }
-.newspaper-container .images-container .background-image img {
-  width: 25vw;
-  height: 600px;
+.newspaper-container .flex-news .images-container .background-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
 }
-.newspaper-container .images-container .background-image .press-article {
-  z-index: 10;
-  position: absolute;
-  top: 30%;
-  left: 25%;
+.newspaper-container .flex-news .images-container .background-image img {
+  width: 50%;
+  height: auto;
 }
-.newspaper-container .images-container .background-image .press-article a img {
-  width: 600px;
-  height: 400px;
-}
-.newspaper-container .images-container .background-image::before {
+.newspaper-container .flex-news .images-container .background-image::before {
   content: "";
   position: absolute;
   top: 0;
-  left: 0;
-  width: 25vw;
-  height: 600px;
+  left: 25%;
+  width: 50%;
+  height: 100%;
   background-color: black;
   opacity: 0.6;
   z-index: 1;
 }
+.newspaper-container .flex-news .images-container .press-article {
+  z-index: 10;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+}
+.newspaper-container .flex-news .images-container .press-article a img {
+  width: 100%;
+  height: auto;
+}
 
+@media screen and (max-width: 1200px) {
+  .newspaper-container h1 {
+    font-size: 30px;
+  }
+  .newspaper-container .flex-news {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .newspaper-container .flex-news .images-container {
+    width: 80%;
+  }
+}
 .contact-container {
   width: 100%;
   display: grid;
@@ -731,6 +796,13 @@
   margin: 20px auto;
   height: 30px;
 }
+.contact-container .contact-droite form input::placeholder {
+  padding-left: 8px;
+  font-style: italic;
+}
+.contact-container .contact-droite form input:valid {
+  padding-left: 8px;
+}
 .contact-container .contact-droite form button {
   width: 50%;
   margin: 0 auto;
@@ -796,6 +868,32 @@
   100% {
     transform: translateX(0); /* position finale à gauche */
   }
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 150px;
+  background-color: #adb5bd;
+}
+footer h2 {
+  margin-left: 30px;
+  color: #212529;
+}
+footer h2 span {
+  font-weight: 900;
+  font-size: 45px;
+  font-family: "Cute Font", sans-serif;
+}
+footer a {
+  color: #343a40;
+  font-weight: bold;
+}
+footer .social-logos {
+  margin-right: 30px;
+}
+footer .social-logos a {
+  margin: 0 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

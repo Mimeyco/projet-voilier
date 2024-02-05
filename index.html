@@ -42,10 +42,10 @@
         <nav>
           <div class="menu">
             <a>Le projet</a>
-            <a>Qui suis-je ?</a>
-            <a>Actualités</a>
+            <a href="#quiSuisJe">Qui suis-je ?</a>
+            <a href="#actuNav">Actualités</a>
             <a>Association</a>
-            <a>Contact</a>
+            <a href="#contactNav">Contact</a>
             <button>Je donne</button>
             <p>Départ dans <span id="counting-days"></span> jours</p>
           </div>
@@ -60,10 +60,10 @@
           Et par les 3 caps du sud
         </h1>
         <h2>Projet associatif pour 1000 enfants</h2>
-        <button id="landing-btn">En savoir plus</button>
+        <button id="landing-btn">Tracking du bateau</button>
       </div>
     </div>
-    <div class="presentation-container">
+    <div class="presentation-container" id="quiSuisJe">
       <div class="left-side">
         <div>
           <img src="img/me.PNG" alt="" />
@@ -98,7 +98,7 @@
         </div>
       </div>
     </div>
-    <div class="actu-container">
+    <div class="actu-container" id="actuNav">
       <div class="grid-cards">
         <div class="card reveal">
           <div class="reveal-2">
@@ -180,22 +180,26 @@
     </div>
     <div class="newspaper-container">
       <h1>La presse en parle...</h1>
-      <div class="images-container">
-        <div class="background-image">
-          <img src="img/news_background.png" alt="" />
+      <div class="flex-news">
+        <div class="images-container">
+          <div class="background-image">
+            <img src="img/news_background.png" alt="" />
+          </div>
           <div class="press-article">
             <a href=""><img src="img/article.png" alt="" /></a>
           </div>
         </div>
-        <div class="background-image">
-          <img src="img/news_background.png" alt="" />
+        <div class="images-container">
+          <div class="background-image">
+            <img src="img/news_background.png" alt="" />
+          </div>
           <div class="press-article">
             <a href=""><img src="img/article.png" alt="" /></a>
           </div>
         </div>
       </div>
     </div>
-    <div class="contact-container">
+    <div class="contact-container" id="contactNav">
       <div class="contact-gauche reveal-2">
         <div class="modal">
           <div class="modal-header">
@@ -286,7 +290,7 @@
         </h4>
         <form action="">
           <label for="email">Inscrivez-vous à la newsletter !</label>
-          <input type="email" />
+          <input type="email" placeholder="Entrer une adresse mail" />
           <button>S'inscrire</button>
         </form>
       </div>
@@ -303,7 +307,15 @@
         </div>
       </div>
     </div>
-    <footer></footer>
+    <footer>
+      <h2>Vous êtes le <span id="visitsCounter">x</span> ème visiteur</h2>
+      <a href="">Mentions légales</a>
+      <div class="social-logos">
+        <a href=""><img src="img/fb.png" alt="" /></a>
+        <a href=""><img src="img/insta.png" alt="" /></a>
+        <a href=""><img src="img/linkedin.png" alt="" /></a>
+      </div>
+    </footer>
 
     <script type="module" src="/main.js"></script>
   </body>

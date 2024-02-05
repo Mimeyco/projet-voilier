@@ -119,3 +119,16 @@ function cleanClasses(index) {
     slides[index - 1].classList.add("hidden");
   }
 }
+
+//COMPTEUR DE VISITEUR
+
+function incrementCounter() {
+  let currentCount = localStorage.getItem("visitCounter") || 0;
+
+  currentCount++;
+  localStorage.setItem("visitCounter", currentCount);
+
+  document.getElementById("visitsCounter").textContent = currentCount;
+}
+
+document.addEventListener("DOMContentLoaded", incrementCounter);

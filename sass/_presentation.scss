@@ -54,14 +54,42 @@
 @media screen and (max-width: 1500px) {
   .presentation-container {
     grid-template-columns: 1fr; /* Une colonne pour les écrans de moins de 700px */
-    .left-side div {
-      grid-template-columns: 1fr;
-      img {
-        margin: 40px auto;
+    .left-side {
+      width: 100%;
+      div {
+        grid-template-columns: 1fr;
+
+        img {
+          margin: 40px auto;
+          width: 200px;
+        }
+        h2 {
+          margin: 20px 25px 50px;
+          text-align: center;
+          font-size: 15px;
+        }
       }
+    }
+    .right-side {
+      margin-bottom: 10px;
       h2 {
-        margin: 20px 25px 50px;
+        font-size: 20px;
+        margin: 0 10px;
         text-align: center;
+      }
+      img {
+        width: 80%;
+        margin: 10px;
+      }
+      div {
+        margin: 10px 0;
+        img {
+          width: 52px;
+          margin: 0 20px;
+        }
+        p {
+          font-size: 14px;
+        }
       }
     }
   }

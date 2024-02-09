@@ -2,12 +2,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   padding: 0 200px;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 10;
+
+  .hamburger-icon {
+    display: none;
+  }
 
   .social-container {
     display: flex;
@@ -99,6 +103,17 @@
         cursor: pointer;
         color: white;
       }
+      a:after {
+        display: block;
+        content: "";
+        border-bottom: solid 3px white;
+        transform: scaleX(0);
+        transition: transform 250ms ease-in-out;
+        transform-origin: 0% 50%;
+      }
+      a:hover:after {
+        transform: scaleX(1);
+      }
       button {
         border: 1px solid white;
         margin: 0 30px;
@@ -128,5 +143,77 @@
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .navbar-container {
+    padding: 0;
+    .navbar {
+      justify-content: space-between;
+      padding-bottom: 0;
+
+      nav {
+        .menu {
+          display: none;
+        }
+      }
+    }
+    .hamburger-icon {
+      display: block;
+      margin: 0 0 0 auto;
+      cursor: pointer;
+      svg {
+        width: 50px;
+        height: 50px;
+        margin: 25px 30px;
+      }
+    }
+
+    /* Affiche les liens lorsque l'icône est cliquée */
+
+    .social-container {
+      display: none !important;
+    }
+
+    .expanded {
+      padding-bottom: 200px !important;
+      transition: all 0.5s ease;
+      nav {
+        .menu {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+          border: none;
+          position: absolute;
+          background-color: white;
+          top: 100px;
+          right: 0;
+          z-index: 1;
+          opacity: 0; /* Commencez avec une opacité de 0 */
+          transform: translateY(-10px); /* Déplacez légèrement vers le haut */
+          animation: fadeInUp 0.4s ease forwards; /* Animation d'apparition */
+          a {
+            font-size: 18px;
+            margin: 10px 0 0;
+            color: black;
+            border-bottom: solid 1px black;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Animation fadeInUp */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

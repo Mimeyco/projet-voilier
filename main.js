@@ -1,3 +1,11 @@
+//NAVBAR
+const navbar = document.querySelector(".navbar");
+document
+  .querySelector(".hamburger-icon")
+  .addEventListener("click", function () {
+    navbar.classList.toggle("expanded");
+  });
+
 // DEFILEMENT IMAGES LANDING
 const landing = document.querySelector(".landing-container");
 

@@ -237,10 +237,73 @@
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 800px) {
   .contact-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    .contact-gauche {
+      .modal {
+        .modal-body {
+          form {
+            padding: 10px;
+            div {
+              label {
+                margin: 5px 0;
+                font-size: 15px;
+                span {
+                  top: -13px;
+                  right: -10px;
+                  font-size: 18px;
+                }
+              }
+              input[type="text"],
+              input[type="email"],
+              input[type="tel"] {
+                width: 100%;
+                height: 30px;
+              }
+              ::placeholder {
+                font-size: 12px;
+              }
+              :valid {
+                font-size: 12px;
+              }
+
+              textarea {
+                width: 100%;
+                height: 150px;
+              }
+              p {
+                font-size: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .contact-droite {
+      h4 {
+        font-size: 18px;
+      }
+      form {
+        label {
+          font-size: 17px;
+        }
+        input {
+          width: 90%;
+        }
+
+        input::placeholder {
+          padding-left: 2px;
+        }
+        input:valid {
+          padding-left: 2px;
+        }
+        button {
+          font-size: 15px;
+        }
+      }
+    }
   }
 }

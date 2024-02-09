@@ -26,3 +26,32 @@ footer {
     }
   }
 }
+
+@media screen and (max-width: 800px) {
+  footer {
+    height: 110px;
+
+    h2 {
+      margin-left: 10px;
+      font-size: 15px;
+      width: 30%;
+
+      span {
+        font-size: 20px;
+      }
+    }
+    a {
+      font-size: 12px;
+      margin-right: 30px;
+    }
+    .social-logos {
+      margin-right: 10px;
+      display: flex;
+      flex-direction: column;
+      a {
+        margin: 0 10px;
+        width: 25px;
+      }
+    }
+  }
+}

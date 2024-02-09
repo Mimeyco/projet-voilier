@@ -61,11 +61,27 @@
       font-size: 30px;
     }
     .flex-news {
-      display: flex;
       flex-direction: column;
       align-items: flex-start;
       .images-container {
-        width: 80%;
+        width: 100%;
+
+        .background-image {
+          justify-content: flex-start;
+
+          margin-left: 20px;
+        }
+        .background-image::before {
+          left: 0;
+        }
+        .press-article {
+          left: 25%;
+          a {
+            img {
+              width: 80%;
+            }
+          }
+        }
       }
     }
   }

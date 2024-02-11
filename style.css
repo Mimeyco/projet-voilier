@@ -275,6 +275,26 @@
   background-image: url("img/landing3.jpg");
 }
 
+.landing-btn {
+  border: 2px solid orangered;
+  color: white;
+  background: none;
+  margin: 20px 0;
+  padding: 8px 25px;
+  border-radius: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  transition: 0.3s ease-in-out;
+}
+
+.landing-btn:hover {
+  background: white;
+  border: none;
+  color: black;
+}
+
 .landing-container {
   position: relative;
   width: 100%;
@@ -291,7 +311,7 @@
   left: 15vw;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   font-size: 25px;
   font-weight: 550;
   font-family: "Montserrat", sans-serif;
@@ -304,23 +324,8 @@
 .landing-container .intro h2 {
   margin: 25px 0 10px;
 }
-.landing-container .intro #landing-btn {
-  border: 2px solid orangered;
-  color: white;
-  background: none;
-  margin: 20px 0;
-  padding: 8px 25px;
-  border-radius: 20px;
-  font-size: 18px;
-  font-weight: 600;
-  cursor: pointer;
-  font-family: "Montserrat", sans-serif;
-  transition: 0.3s ease-in-out;
-}
-.landing-container .intro #landing-btn:hover {
-  background: white;
-  border: none;
-  color: black;
+.landing-container .intro button {
+  align-self: center;
 }
 
 .landing-container::before {
@@ -340,6 +345,89 @@
     top: 200px;
     left: 20px;
     font-size: 14px;
+  }
+}
+.landing-asso-container {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  padding-top: 250px;
+  background-color: #fec89a;
+  overflow: hidden;
+  z-index: 0;
+}
+.landing-asso-container .left-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 100px 20px 0 60px;
+  font-family: "Montserrat", sans-serif;
+}
+.landing-asso-container .left-side h1 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 550;
+  color: #2f394d;
+}
+.landing-asso-container .left-side p {
+  margin: 20px 0;
+  color: #2f394d;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: start;
+  width: 50%;
+}
+.landing-asso-container .left-side button {
+  margin-left: 200px;
+}
+.landing-asso-container .left-side button a {
+  text-decoration: none;
+  color: #2f394d;
+  transition: 0.3s ease-in-out;
+}
+.landing-asso-container .left-side button:hover {
+  color: #246a73;
+  border: 2px solid #880d1e;
+}
+.landing-asso-container .left-side button:hover a:hover {
+  color: #246a73;
+}
+.landing-asso-container .right-side {
+  position: relative;
+}
+.landing-asso-container .right-side img {
+  position: absolute;
+  top: 20px;
+  right: 100px;
+  max-width: 800px;
+  max-height: 800px;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 1000px) {
+  .landing-asso-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding-top: 70px;
+  }
+  .landing-asso-container .left-side {
+    align-items: center;
+  }
+  .landing-asso-container .left-side button {
+    margin: 0;
+  }
+  .landing-asso-container .right-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+  }
+  .landing-asso-container .right-side img {
+    position: initial;
+    width: 350px;
   }
 }
 .presentation-container {
@@ -983,12 +1071,30 @@
   font-weight: bold;
   border-radius: 5px;
   border: none;
-  background-color: #d9afd9;
-  background-image: linear-gradient(0deg, #d9afd9 0%, #97d9e1 100%);
-  padding: 5px;
+  background: linear-gradient(to right, #d9afd9, #97d9e1, #74acc2, #0a2463);
+  padding: 10px;
   cursor: pointer;
+  background-size: 350% 100%;
+  transition: all 0.4s ease-in-out;
+  color: #242038;
+  text-transform: uppercase;
+}
+.contact-container .contact-droite form button:hover {
+  background-position: 100% 0;
+  animation-name: flow;
+  animation-duration: 500ms;
+  animation-timing-function: linear;
+  color: white;
 }
 
+@keyframes flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
 @media screen and (max-width: 800px) {
   .contact-container {
     display: flex;
@@ -1014,7 +1120,7 @@
     height: 30px;
   }
   .contact-container .contact-gauche .modal .modal-body form div ::placeholder {
-    font-size: 12px;
+    font-size: 9px;
   }
   .contact-container .contact-gauche .modal .modal-body form div :valid {
     font-size: 12px;
@@ -1045,6 +1151,71 @@
     font-size: 15px;
   }
 }
+.button-51 {
+  background-color: transparent;
+  border: 1px solid #266db6;
+  box-sizing: border-box;
+  color: #00132c;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  padding: 16px 23px;
+  position: relative;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.button-51 a {
+  text-decoration: none;
+  color: #2f394d;
+}
+
+.button-51:hover,
+.button-51:active {
+  outline: 0;
+}
+
+.button-51:hover {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.button-51:before {
+  background-color: #d5edf6;
+  content: "";
+  height: calc(100% + 3px);
+  position: absolute;
+  right: -7px;
+  top: -9px;
+  transition: background-color 0.2 ease-in;
+  width: 100%;
+  z-index: -1;
+}
+
+.button-51:hover:before {
+  background-color: #6dcff6;
+}
+
+@media screen and (max-width: 800px) {
+  .button-51 {
+    margin: 15px 0 20px;
+  }
+}
+.contact-asso-container {
+  display: flex;
+  justify-content: center;
+}
+.contact-asso-container .contact-gauche .modal .modal-body form div input[type=text],
+.contact-asso-container .contact-gauche .modal .modal-body form div input[type=email],
+.contact-asso-container .contact-gauche .modal .modal-body form div input[type=tel] {
+  width: 22vw;
+}
+.contact-asso-container .contact-droite h4 {
+  width: 70%;
+}
+
 .banderole-container {
   display: flex;
   align-items: center;
@@ -1141,6 +1312,27 @@ footer .social-logos a {
   footer .social-logos a {
     margin: 0 10px;
     width: 25px;
+  }
+}
+.footer-asso-container .docs-asso {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-asso-container .docs-asso h2 {
+  margin-bottom: 10px;
+}
+.footer-asso-container .docs-asso a {
+  margin: 4px 0;
+}
+
+@media screen and (max-width: 800px) {
+  .footer-asso-container .docs-asso h2 {
+    margin-bottom: 10px;
+    font-size: 12px;
+    text-align: center;
+    width: 60%;
+    margin-left: 0;
   }
 }
 

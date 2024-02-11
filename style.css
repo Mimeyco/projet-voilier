@@ -20,8 +20,28 @@
   left: 0;
   z-index: 10;
 }
+.navbar-container .less1000 {
+  display: none;
+}
 .navbar-container .hamburger-icon {
   display: none;
+}
+.navbar-container .give-btn {
+  border: 1px solid white;
+  margin: 0 30px;
+  padding: 8px 25px;
+  border-radius: 20px;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  background: white;
+  transition: 0.3s ease-in-out;
+}
+.navbar-container .give-btn:hover {
+  background: none;
+  color: white;
 }
 .navbar-container .social-container {
   display: flex;
@@ -123,23 +143,6 @@
 .navbar-container .navbar nav .menu a:hover:after {
   transform: scaleX(1);
 }
-.navbar-container .navbar nav .menu button {
-  border: 1px solid white;
-  margin: 0 30px;
-  padding: 8px 25px;
-  border-radius: 20px;
-  font-size: 18px;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-family: Arial, Helvetica, sans-serif;
-  cursor: pointer;
-  background: white;
-  transition: 0.3s ease-in-out;
-}
-.navbar-container .navbar nav .menu button:hover {
-  background: none;
-  color: white;
-}
 .navbar-container .navbar nav .menu p {
   color: white;
   text-transform: none;
@@ -162,6 +165,35 @@
   }
   .navbar-container .navbar nav .menu {
     display: none;
+  }
+  .navbar-container .less1000 {
+    display: flex;
+    position: absolute;
+    top: 25px;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 20px;
+  }
+  .navbar-container .less1000 .give-btn {
+    padding: 5px;
+    margin: 0 20px 0 10px;
+    width: 20vw;
+    height: 40px;
+    font-size: 12px;
+  }
+  .navbar-container .less1000 p {
+    color: white;
+    width: 40vw;
+    text-transform: none;
+    font-style: italic;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+  }
+  .navbar-container .less1000 p span {
+    font-family: "Cute Font", sans-serif;
+    font-size: 30px;
   }
   .navbar-container .hamburger-icon {
     display: block;
@@ -200,6 +232,24 @@
     margin: 10px 0 0;
     color: black;
     border-bottom: solid 1px black;
+  }
+  .navbar-container .expanded nav .menu a:last-of-type {
+    margin-bottom: 10px;
+  }
+  .navbar-container .expanded nav .menu .give-btn {
+    display: none;
+  }
+  .navbar-container .expanded nav .menu p {
+    display: none;
+  }
+}
+@media screen and (max-width: 999px) and (min-width: 600px) {
+  .navbar-container .less1000 p {
+    font-size: 20px;
+    text-align: end;
+  }
+  .navbar-container .less1000 p span {
+    font-size: 40px;
   }
 }
 /* Animation fadeInUp */

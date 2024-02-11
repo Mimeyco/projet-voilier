@@ -28,10 +28,12 @@ function updateCountdown() {
   let daysRemaining = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
 
   // Affichage dans le span avec l'id "countdown"
-  let countdownSpan = document.getElementById("counting-days");
-  if (countdownSpan) {
-    countdownSpan.textContent = daysRemaining;
-  }
+  let countdownSpan = document.querySelectorAll("#counting-days");
+  countdownSpan.forEach((e) => {
+    if (e) {
+      e.textContent = daysRemaining;
+    }
+  });
 }
 
 updateCountdown();

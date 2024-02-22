@@ -50,6 +50,9 @@
     z-index: 10;
     h1 {
       line-height: 1.3;
+      a {
+        color: white;
+      }
     }
     h2 {
       margin: 25px 0 10px;
@@ -85,21 +88,17 @@
 //ASSO
 
 .landing-asso-container {
-  position: relative;
   display: flex;
-  height: 100vh;
-  padding-top: 250px;
+  padding: 200px 0 100px;
   background-color: #fec89a;
   overflow: hidden;
-
-  z-index: 0;
 
   .left-side {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin: 100px 20px 0 60px;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 20px;
     font-family: "Montserrat", sans-serif;
     h1 {
       text-align: center;
@@ -113,11 +112,9 @@
       color: #2f394d;
       font-size: 18px;
       font-weight: 600;
-      text-align: start;
-      width: 50%;
+      text-align: center;
     }
     button {
-      margin-left: 200px;
       a {
         text-decoration: none;
         color: #2f394d;
@@ -133,14 +130,14 @@
     }
   }
   .right-side {
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     img {
-      position: absolute;
-      top: 20px;
-      right: 100px;
       max-width: 800px;
       max-height: 800px;
       border-radius: 5px;
+      margin: 0 30px;
     }
   }
 }

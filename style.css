@@ -350,13 +350,13 @@
     font-size: 14px;
   }
 }
-.landing-asso-container {
+.landing-default-container {
   display: flex;
   padding: 200px 0 100px;
   background-color: #fec89a;
   overflow: hidden;
 }
-.landing-asso-container .left-side {
+.landing-default-container .left-side {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -364,37 +364,37 @@
   margin: 100px 20px;
   font-family: "Montserrat", sans-serif;
 }
-.landing-asso-container .left-side h1 {
+.landing-default-container .left-side h1 {
   text-align: center;
   font-size: 40px;
   font-weight: 550;
   color: #2f394d;
 }
-.landing-asso-container .left-side p {
+.landing-default-container .left-side p {
   margin: 20px 0;
   color: #2f394d;
   font-size: 18px;
   font-weight: 600;
   text-align: center;
 }
-.landing-asso-container .left-side button a {
+.landing-default-container .left-side button a {
   text-decoration: none;
   color: #2f394d;
   transition: 0.3s ease-in-out;
 }
-.landing-asso-container .left-side button:hover {
+.landing-default-container .left-side button:hover {
   color: #246a73;
   border: 2px solid #880d1e;
 }
-.landing-asso-container .left-side button:hover a:hover {
+.landing-default-container .left-side button:hover a:hover {
   color: #246a73;
 }
-.landing-asso-container .right-side {
+.landing-default-container .right-side {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.landing-asso-container .right-side img {
+.landing-default-container .right-side img {
   max-width: 800px;
   max-height: 800px;
   border-radius: 5px;
@@ -426,6 +426,53 @@
     width: 350px;
   }
 }
+.descriptif-technique {
+  display: block;
+  margin: 0 50px;
+  padding: 50px;
+  background-color: white;
+  border-radius: 10px;
+}
+.descriptif-technique h2 {
+  margin: 10px;
+  text-align: start;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: underline;
+}
+.descriptif-technique div {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  line-height: 1.5;
+}
+.descriptif-technique div p {
+  line-height: 1;
+  margin: 20px 0;
+}
+.descriptif-technique div p .bold {
+  font-weight: bold;
+}
+
+.objectifs-asso {
+  display: block;
+  margin: 0 500px;
+  padding: 50px;
+  background-color: white;
+  border-radius: 10px;
+}
+.objectifs-asso h2 {
+  margin: 10px;
+  text-align: start;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: underline;
+}
+.objectifs-asso div {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+}
+.objectifs-asso div p {
+  margin: 30px 0;
+}
+
 .presentation-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
@@ -1315,20 +1362,20 @@ footer .social-logos a {
     width: 25px;
   }
 }
-.footer-asso-container .docs-asso {
+.footer-default-container .docs-asso {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.footer-asso-container .docs-asso h2 {
+.footer-default-container .docs-asso h2 {
   margin-bottom: 10px;
 }
-.footer-asso-container .docs-asso a {
+.footer-default-container .docs-asso a {
   margin: 4px 0;
 }
 
 @media screen and (max-width: 800px) {
-  .footer-asso-container .docs-asso h2 {
+  .footer-default-container .docs-asso h2 {
     margin-bottom: 10px;
     font-size: 12px;
     text-align: center;

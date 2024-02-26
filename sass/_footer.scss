@@ -56,7 +56,9 @@ footer {
   }
 }
 
-.footer-asso-container {
+//ASSO
+
+.footer-default-container {
   .docs-asso {
     display: flex;
     flex-direction: column;
@@ -71,7 +73,7 @@ footer {
   }
 }
 @media screen and (max-width: 800px) {
-  .footer-asso-container {
+  .footer-default-container {
     .docs-asso {
       h2 {
         margin-bottom: 10px;

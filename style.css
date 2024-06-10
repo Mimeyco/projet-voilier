@@ -1021,9 +1021,28 @@
   top: 25%;
   left: 50%;
 }
-.newspaper-container .flex-news .images-container .press-article a img {
+.newspaper-container .flex-news .images-container .press-article img {
   width: 100%;
   height: auto;
+}
+.newspaper-container .flex-news .images-container #franceBleu {
+  background-image: url("../img/france-bleu.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 300px;
+  width: 300px;
+}
+.newspaper-container .flex-news .images-container #franceBleu figure {
+  margin-top: 40px;
+}
+.newspaper-container .flex-news .images-container #franceBleu figure figcaption {
+  margin: 0 0 10px 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+.newspaper-container .flex-news .images-container #franceBleu figure audio {
+  margin: 0 10px;
+  width: 80%;
 }
 
 @media screen and (max-width: 1200px) {
@@ -1033,6 +1052,7 @@
   .newspaper-container .flex-news {
     flex-direction: column;
     align-items: flex-start;
+    height: 450px;
   }
   .newspaper-container .flex-news .images-container {
     width: 100%;

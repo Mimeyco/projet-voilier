@@ -3,7 +3,7 @@
      "email" => "",
      "emailError" => "", 
      "isSuccess" => false];
-    $emailTo = "loghan.meynaud@gmail.com";
+    $emailTo = "fabien.autourdumonde@gmail.com";
     if ($_SERVER["REQUEST_METHOD"]=="POST")
     {
         $array["email"]=verifyInput($_POST['email']);
@@ -20,7 +20,8 @@
 
         if($array["isSuccess"])
         {
-            mail($emailTo, "Personne souhaitant s'inscrire à la newsletter", $emailText);
+            $headers = "Demande d'inscription à la newsletter";
+            mail($emailTo, "Personne souhaitant s'inscrire à la newsletter", $emailText,$headers);
         }
         echo json_encode($array);
     }

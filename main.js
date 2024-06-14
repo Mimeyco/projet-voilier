@@ -147,7 +147,7 @@ $(function () {
       success: function (result) {
         if (result.isSuccess) {
           $("#contactForm").append(
-            "<p class='thank-you'> Votre message a bien été envoyé. Merci de nous avoir contacté :) </p>"
+            "<p class='thank-you'> Votre message a bien été envoyé. Merci de m'avoir contacté 😀 </p>"
           );
           $("#contactForm")[0].reset();
         } else {
@@ -161,42 +161,12 @@ $(function () {
     });
   });
 });
-//FORMULAIRE PAGE ASSO
-$(function () {
-  $("#contactFormAsso").submit(function (e) {
-    e.preventDefault();
-    $(".comments").empty();
-    var postdata = $("#contactFormAsso").serialize();
-
-    $.ajax({
-      type: "POST",
-      url: "php/contactAsso.php",
-      data: postdata,
-      dataType: "json",
-      success: function (result) {
-        if (result.isSuccess) {
-          $("#contactFormAsso").append(
-            "<p class='thank-you'> Votre message a bien été envoyé. Merci de nous avoir contacté :) </p>"
-          );
-          $("#contactFormAsso")[0].reset();
-        } else {
-          $("#firstname + .comments").html(result.firstnameError);
-          $("#name + .comments").html(result.nameError);
-          $("#email + .comments").html(result.emailError);
-          $("#phone + .comments").html(result.phoneError);
-          $("#message + .comments").html(result.messageError);
-        }
-      },
-    });
-  });
-});
-
 //FORMULAIRE NEWSLETTER
 $(function () {
-  $("contactFormNewsletter").submit(function (e) {
+  $("#contactFormNewsletter").submit(function (e) {
     e.preventDefault();
-    $(".comments").empty();
-    var postdata = $("contactFormNewsletter").serialize();
+    $(".commentsNewsletter").empty();
+    var postdata = $("#contactFormNewsletter").serialize();
 
     $.ajax({
       type: "POST",
@@ -210,7 +180,7 @@ $(function () {
           );
           $("#contactFormNewsletter")[0].reset();
         } else {
-          $("#email + .comments").html(result.emailError);
+          $("#emailNewsletter + .commentsNewsletter").html(result.emailError);
         }
       },
     });

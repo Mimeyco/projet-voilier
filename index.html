@@ -428,7 +428,7 @@
                 </p>
               </div>
               <div>
-                <input type="submit" value="Envoyer" />
+                <input type="submit" value="Envoyer" id="#submitBtn" />
               </div>
             </form>
           </div>
@@ -445,8 +445,14 @@
         </h4>
         <form method="post" id="contactFormNewsletter">
           <label for="email">Inscrivez-vous à la newsletter !</label>
-          <input type="email" placeholder="Entrer une adresse mail" />
-          <input type="submit" value="S'inscrire" />
+          <input
+            type="email"
+            placeholder="Entrer une adresse mail"
+            id="emailNewsletter"
+            name="email"
+          />
+          <input type="submit" value="S'inscrire" id="submitBtnNewsletter" />
+          <p class="commentsNewsletter"></p>
         </form>
       </div>
     </div>
@@ -475,7 +481,7 @@
         <!-- <a href=""><img src="img/tiktok.png" alt="icône tiktok" /></a> -->
       </div>
     </footer>
-    <script>
+    <!-- <script>
       function cb(response) {
         document.getElementById("visitsCounter").innerText = response.value;
       }
@@ -483,7 +489,7 @@
     <script
       async
       src="https://api.countapi.xyz/hit/fabienautourdumonde.fr/visits?callback=cb"
-    ></script>
+    ></script> -->
     <script type="module" src="/main.js"></script>
   </body>
 </html>

@@ -10,7 +10,7 @@
      "phoneError" => "",
      "messageError" => "", 
      "isSuccess" => false];
-    $emailTo = "loghan.meynaud@gmail.com";
+    $emailTo = "fabien.autourdumonde@gmail.com";
     if ($_SERVER["REQUEST_METHOD"]=="POST")
     {
         $array["firstname"]= verifyInput($_POST['firstname']);

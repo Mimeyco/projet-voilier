@@ -10,7 +10,7 @@
      "phoneError" => "",
      "messageError" => "", 
      "isSuccess" => false];
-    $emailTo = "loghan.meynaud@gmail.com";
+    $emailTo = "fabien.autourdumonde@gmail.com";
     if ($_SERVER["REQUEST_METHOD"]=="POST")
     {
         $array["firstname"]= verifyInput($_POST['firstname']);
@@ -61,8 +61,8 @@
             $emailText .= "Message : {$array["message"]}\n";
         if($array["isSuccess"])
         {
-            $headers = "From : {$array["firstname"]} {$array["name"]} <{$array["email"]}>\r\nReply-To: {$array["email"]}";
-            mail($emailTo, "Message", $emailText, $headers);
+            $headers = "Contact depuis la page Association";
+            mail($emailTo, "Message depuis la page association", $emailText, $headers);
         }
         echo json_encode($array);
     }

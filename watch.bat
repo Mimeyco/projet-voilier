@@ -1,1 +1,1 @@
-npx sass --watch sass/style.scss:style.css 
+npx sass --watch sass/style.scss:style.css

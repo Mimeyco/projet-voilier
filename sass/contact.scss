@@ -221,8 +221,9 @@
       input:valid {
         padding-left: 8px;
       }
-      button {
+      input[type="submit"] {
         width: 50%;
+        height: auto;
         margin: 0 auto;
         font-size: 18px;
         font-weight: bold;
@@ -242,7 +243,7 @@
         color: #242038;
         text-transform: uppercase;
       }
-      button:hover {
+      input[type="submit"]:hover {
         background-position: 100% 0;
         animation-name: flow;
         animation-duration: 500ms;
@@ -324,7 +325,7 @@
         input:valid {
           padding-left: 2px;
         }
-        button {
+        input[type="submit"] {
           font-size: 15px;
         }
       }

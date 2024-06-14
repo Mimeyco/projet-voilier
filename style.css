@@ -1327,8 +1327,9 @@
 .contact-container .contact-droite form input:valid {
   padding-left: 8px;
 }
-.contact-container .contact-droite form button {
+.contact-container .contact-droite form input[type=submit] {
   width: 50%;
+  height: auto;
   margin: 0 auto;
   font-size: 18px;
   font-weight: bold;
@@ -1342,7 +1343,7 @@
   color: #242038;
   text-transform: uppercase;
 }
-.contact-container .contact-droite form button:hover {
+.contact-container .contact-droite form input[type=submit]:hover {
   background-position: 100% 0;
   animation-name: flow;
   animation-duration: 500ms;
@@ -1410,7 +1411,7 @@
   .contact-container .contact-droite form input:valid {
     padding-left: 2px;
   }
-  .contact-container .contact-droite form button {
+  .contact-container .contact-droite form input[type=submit] {
     font-size: 15px;
   }
 }

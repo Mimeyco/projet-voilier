@@ -130,69 +130,89 @@ function cleanClasses(index) {
   }
 }
 
-// GESTION DE L'ENVOI DU FORMULAIRE DE CONTACT
-document.addEventListener("DOMContentLoaded", function () {
-  const contactForm = document.getElementById("contactForm");
+// GESTION DE L'ENVOI DES FORMULAIRE DE CONTACT
 
-  if (contactForm) {
-    contactForm.addEventListener("submit", function (e) {
-      e.preventDefault();
+//FORMULAIRE PAGE ACCUEIL
+$(function () {
+  $("#contactForm").submit(function (e) {
+    e.preventDefault();
+    $(".comments").empty();
+    var postdata = $("#contactForm").serialize();
 
-      // Supprime le contenu des éléments avec la classe "comments"
-      const commentsElements = document.querySelectorAll(".comments");
-      commentsElements.forEach(function (element) {
-        element.innerHTML = "";
-      });
-
-      // Sérialise les données du formulaire
-      let formData = new FormData(contactForm);
-
-      // Effectue la requête AJAX
-      let xhr = new XMLHttpRequest();
-      xhr.open("POST", "php/contact.php", true);
-      xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-
-      xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-          let result = JSON.parse(xhr.responseText);
-
-          if (result.isSuccess) {
-            let thankYouMessage = document.createElement("p");
-            thankYouMessage.className = "thank-you";
-            thankYouMessage.textContent =
-              "Votre message a bien été envoyé. Merci de nous avoir contacté :)";
-            contactForm.appendChild(thankYouMessage);
-
-            contactForm.reset();
-          } else {
-            document.getElementById("firstname + .comments").innerHTML =
-              result.firstnameError;
-            document.getElementById("name + .comments").innerHTML =
-              result.nameError;
-            document.getElementById("email + .comments").innerHTML =
-              result.emailError;
-            document.getElementById("phone + .comments").innerHTML =
-              result.phoneError;
-            document.getElementById("message + .comments").innerHTML =
-              result.messageError;
-          }
+    $.ajax({
+      type: "POST",
+      url: "php/contact.php",
+      data: postdata,
+      dataType: "json",
+      success: function (result) {
+        if (result.isSuccess) {
+          $("#contactForm").append(
+            "<p class='thank-you'> Votre message a bien été envoyé. Merci de nous avoir contacté :) </p>"
+          );
+          $("#contactForm")[0].reset();
+        } else {
+          $("#firstname + .comments").html(result.firstnameError);
+          $("#name + .comments").html(result.nameError);
+          $("#email + .comments").html(result.emailError);
+          $("#phone + .comments").html(result.phoneError);
+          $("#message + .comments").html(result.messageError);
         }
-      };
-
-      xhr.send(new URLSearchParams(formData));
+      },
     });
-  }
+  });
+});
+//FORMULAIRE PAGE ASSO
+$(function () {
+  $("#contactFormAsso").submit(function (e) {
+    e.preventDefault();
+    $(".comments").empty();
+    var postdata = $("#contactFormAsso").serialize();
+
+    $.ajax({
+      type: "POST",
+      url: "php/contactAsso.php",
+      data: postdata,
+      dataType: "json",
+      success: function (result) {
+        if (result.isSuccess) {
+          $("#contactFormAsso").append(
+            "<p class='thank-you'> Votre message a bien été envoyé. Merci de nous avoir contacté :) </p>"
+          );
+          $("#contactFormAsso")[0].reset();
+        } else {
+          $("#firstname + .comments").html(result.firstnameError);
+          $("#name + .comments").html(result.nameError);
+          $("#email + .comments").html(result.emailError);
+          $("#phone + .comments").html(result.phoneError);
+          $("#message + .comments").html(result.messageError);
+        }
+      },
+    });
+  });
 });
 
-//COMPTEUR DE VISITEUR
+//FORMULAIRE NEWSLETTER
+$(function () {
+  $("contactFormNewsletter").submit(function (e) {
+    e.preventDefault();
+    $(".comments").empty();
+    var postdata = $("contactFormNewsletter").serialize();
 
-function incrementCounter() {
-  let currentCount = localStorage.getItem("visitCounter") || 0;
-
-  currentCount++;
-  localStorage.setItem("visitCounter", currentCount);
-
-  document.getElementById("visitsCounter").textContent = currentCount;
-}
-
-document.addEventListener("DOMContentLoaded", incrementCounter);
+    $.ajax({
+      type: "POST",
+      url: "php/contactNewsletter.php",
+      data: postdata,
+      dataType: "json",
+      success: function (result) {
+        if (result.isSuccess) {
+          $("#contactFormNewsletter").append(
+            "<p class='thank-you'> Votre adresse mail a bien été envoyée. Merci ! 😉 </p>"
+          );
+          $("#contactFormNewsletter")[0].reset();
+        } else {
+          $("#email + .comments").html(result.emailError);
+        }
+      },
+    });
+  });
+});

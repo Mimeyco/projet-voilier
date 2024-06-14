@@ -29,6 +29,8 @@
     />
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/x-icon" href="/img/favicon.png" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
     <title>Fabien autour du monde</title>
   </head>
   <body>
@@ -441,10 +443,10 @@
           <span>fabien.autourdumonde@gmail.com</span> <br />
           Ou via le formulaire de contact !
         </h4>
-        <form action="">
+        <form method="post" id="contactFormNewsletter">
           <label for="email">Inscrivez-vous à la newsletter !</label>
           <input type="email" placeholder="Entrer une adresse mail" />
-          <button>S'inscrire</button>
+          <input type="submit" value="S'inscrire" />
         </form>
       </div>
     </div>
@@ -473,7 +475,15 @@
         <!-- <a href=""><img src="img/tiktok.png" alt="icône tiktok" /></a> -->
       </div>
     </footer>
-
+    <script>
+      function cb(response) {
+        document.getElementById("visitsCounter").innerText = response.value;
+      }
+    </script>
+    <script
+      async
+      src="https://api.countapi.xyz/hit/fabienautourdumonde.fr/visits?callback=cb"
+    ></script>
     <script type="module" src="/main.js"></script>
   </body>
 </html>

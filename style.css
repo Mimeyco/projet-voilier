@@ -182,7 +182,6 @@
   .navbar-container .less1000 .give-btn {
     border: 1px solid white;
     border-radius: 20px;
-    padding: 12px 5px;
     margin: 0 20px 0 10px;
     width: 20vw;
     height: 40px;
@@ -624,6 +623,40 @@
     margin: 30px;
   }
 }
+.article {
+  display: block;
+  margin: 0 50px;
+  padding: 50px;
+  background-color: white;
+  border-radius: 10px;
+}
+.article h2 {
+  margin: 10px;
+  text-align: start;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: underline;
+}
+.article p {
+  line-height: 1;
+  margin: 20px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+}
+.article p .bold {
+  font-weight: bold;
+}
+.article ul {
+  margin-left: 60px;
+}
+.article ul li {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+}
+.article img {
+  width: 40vw;
+  margin: 20px;
+}
+
 .presentation-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
@@ -798,6 +831,17 @@
   margin: 1em auto;
   padding-inline: 0.5em;
   max-width: 35ch;
+}
+.actu-container .card-body a {
+  text-decoration: none;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: underline;
+  display: block;
+  text-align: right;
+  margin-right: 15px;
 }
 @media screen and (max-width: 1200px) {
   .actu-container .actu-container h1 {

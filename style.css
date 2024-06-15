@@ -265,6 +265,25 @@
     display: none;
   }
 }
+@media screen and (max-width: 1600px) and (min-width: 1001px) {
+  .navbar-container .navbar nav .menu {
+    font-size: 15px;
+  }
+  .navbar-container .navbar nav .menu .give-btn {
+    font-size: 13px;
+    white-space: pre-wrap;
+    text-align: center;
+    padding: 5px;
+    width: 300px;
+  }
+  .navbar-container .navbar nav .menu p {
+    font-size: 13px;
+    margin: 10px 0 0 25px;
+  }
+  .navbar-container .navbar nav .menu p span {
+    font-size: 25px;
+  }
+}
 @media screen and (max-width: 999px) and (min-width: 600px) {
   .navbar-container .less1000 p {
     font-size: 20px;
@@ -320,7 +339,7 @@
 .landing-container {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 800px;
   overflow: hidden;
   transition: background-image 0.5s ease-in;
   background-size: cover;

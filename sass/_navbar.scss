@@ -275,6 +275,31 @@
     }
   }
 }
+@media screen and (max-width: 1600px) and (min-width: 1001px) {
+  .navbar-container {
+    .navbar {
+      nav {
+        .menu {
+          font-size: 15px;
+          .give-btn {
+            font-size: 13px;
+            white-space: pre-wrap;
+            text-align: center;
+            padding: 5px;
+            width: 300px;
+          }
+          p {
+            font-size: 13px;
+            margin: 10px 0 0 25px;
+            span {
+              font-size: 25px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 @media screen and (max-width: 999px) and (min-width: 600px) {
   .navbar-container {
     .less1000 {

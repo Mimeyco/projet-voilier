@@ -41,93 +41,91 @@ updateCountdown();
 setInterval(updateCountdown, 86400000);
 
 //SLIDER
+const slides = [...document.querySelectorAll(".slide")];
 
-const rightChevron = document.getElementById("chevron-right");
-const leftChevron = document.getElementById("chevron-left");
-const slides = document.querySelectorAll(".animation");
+const sliderData = {
+  locked: false,
+  direction: 0,
+  slideOutIndex: 0,
+  slideInIndex: 0,
+};
 
-rightChevron.addEventListener("click", slideToRight);
-leftChevron.addEventListener("click", slideToLeft);
+const directionButtons = [...document.querySelectorAll(".direction-btn")];
 
-const lastSlideIndex = slides.length - 1;
+directionButtons.forEach((btn) => btn.addEventListener("click", handleClick));
 
-let lock = false;
-let indexSlideOnScreen = 0;
-function slideToRight() {
-  if (!lock) {
-    lock = true;
-    slides[indexSlideOnScreen].classList.add("disparition-right");
-    slides[indexSlideOnScreen].classList.remove(
-      ...["apparition-left", "apparition-right"]
-    );
-    cleanClasses(indexSlideOnScreen);
-    setTimeout(() => {
-      if (indexSlideOnScreen + 1 > 2) {
-        slides[0].classList.remove("hidden");
-        slides[0].classList.add("apparition-right");
-      } else {
-        slides[indexSlideOnScreen + 1].classList.remove("hidden");
-        slides[indexSlideOnScreen + 1].classList.add("apparition-right");
-      }
-      if (indexSlideOnScreen === lastSlideIndex) {
-        indexSlideOnScreen = 0;
-      } else {
-        indexSlideOnScreen++;
-      }
-      lock = false;
-    }, 800);
-  }
+function handleClick(e) {
+  if (sliderData.locked) return;
+  sliderData.locked = true;
+  console.log(e);
+  getDirection(e.target);
+
+  slideOut();
 }
 
-function slideToLeft() {
-  if (!lock) {
-    lock = true;
-    slides[indexSlideOnScreen].classList.add("disparition-left");
-    slides[indexSlideOnScreen].classList.remove(
-      ...["apparition-left", "apparition-right"]
-    );
-    cleanClasses(indexSlideOnScreen);
-    setTimeout(() => {
-      if (indexSlideOnScreen - 1 < 0) {
-        slides[lastSlideIndex].classList.remove("hidden");
-        slides[lastSlideIndex].classList.add("apparition-left");
-      } else {
-        slides[indexSlideOnScreen - 1].classList.remove("hidden");
-        slides[indexSlideOnScreen - 1].classList.add("apparition-left");
-      }
-      if (indexSlideOnScreen === 0) {
-        indexSlideOnScreen = lastSlideIndex;
-      } else {
-        indexSlideOnScreen--;
-      }
-      lock = false;
-    }, 800);
-  }
-}
+function getDirection(btn) {
+  sliderData.direction = btn.className.includes("right") ? 1 : -1;
 
-function cleanClasses(index) {
-  let classesToRemove = [
-    "disparition-right",
-    "disparition-left",
-    "apparition-right",
-    "apparition-left",
-  ];
-  if (index === 0) {
-    slides[index + 1].classList.remove(...classesToRemove);
-    slides[index + 1].classList.add("hidden");
-    slides[lastSlideIndex].classList.remove(...classesToRemove);
-    slides[lastSlideIndex].classList.add("hidden");
-  } else if (index === lastSlideIndex) {
-    slides[index - 1].classList.remove(...classesToRemove);
-    slides[index - 1].classList.add("hidden");
-    slides[0].classList.remove(...classesToRemove);
-    slides[0].classList.add("hidden");
+  sliderData.slideOutIndex = slides.findIndex((slide) =>
+    slide.classList.contains("active")
+  );
+
+  if (sliderData.slideOutIndex + sliderData.direction > slides.length - 1) {
+    sliderData.slideInIndex = 0;
+  } else if (sliderData.slideOutIndex + sliderData.direction < 0) {
+    sliderData.slideInIndex = slides.length - 1;
   } else {
-    slides[index + 1].classList.remove(...classesToRemove);
-    slides[index + 1].classList.add("hidden");
-    slides[index - 1].classList.remove(...classesToRemove);
-    slides[index - 1].classList.add("hidden");
+    sliderData.slideInIndex = sliderData.slideOutIndex + sliderData.direction;
   }
+}
+
+function slideOut() {
+  slideAnimation({
+    el: slides[sliderData.slideInIndex],
+    props: {
+      display: "flex",
+      transform: `translateX(${sliderData.direction < 0 ? "100%" : "-100%"})`,
+      opacity: 0,
+    },
+  });
+
+  slides[sliderData.slideOutIndex].addEventListener("transitionend", slideIn);
+
+  slideAnimation({
+    el: slides[sliderData.slideOutIndex],
+    props: {
+      transition:
+        "transform 0.4s cubic-bezier(0.74, -0.34, 1, 1.19), opacity 0.4s ease-out",
+      transform: `translateX(${sliderData.direction < 0 ? "-100%" : "100%"})`,
+      opacity: 0,
+    },
+  });
+}
+
+function slideAnimation(animationObject) {
+  for (const prop in animationObject.props) {
+    animationObject.el.style[prop] = animationObject.props[prop];
+  }
+}
+
+function slideIn(e) {
+  slideAnimation({
+    el: slides[sliderData.slideInIndex],
+    props: {
+      transition: "transform 0.4s ease-out, opacity 0.6s ease-out",
+      transform: "translateX(0%)",
+      opacity: 1,
+    },
+  });
+  slides[sliderData.slideInIndex].classList.add("active");
+
+  slides[sliderData.slideOutIndex].classList.remove("active");
+  e.target.removeEventListener("transitionend", slideIn);
+  slides[sliderData.slideOutIndex].style.display = "none";
+
+  setTimeout(() => {
+    sliderData.locked = false;
+  }, 400);
 }
 
 // GESTION DE L'ENVOI DES FORMULAIRE DE CONTACT

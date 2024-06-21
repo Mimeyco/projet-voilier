@@ -185,7 +185,7 @@
         margin: 0 20px 0 10px;
         width: 20vw;
         height: 40px;
-        padding-top: 6px;
+        padding-top: 10px;
         font-size: 12px;
         text-align: center;
         text-transform: uppercase;
@@ -310,6 +310,15 @@
         span {
           font-size: 40px;
         }
+      }
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  .navbar-container {
+    .less1000 {
+      .give-btn {
+        padding-top: 5px;
       }
     }
   }

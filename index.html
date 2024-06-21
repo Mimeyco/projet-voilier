@@ -23,10 +23,7 @@
       href="https://fonts.googleapis.com/css2?family=Cute+Font&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap"
-      rel="stylesheet"
-    />
+
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/x-icon" href="/img/favicon.png" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -118,9 +115,18 @@
               target="_blank"
               >Le projet</a
             >
-            <a href="#quiSuisJe">Qui suis-je ?</a>
-            <a href="#actuNav">Actualités</a>
+            <a href="quisuisje.html">Qui suis-je ?</a>
+            <div class="dropdown">
+              <a href="#actuNav">Actualités</a>
+              <div class="dropdown-content">
+                <a href="#">Blog</a>
+                <a href="#">Articles de presse</a>
+                <a href="#">Articles</a>
+              </div>
+            </div>
+
             <a href="asso.html">Association</a>
+            <a href="">R&D</a>
             <a href="#contactNav">Contact</a>
             <a class="give-btn" href="./dons.html">Je fais un don</a>
             <p>
@@ -149,39 +155,24 @@
         <div>
           <img src="img/me.PNG" alt="portrait" />
           <h2>
-            <span>Qui suis-je :</span> je suis né le 13 septembre 1971 dans
-            l’Aveyron. J’ai pris mon premier bain en mer en avril 1972 au Grau
-            d’Agde, là où tous les ans un oncle nous prêtait son chalet en bois
-            aux cabanes du Grau d’Agde, dans les tamaris. <br />
-            J’ai commencé mon apprentissage à la voile sur les lacs de Pont de
-            Salars (12)avec la FOL et de Montézic à Saint Gervais (12) en
-            optimist puis en planche à voile. J’ai fait mes études à Rodez, à
-            Souillac (46) puis à Saint Etienne de Montluc (44) à proximité de
-            Nantes. J’ai découvert la voile habitable en 09 1991 grâce à la
-            CCAS*. Un séjour de 15 jours entre Saint Cyprien (66) et Minorque.
-            <br />
-            Depuis la navigation est resté ancré en moi. Je suis passionné de la
-            mer, je suis moniteur de plongée sous-marine (MF1) et j'ai passé en
-            2010 une formation pour devenir skippeur (capitaine 200 voile), afin
-            de pouvoir naviguer en toute sécurité avec mes jeunes enfants et
-            encadrer des séjours pour la CCAS.* <br />Mon terrain de jeu est
-            partagé entre la méditerranée de la Corse à Gibraltar et
-            l’Atlantique, de la Bretagne sud au golfe de Gascogne, à la mer
-            d’Iroise et jusqu’en Irlande <br />*Caisse Centrale d’Action Sociale
-            <br /><br />
-            Fabien Maury
+            Je m'appelle Fabien, j'ai 52 ans et je vais réaliser un tour du
+            monde à la voile en solitaire, sans escales en 200-250 jours.
           </h2>
+        </div>
+        <div class="itineraire">
+          <h1>ITINERAIRE :</h1>
+          <img src="img/trajet_cible.jpg" alt="itinéraire prévu en bateau" />
         </div>
       </div>
       <div class="right-side">
         <h2>Le bateau : Aqui Lou</h2>
-        <img src="img/le_bateau.jpg" alt="bateau utilisé pour le voyage" />
         <div>
           <img src="img/engrenages_icon.png" alt="icône d'engrenage" />
           <p>
             <a href="./technique.html">Caractéristiques techniques</a> du bateau
           </p>
         </div>
+        <img src="img/le_bateau.jpg" alt="bateau utilisé pour le voyage" />
       </div>
     </div>
     <div class="actu-container" id="actuNav">
@@ -619,7 +610,7 @@
       </div>
     </div>
     <footer>
-      <h2>Vous êtes le <span id="visitsCounter">x</span> ème visiteur</h2>
+      <!-- <h2>Vous êtes le <span id="visitsCounter">x</span> ème visiteur</h2> -->
       <a href="./mentions.html">Mentions légales</a>
       <div class="social-logos">
         <a

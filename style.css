@@ -7,6 +7,7 @@
   padding: 0;
   scroll-behavior: smooth;
   max-width: 100%;
+  font-family: "Montserrat", sans-serif;
 }
 
 .navbar-container {
@@ -14,7 +15,7 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 0 100px;
+  padding: 0 75px;
   position: absolute;
   top: 0;
   left: 0;
@@ -77,7 +78,6 @@
   right: 5px;
   font-size: 12px;
   color: white;
-  font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
 }
 .navbar-container .social-container .switch input:checked + span {
@@ -104,9 +104,8 @@
 .navbar-container .navbar nav .menu {
   display: flex;
   align-items: center;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 550;
-  font-family: Arial, Helvetica, sans-serif;
   text-transform: uppercase;
 }
 .navbar-container .navbar nav .menu a {
@@ -126,6 +125,31 @@
 .navbar-container .navbar nav .menu a:hover:after {
   transform: scaleX(1);
 }
+.navbar-container .navbar nav .menu .dropdown {
+  display: flex;
+}
+.navbar-container .navbar nav .menu .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.navbar-container .navbar nav .menu .dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.navbar-container .navbar nav .menu .dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+.navbar-container .navbar nav .menu .dropdown:hover .dropdown-content {
+  display: block;
+  margin-top: 25px;
+}
 .navbar-container .navbar nav .menu .give-btn {
   border: 1px solid white;
   margin: 0 30px;
@@ -134,7 +158,6 @@
   font-size: 18px;
   text-transform: uppercase;
   font-weight: 600;
-  font-family: Arial, Helvetica, sans-serif;
   cursor: pointer;
   background: white;
   color: black;
@@ -191,7 +214,6 @@
     text-transform: uppercase;
     text-decoration: none;
     font-weight: 600;
-    font-family: Arial, Helvetica, sans-serif;
     cursor: pointer;
     background: white;
     color: black;
@@ -210,7 +232,6 @@
     text-transform: none;
     font-style: italic;
     font-size: 13px;
-    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
   }
   .navbar-container .less1000 p span {
@@ -322,7 +343,7 @@
 }
 
 .landing-btn {
-  border: 5px solid orangered;
+  border: 5px solid #e63946;
   color: white;
   background: none;
   margin: 20px 0;
@@ -331,7 +352,6 @@
   font-size: 28px;
   font-weight: 600;
   cursor: pointer;
-  font-family: "Montserrat", sans-serif;
   transition: 0.3s ease-in-out;
 }
 
@@ -360,7 +380,6 @@
   align-items: flex-start;
   font-size: 25px;
   font-weight: 550;
-  font-family: "Montserrat", sans-serif;
   color: white;
   z-index: 10;
 }
@@ -406,7 +425,7 @@
 .landing-asso-container {
   display: flex;
   padding: 200px 0 100px;
-  background-color: #fec89a;
+  background-color: #a8dadc;
   overflow: hidden;
 }
 .landing-asso-container .left-side {
@@ -415,24 +434,23 @@
   justify-content: center;
   align-items: center;
   margin: 100px 20px;
-  font-family: "Montserrat", sans-serif;
 }
 .landing-asso-container .left-side h1 {
   text-align: center;
   font-size: 40px;
   font-weight: 550;
-  color: #2f394d;
+  color: black;
 }
 .landing-asso-container .left-side p {
   margin: 20px 0;
-  color: #2f394d;
+  color: black;
   font-size: 18px;
   font-weight: 600;
   text-align: center;
 }
 .landing-asso-container .left-side button a {
   text-decoration: none;
-  color: #2f394d;
+  color: black;
   transition: 0.3s ease-in-out;
 }
 .landing-asso-container .left-side button:hover {
@@ -452,6 +470,31 @@
   max-height: 800px;
   border-radius: 5px;
   margin: 0 30px;
+}
+
+.objectifs-asso {
+  background-color: #a8dadc;
+  padding: 50px 0;
+}
+.objectifs-asso div {
+  display: flex;
+  flex-direction: column;
+  margin: 0 100px;
+  padding: 50px;
+  border-radius: 10px;
+  background-color: white;
+}
+.objectifs-asso div h2 {
+  margin: 10px;
+  text-align: center;
+  text-decoration: underline;
+}
+.objectifs-asso div div {
+  font-size: 18px;
+}
+.objectifs-asso div div p {
+  margin: 20px 0;
+  font-family: "Times New Roman", Times, serif;
 }
 
 @media screen and (max-width: 1000px) {
@@ -478,7 +521,41 @@
     position: initial;
     width: 350px;
   }
+  .objectifs-asso div {
+    margin: 0 50px;
+    padding: 15px;
+  }
+  .objectifs-asso div div {
+    font-size: 16px;
+  }
+  .objectifs-asso div div p {
+    margin: 10px 0;
+  }
 }
+.landing-quisuisje-container {
+  padding: 200px 0 100px;
+  background-color: #a8dadc;
+  overflow: hidden;
+}
+.landing-quisuisje-container div {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 50px;
+}
+.landing-quisuisje-container div img {
+  border-radius: 50%;
+  margin: 40px auto;
+}
+.landing-quisuisje-container div h2 {
+  font-size: 22px;
+  margin: 20px 25px 50px;
+  line-height: 1.8;
+}
+.landing-quisuisje-container div h2 span {
+  font-weight: 900;
+  font-size: 30px;
+}
+
 .descriptif-technique {
   display: block;
   margin: 0 50px;
@@ -489,11 +566,9 @@
 .descriptif-technique h2 {
   margin: 10px;
   text-align: start;
-  font-family: Arial, Helvetica, sans-serif;
   text-decoration: underline;
 }
 .descriptif-technique div {
-  font-family: "Times New Roman", Times, serif;
   font-size: 18px;
   line-height: 1.5;
 }
@@ -518,7 +593,6 @@
   transition: all 0.3s ease-in;
   font-size: 13px;
   font-weight: 600;
-  font-family: Arial, Helvetica, sans-serif;
 }
 .descriptif-technique .up-arrow .to-top:before {
   content: "▲";
@@ -543,27 +617,6 @@
   transform: rotate(360deg);
 }
 
-.objectifs-asso {
-  display: block;
-  margin: 0 500px;
-  padding: 50px;
-  background-color: white;
-  border-radius: 10px;
-}
-.objectifs-asso h2 {
-  margin: 10px;
-  text-align: start;
-  font-family: Arial, Helvetica, sans-serif;
-  text-decoration: underline;
-}
-.objectifs-asso div {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 18px;
-}
-.objectifs-asso div p {
-  margin: 30px 0;
-}
-
 .landing-dons-container {
   display: flex;
   padding: 200px 0 100px;
@@ -583,7 +636,6 @@
 .landing-dons-container ul li {
   color: black;
   font-size: 18px;
-  font-family: Arial, Helvetica, sans-serif;
   font-weight: 500;
   margin: 30px 0 0;
   position: relative;
@@ -614,7 +666,6 @@
   justify-content: flex-start;
   align-items: center;
   margin: 100px 20px;
-  font-family: "Montserrat", sans-serif;
   width: 50%;
 }
 .landing-dons-container .right-side {
@@ -624,7 +675,6 @@
   align-items: center;
   width: 50%;
   margin: 100px 20px;
-  font-family: "Montserrat", sans-serif;
 }
 
 @media screen and (max-width: 1000px) {
@@ -658,13 +708,11 @@
 .article h2 {
   margin: 10px;
   text-align: start;
-  font-family: Arial, Helvetica, sans-serif;
   text-decoration: underline;
 }
 .article p {
   line-height: 1;
   margin: 20px;
-  font-family: "Times New Roman", Times, serif;
   font-size: 20px;
 }
 .article p .bold {
@@ -674,7 +722,6 @@
   margin-left: 60px;
 }
 .article ul li {
-  font-family: "Times New Roman", Times, serif;
   font-size: 20px;
 }
 .article .articles-images {
@@ -696,7 +743,6 @@
   margin: 10px 20px;
 }
 .article .articles-images div div h3 {
-  font-family: "Montserrat", sans-serif;
   text-decoration: underline;
   margin-bottom: 20px;
   max-width: 60%;
@@ -724,28 +770,30 @@
 }
 .presentation-container .left-side div img {
   border-radius: 50%;
+  width: 200px;
   margin: 40px auto;
 }
 .presentation-container .left-side div h2 {
-  font-family: "Caveat", cursive;
-  font-size: 22px;
+  font-size: 21px;
   margin: 20px 25px 50px;
   text-align: center;
-  line-height: 1.8;
 }
-.presentation-container .left-side div h2 span {
-  font-weight: 900;
-  font-size: 30px;
+.presentation-container .left-side .itineraire h1 {
+  text-align: center;
+}
+.presentation-container .left-side .itineraire img {
+  width: 75%;
+  border-radius: 5px;
 }
 .presentation-container .right-side {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 20%;
 }
 .presentation-container .right-side h2 {
   font-size: 25px;
   font-weight: 600;
-  font-family: "Montserrat", sans-serif;
   margin: 30px 0;
 }
 .presentation-container .right-side img {
@@ -762,7 +810,6 @@
   margin: 0 20px;
 }
 .presentation-container .right-side div p {
-  font-family: "Montserrat", sans-serif;
   font-weight: 600;
 }
 .presentation-container .right-side div p a {
@@ -787,6 +834,7 @@
   }
   .presentation-container .right-side {
     margin-bottom: 10px;
+    margin-top: 0;
   }
   .presentation-container .right-side h2 {
     font-size: 20px;
@@ -892,7 +940,6 @@
 .actu-container .card-body a {
   text-decoration: none;
   color: black;
-  font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
   font-size: 15px;
   text-decoration: underline;
@@ -1000,7 +1047,6 @@
   font-weight: 500;
   text-align: center;
   margin: 50px 0 40px;
-  font-family: "Montserrat", sans-serif;
 }
 .newspaper-container .flex-news {
   display: flex;
@@ -1054,7 +1100,6 @@
 }
 .newspaper-container .flex-news .images-container #franceBleu figure figcaption {
   margin: 0 0 10px 10px;
-  font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
 }
 .newspaper-container .flex-news .images-container #franceBleu figure audio {
@@ -1111,7 +1156,6 @@
   margin: 20px 0;
   text-transform: uppercase;
   font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
 }
 .contact-container .contact-gauche .modal .modal-body {
   width: 100%;
@@ -1141,7 +1185,6 @@
   align-self: flex-start;
   margin-bottom: 5px;
   font-size: 17px;
-  font-family: "Times New Roman", Times, serif;
 }
 .contact-container .contact-gauche .modal .modal-body form div label span {
   position: absolute;
@@ -1165,7 +1208,6 @@
   font-family: "Long Cang", cursive, sans-serif;
 }
 .contact-container .contact-gauche .modal .modal-body form div :valid {
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 17px;
   padding-left: 10px;
 }
@@ -1235,7 +1277,6 @@
   transition: all 0.3s ease-out;
   font-size: 13px;
   font-weight: 600;
-  font-family: Arial, Helvetica, sans-serif;
 }
 .contact-container .up-arrow .to-top:before {
   content: "▲";
@@ -1267,7 +1308,6 @@
   flex-direction: column;
 }
 .contact-container .contact-droite h4 {
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 23px;
   font-weight: bold;
   margin: 30px 0;
@@ -1285,7 +1325,6 @@
 .contact-container .contact-droite form label {
   font-style: italic;
   font-size: 20px;
-  font-family: sans-serif;
   border-bottom: 1px solid black;
 }
 .contact-container .contact-droite form input {
@@ -1393,7 +1432,6 @@
   border: 1px solid #266db6;
   box-sizing: border-box;
   color: #00132c;
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-weight: 700;
   line-height: 24px;
@@ -1462,7 +1500,7 @@
   display: flex;
   align-items: center;
   width: 100%;
-  background: #222;
+  background: #457b9d;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
   border-radius: 3px;
   overflow: hidden;
@@ -1478,10 +1516,9 @@
   padding-bottom: 5px;
   white-space: nowrap; /* pas de passage à la ligne */
   animation: defilement-rtl 15s infinite linear;
-  font-family: Arial, Helvetica, sans-serif;
   font-weight: 550;
   font-size: 19px;
-  color: white;
+  color: #f1faee;
   max-width: none;
 }
 .banderole-container #moving-text div img {
@@ -1503,11 +1540,11 @@ footer {
   justify-content: space-between;
   align-items: center;
   height: 150px;
-  background-color: #adb5bd;
+  background-color: #1d3557;
 }
 footer h2 {
   margin-left: 30px;
-  color: #212529;
+  color: #f1faee;
 }
 footer h2 span {
   font-weight: 900;
@@ -1515,8 +1552,9 @@ footer h2 span {
   font-family: "Cute Font", sans-serif;
 }
 footer a {
-  color: #343a40;
+  color: #f1faee;
   font-weight: bold;
+  margin-left: 25px;
 }
 footer .social-logos {
   margin-right: 30px;

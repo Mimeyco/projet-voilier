@@ -6,7 +6,7 @@
     display: flex;
     align-items: center;
     width: 100%;
-    background: #222;
+    background: #457b9d;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
     border-radius: 3px;
     overflow: hidden;
@@ -22,10 +22,10 @@
       padding-bottom: 5px;
       white-space: nowrap; /* pas de passage à la ligne */
       animation: defilement-rtl 15s infinite linear;
-      font-family: Arial, Helvetica, sans-serif;
+
       font-weight: 550;
       font-size: 19px;
-      color: white;
+      color: #f1faee;
       max-width: none;
       img {
         height: 70px;

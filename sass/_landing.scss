@@ -8,7 +8,7 @@
   background-image: url("img/landing3.jpg");
 }
 .landing-btn {
-  border: 5px solid orangered;
+  border: 5px solid #e63946;
   color: white;
   background: none;
   margin: 20px 0;
@@ -17,7 +17,7 @@
   font-size: 28px;
   font-weight: 600;
   cursor: pointer;
-  font-family: "Montserrat", sans-serif;
+
   transition: 0.3s ease-in-out;
 }
 .landing-btn:hover {
@@ -45,7 +45,7 @@
     align-items: flex-start;
     font-size: 25px;
     font-weight: 550;
-    font-family: "Montserrat", sans-serif;
+
     color: white;
     z-index: 10;
     h1 {
@@ -96,7 +96,7 @@
 .landing-asso-container {
   display: flex;
   padding: 200px 0 100px;
-  background-color: #fec89a;
+  background-color: #a8dadc;
   overflow: hidden;
 
   .left-side {
@@ -105,17 +105,17 @@
     justify-content: center;
     align-items: center;
     margin: 100px 20px;
-    font-family: "Montserrat", sans-serif;
+
     h1 {
       text-align: center;
       font-size: 40px;
       font-weight: 550;
 
-      color: #2f394d;
+      color: black;
     }
     p {
       margin: 20px 0;
-      color: #2f394d;
+      color: black;
       font-size: 18px;
       font-weight: 600;
       text-align: center;
@@ -123,7 +123,7 @@
     button {
       a {
         text-decoration: none;
-        color: #2f394d;
+        color: black;
         transition: 0.3s ease-in-out;
       }
     }
@@ -144,6 +144,32 @@
       max-height: 800px;
       border-radius: 5px;
       margin: 0 30px;
+    }
+  }
+}
+.objectifs-asso {
+  background-color: #a8dadc;
+  padding: 50px 0;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    margin: 0 100px;
+    padding: 50px;
+    border-radius: 10px;
+    background-color: white;
+    h2 {
+      margin: 10px;
+      text-align: center;
+
+      text-decoration: underline;
+    }
+    div {
+      font-size: 18px;
+      p {
+        margin: 20px 0;
+        font-family: "Times New Roman", Times, serif;
+      }
     }
   }
 }
@@ -172,8 +198,47 @@
       }
     }
   }
+  .objectifs-asso {
+    div {
+      margin: 0 50px;
+      padding: 15px;
+      div {
+        font-size: 16px;
+        p {
+          margin: 10px 0;
+        }
+      }
+    }
+  }
 }
 
+// QUI SUIS JE
+
+.landing-quisuisje-container {
+  padding: 200px 0 100px;
+  background-color: #a8dadc;
+  overflow: hidden;
+  div {
+    display: flex;
+    flex-direction: column;
+
+    margin: 20px 50px;
+    img {
+      border-radius: 50%;
+      margin: 40px auto;
+    }
+    h2 {
+      font-size: 22px;
+      margin: 20px 25px 50px;
+
+      line-height: 1.8;
+      span {
+        font-weight: 900;
+        font-size: 30px;
+      }
+    }
+  }
+}
 // TECHNIQUE
 .descriptif-technique {
   display: block;
@@ -185,11 +250,10 @@
   h2 {
     margin: 10px;
     text-align: start;
-    font-family: Arial, Helvetica, sans-serif;
+
     text-decoration: underline;
   }
   div {
-    font-family: "Times New Roman", Times, serif;
     font-size: 18px;
     line-height: 1.5;
 
@@ -215,7 +279,6 @@
       transition: all 0.3s ease-in;
       font-size: 13px;
       font-weight: 600;
-      font-family: Arial, Helvetica, sans-serif;
     }
     .to-top:before {
       content: "▲";
@@ -242,29 +305,6 @@
   }
 }
 
-//OBJECTIFS ASSO
-.objectifs-asso {
-  display: block;
-  margin: 0 500px;
-  padding: 50px;
-  background-color: white;
-  border-radius: 10px;
-
-  h2 {
-    margin: 10px;
-    text-align: start;
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: underline;
-  }
-  div {
-    font-family: "Times New Roman", Times, serif;
-    font-size: 18px;
-    p {
-      margin: 30px 0;
-    }
-  }
-}
-
 // DONS
 
 .landing-dons-container {
@@ -285,7 +325,7 @@
     li {
       color: black;
       font-size: 18px;
-      font-family: Arial, Helvetica, sans-serif;
+
       font-weight: 500;
       margin: 30px 0 0;
       position: relative;
@@ -319,7 +359,7 @@
     justify-content: flex-start;
     align-items: center;
     margin: 100px 20px;
-    font-family: "Montserrat", sans-serif;
+
     width: 50%;
   }
   .right-side {
@@ -329,7 +369,6 @@
     align-items: center;
     width: 50%;
     margin: 100px 20px;
-    font-family: "Montserrat", sans-serif;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -367,14 +406,14 @@
   h2 {
     margin: 10px;
     text-align: start;
-    font-family: Arial, Helvetica, sans-serif;
+
     text-decoration: underline;
   }
 
   p {
     line-height: 1;
     margin: 20px;
-    font-family: "Times New Roman", Times, serif;
+
     font-size: 20px;
     .bold {
       font-weight: bold;
@@ -383,7 +422,6 @@
   ul {
     margin-left: 60px;
     li {
-      font-family: "Times New Roman", Times, serif;
       font-size: 20px;
     }
   }
@@ -404,7 +442,6 @@
           margin: 10px 20px;
         }
         h3 {
-          font-family: "Montserrat", sans-serif;
           text-decoration: underline;
           margin-bottom: 20px;
           max-width: 60%;

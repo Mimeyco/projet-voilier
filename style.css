@@ -556,67 +556,6 @@
   font-size: 30px;
 }
 
-.descriptif-technique {
-  display: block;
-  margin: 0 50px;
-  padding: 50px;
-  background-color: white;
-  border-radius: 10px;
-}
-.descriptif-technique h2 {
-  margin: 10px;
-  text-align: start;
-  text-decoration: underline;
-}
-.descriptif-technique div {
-  font-size: 18px;
-  line-height: 1.5;
-}
-.descriptif-technique div p {
-  line-height: 1;
-  margin: 20px 0;
-}
-.descriptif-technique div p .bold {
-  font-weight: bold;
-}
-.descriptif-technique .up-arrow {
-  display: flex;
-  justify-content: center;
-}
-.descriptif-technique .up-arrow .to-top {
-  color: black;
-  padding-top: 60px;
-  display: block;
-  position: relative;
-  border-color: black;
-  text-decoration: none;
-  transition: all 0.3s ease-in;
-  font-size: 13px;
-  font-weight: 600;
-}
-.descriptif-technique .up-arrow .to-top:before {
-  content: "▲";
-  font-size: 35px;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  padding-left: 9px;
-  margin-left: -25px;
-  border: solid 1px black;
-  border-radius: 10em;
-  width: 55px;
-  height: 55px;
-  border-color: inherit;
-  transition: transform 0.5s ease-in;
-}
-.descriptif-technique .up-arrow .to-top:hover {
-  color: orangered;
-  border-color: orangered;
-}
-.descriptif-technique .up-arrow .to-top:hover:before {
-  transform: rotate(360deg);
-}
-
 .landing-dons-container {
   display: flex;
   padding: 200px 0 100px;
@@ -854,6 +793,83 @@
   }
   .presentation-container .right-side div p {
     font-size: 14px;
+  }
+}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 5px;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+.modal-content .descriptif-technique {
+  margin: 0 50px;
+  padding: 50px;
+  background-color: white;
+  border-radius: 10px;
+}
+.modal-content .descriptif-technique h2 {
+  margin: 10px;
+  text-align: start;
+  text-decoration: underline;
+}
+.modal-content .descriptif-technique div {
+  font-size: 18px;
+  font-family: "Times New Roman", Times, serif;
+  line-height: 1.5;
+}
+.modal-content .descriptif-technique div p {
+  line-height: 1;
+  margin: 20px 0;
+  font-family: "Times New Roman", Times, serif;
+}
+.modal-content .descriptif-technique div p .bold {
+  font-weight: bold;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+  .modal-content {
+    padding: 5px;
+  }
+  .modal-content .descriptif-technique {
+    padding: 10px 0;
+  }
+  .modal-content .descriptif-technique h2 {
+    font-size: 20px;
+  }
+  .modal-content .descriptif-technique div {
+    font-size: 15px;
   }
 }
 .actu-container {

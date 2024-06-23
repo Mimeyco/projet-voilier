@@ -87,7 +87,7 @@
 .landing-default-container {
   display: flex;
   padding: 200px 0 100px;
-  background-color: #fec89a;
+  background-color: #a8dadc;
   overflow: hidden;
 }
 
@@ -348,7 +348,7 @@
   p {
     line-height: 1;
     margin: 20px;
-
+    font-family: "Times New Roman", Times, serif;
     font-size: 20px;
     .bold {
       font-weight: bold;
@@ -399,6 +399,48 @@
             font-size: 15px;
           }
         }
+      }
+    }
+  }
+}
+
+//PAGE BLOG
+
+.landing-blog {
+  .actu-container {
+    padding-top: 200px;
+    .grid-cards {
+      .card {
+        max-width: calc(11.5rem + 8vw);
+        .card-body {
+          p {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+}
+
+//PAGE PRESSE
+.landing-default-container {
+  .newspaper-container {
+    margin: 0;
+    h1 {
+      font-weight: 600;
+    }
+    .flex-news {
+      .images-container {
+        width: 100%;
+      }
+    }
+  }
+}
+@media screen and (max-width: "700px") {
+  .landing-default-container {
+    .newspaper-container {
+      .flex-news {
+        display: block;
       }
     }
   }

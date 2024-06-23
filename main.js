@@ -1,11 +1,3 @@
-//NAVBAR
-const navbar = document.querySelector(".navbar");
-document
-  .querySelector(".hamburger-icon")
-  .addEventListener("click", function () {
-    navbar.classList.toggle("expanded");
-  });
-
 // DEFILEMENT IMAGES LANDING
 const landing = document.querySelector(".landing-container");
 
@@ -18,37 +10,15 @@ document.addEventListener("DOMContentLoaded", function () {
   }, 2000);
 });
 
-// COMPTE A REBOURS DEPART
-
-function updateCountdown() {
-  // Date cible de départ (10 septembre 2024)
-  let targetDate = new Date("2024-09-10T00:00:00Z");
-  let currentDate = new Date();
-  let timeDifference = targetDate.getTime() - currentDate.getTime();
-  let daysRemaining = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
-
-  // Affichage dans le span avec l'id "countdown"
-  let countdownSpan = document.querySelectorAll("#counting-days");
-  countdownSpan.forEach((e) => {
-    if (e) {
-      e.textContent = daysRemaining;
-    }
-  });
-}
-
-updateCountdown();
-// Mise à jour toutes les 24 heures (86400000 millisecondes)
-setInterval(updateCountdown, 86400000);
-
 //MODAL
 // Get the modal
-var modal = document.getElementById("myModal");
+const modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
-var btn = document.getElementById("modalTrigger");
+const btn = document.getElementById("modalTrigger");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+const span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
 btn.onclick = function () {
@@ -155,37 +125,6 @@ function slideIn(e) {
   }, 400);
 }
 
-// GESTION DE L'ENVOI DES FORMULAIRE DE CONTACT
-
-//FORMULAIRE PAGE ACCUEIL
-$(function () {
-  $("#contactForm").submit(function (e) {
-    e.preventDefault();
-    $(".comments").empty();
-    var postdata = $("#contactForm").serialize();
-
-    $.ajax({
-      type: "POST",
-      url: "php/contact.php",
-      data: postdata,
-      dataType: "json",
-      success: function (result) {
-        if (result.isSuccess) {
-          $("#contactForm").append(
-            "<p class='thank-you'> Votre message a bien été envoyé. Merci de m'avoir contacté 😀 </p>"
-          );
-          $("#contactForm")[0].reset();
-        } else {
-          $("#firstname + .comments").html(result.firstnameError);
-          $("#name + .comments").html(result.nameError);
-          $("#email + .comments").html(result.emailError);
-          $("#phone + .comments").html(result.phoneError);
-          $("#message + .comments").html(result.messageError);
-        }
-      },
-    });
-  });
-});
 //FORMULAIRE NEWSLETTER
 $(function () {
   $("#contactFormNewsletter").submit(function (e) {

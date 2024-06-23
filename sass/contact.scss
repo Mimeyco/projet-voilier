@@ -1,143 +1,12 @@
 .contact-container {
   width: 100%;
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-top: 50px;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 1fr;
-  gap: 10px;
 
-  .contact-gauche {
-    grid-column: span 6;
-
-    .modal {
-      margin: 50px 25px;
-      .modal-header {
-        width: 100%;
-        h1 {
-          font-size: 30px;
-          text-align: center;
-          margin: 20px 0;
-          text-transform: uppercase;
-          font-weight: bold;
-        }
-      }
-      .modal-body {
-        width: 100%;
-        // background: linear-gradient(to right, #0433b4, #5f89fc);
-        background-color: #d9afd9;
-        background-image: linear-gradient(0deg, #d9afd9 0%, #97d9e1 100%);
-
-        border-radius: 10px;
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-          rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-          rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-
-        form {
-          border-radius: 3px;
-          padding: 50px;
-          margin: 25px auto;
-          display: grid;
-          grid-gap: 10px;
-          justify-items: center;
-          grid-template-columns: repeat(2, 1fr);
-          max-width: 70vw;
-
-          div {
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            width: 100%;
-
-            label {
-              position: relative;
-              align-self: flex-start;
-              margin-bottom: 5px;
-              font-size: 17px;
-
-              span {
-                position: absolute;
-                top: -13px;
-                right: -10px;
-                font-weight: bold;
-                font-size: 22px;
-              }
-            }
-            input[type="text"],
-            input[type="email"],
-            input[type="tel"] {
-              align-self: flex-start;
-              width: 15vw;
-              height: 30px;
-              border-radius: 5px;
-              border: none;
-            }
-            ::placeholder {
-              font-size: 18px;
-              font-weight: 550;
-              font-family: "Long Cang", cursive, sans-serif;
-            }
-            :valid {
-              font-size: 17px;
-              padding-left: 10px;
-            }
-
-            textarea {
-              width: 100%;
-              height: 150px;
-            }
-            p {
-              font-weight: 400;
-              font-size: 18px;
-              align-self: flex-start;
-            }
-            input[type="submit"] {
-              margin: 40px auto 0px;
-              width: 300px;
-              border: 1px solid #ddd;
-              background: #ffa500;
-              color: #fff;
-              font-weight: bold;
-              text-transform: uppercase;
-              padding: 18px;
-              border-radius: 5px;
-              cursor: pointer;
-            }
-            input[type="submit"]:hover {
-              transition: all 0.3s ease;
-              background: #f88562;
-              border-color: #f88562;
-            }
-          }
-          #textArea {
-            align-items: flex-start;
-          }
-          div:nth-child(1) {
-            grid-column: 1/2;
-          }
-          div:nth-child(2) {
-            grid-column: 2/2;
-          }
-          div:nth-child(3) {
-            grid-column: 1/2;
-          }
-          div:nth-child(4) {
-            grid-column: 2/2;
-          }
-          div:nth-child(5) {
-            grid-column: 1 / span 2;
-          }
-          div:nth-child(6) {
-            grid-column: 1 / span 2;
-          }
-          div:nth-child(7) {
-            grid-column: 1 / span 2;
-          }
-        }
-      }
-    }
-  }
   .up-arrow {
-    grid-column: span 1;
+    margin-top: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -176,24 +45,9 @@
       transform: rotate(360deg);
     }
   }
-  .contact-droite {
-    grid-column: span 5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  .newsletter-container {
+    max-width: 35vw;
 
-    h4 {
-      font-size: 23px;
-      font-weight: bold;
-      margin: 30px 0;
-      color: black;
-      text-align: center;
-    }
-    span {
-      color: rgb(11, 11, 59);
-      font-style: italic;
-    }
     form {
       display: flex;
       flex-direction: column;
@@ -201,7 +55,8 @@
       label {
         font-style: italic;
         font-size: 20px;
-
+        font-weight: 600;
+        text-align: center;
         border-bottom: 1px solid black;
       }
       input {
@@ -225,13 +80,14 @@
         font-weight: bold;
         border-radius: 5px;
         border: none;
-        background: linear-gradient(
-          to right,
-          #d9afd9,
-          #97d9e1,
-          #74acc2,
-          #0a2463
-        );
+        // background: linear-gradient(
+        //   to right,
+        //   #d9afd9,
+        //   #97d9e1,
+        //   #74acc2,
+        //   #0a2463
+        // );
+        background: #a8dadc;
         padding: 10px;
         cursor: pointer;
         background-size: 350% 100%;
@@ -260,50 +116,7 @@
 
 @media screen and (max-width: 800px) {
   .contact-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    .contact-gauche {
-      .modal {
-        .modal-body {
-          form {
-            padding: 10px;
-            div {
-              label {
-                margin: 5px 0;
-                font-size: 15px;
-                span {
-                  top: -13px;
-                  right: -10px;
-                  font-size: 18px;
-                }
-              }
-              input[type="text"],
-              input[type="email"],
-              input[type="tel"] {
-                width: 100%;
-                height: 30px;
-              }
-              ::placeholder {
-                font-size: 9px;
-              }
-              :valid {
-                font-size: 12px;
-              }
-
-              textarea {
-                width: 100%;
-                height: 150px;
-              }
-              p {
-                font-size: 15px;
-              }
-            }
-          }
-        }
-      }
-    }
-    .contact-droite {
+    .newsletter-container {
       h4 {
         font-size: 18px;
       }
@@ -318,9 +131,7 @@
         input::placeholder {
           padding-left: 2px;
         }
-        input:valid {
-          padding-left: 2px;
-        }
+
         input[type="submit"] {
           font-size: 15px;
         }
@@ -329,78 +140,198 @@
   }
 }
 
-.button-51 {
-  background-color: transparent;
-  border: 1px solid #266db6;
-  box-sizing: border-box;
-  color: #00132c;
+//PAGE CONTACT
 
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 24px;
-  padding: 16px 23px;
-  position: relative;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  a {
-    text-decoration: none;
-    color: #2f394d;
-  }
-}
-.button-51:hover,
-.button-51:active {
-  outline: 0;
-}
-.button-51:hover {
-  background-color: transparent;
-  cursor: pointer;
-}
-.button-51:before {
-  background-color: #d5edf6;
-  content: "";
-  height: calc(100% + 3px);
-  position: absolute;
-  right: -7px;
-  top: -9px;
-  transition: background-color 0.2 ease-in;
-  width: 100%;
-  z-index: -1;
-}
-.button-51:hover:before {
-  background-color: #6dcff6;
-}
-
-@media screen and (max-width: 800px) {
-  .button-51 {
-    margin: 15px 0 20px;
-  }
-}
-
-.contact-asso-container {
+.landing-contact-container {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 200px 0 100px;
+  background-color: #a8dadc;
+  overflow: hidden;
+  h4 {
+    font-size: 23px;
+    font-weight: bold;
+    margin: 30px 0;
+    color: black;
+    text-align: center;
+  }
+  span {
+    color: rgb(11, 11, 59);
+    font-style: italic;
+  }
+  .formulaire {
+    margin: 50px 25px;
+    width: 50vw;
+    .formulaire-header {
+      width: 100%;
+      h1 {
+        font-size: 30px;
+        text-align: center;
+        margin: 20px 0;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+    }
+    .formulaire-body {
+      width: 100%;
+      // background: linear-gradient(to right, #0433b4, #5f89fc);
+      background-color: #d9afd9;
+      background-image: linear-gradient(0deg, #d9afd9 0%, #97d9e1 100%);
 
-  .contact-gauche {
-    .modal {
-      .modal-body {
-        form {
-          div {
-            input[type="text"],
-            input[type="email"],
-            input[type="tel"] {
-              width: 22vw;
+      border-radius: 10px;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+      form {
+        border-radius: 3px;
+        padding: 50px;
+        margin: 25px auto;
+        display: grid;
+        grid-gap: 10px;
+        justify-items: center;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 70vw;
+
+        div {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          width: 100%;
+
+          label {
+            position: relative;
+            align-self: flex-start;
+            margin-bottom: 5px;
+            font-size: 17px;
+
+            span {
+              position: absolute;
+              top: -13px;
+              right: -10px;
+              font-weight: bold;
+              font-size: 22px;
             }
           }
+          input[type="text"],
+          input[type="email"],
+          input[type="tel"] {
+            align-self: flex-start;
+            width: 15vw;
+            height: 30px;
+            border-radius: 5px;
+            border: none;
+          }
+          ::placeholder {
+            font-size: 18px;
+            font-weight: 550;
+            font-family: "Long Cang", cursive, sans-serif;
+          }
+          :valid {
+            font-size: 17px;
+            padding-left: 10px;
+          }
+
+          textarea {
+            width: 100%;
+            height: 150px;
+          }
+          p {
+            font-weight: 400;
+            font-size: 18px;
+            align-self: flex-start;
+          }
+          input[type="submit"] {
+            margin: 40px auto 0px;
+            width: 300px;
+            border: 1px solid #ddd;
+            background: #ffa500;
+            color: #fff;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+          input[type="submit"]:hover {
+            transition: all 0.3s ease;
+            background: #f88562;
+            border-color: #f88562;
+          }
+        }
+        #textArea {
+          align-items: flex-start;
+        }
+        div:nth-child(1) {
+          grid-column: 1/2;
+        }
+        div:nth-child(2) {
+          grid-column: 2/2;
+        }
+        div:nth-child(3) {
+          grid-column: 1/2;
+        }
+        div:nth-child(4) {
+          grid-column: 2/2;
+        }
+        div:nth-child(5) {
+          grid-column: 1 / span 2;
+        }
+        div:nth-child(6) {
+          grid-column: 1 / span 2;
+        }
+        div:nth-child(7) {
+          grid-column: 1 / span 2;
         }
       }
     }
   }
-
-  .contact-droite {
+}
+@media screen and (max-width: 800px) {
+  .landing-contact-container {
     h4 {
-      width: 70%;
+      font-size: 18px;
+      margin: 0 10px;
+    }
+    .formulaire {
+      width: 90vw;
+      .formulaire-body {
+        form {
+          padding: 10px;
+          div {
+            label {
+              margin: 5px 0;
+              font-size: 12px;
+              span {
+                top: -10px;
+                right: -10px;
+                font-size: 18px;
+              }
+            }
+            input[type="text"],
+            input[type="email"],
+            input[type="tel"] {
+              width: 100%;
+              height: 30px;
+            }
+            ::placeholder {
+              font-size: 9px;
+            }
+            :valid {
+              font-size: 12px;
+            }
+
+            textarea {
+              width: 100%;
+              height: 150px;
+            }
+            p {
+              font-size: 12px;
+            }
+          }
+        }
+      }
     }
   }
 }

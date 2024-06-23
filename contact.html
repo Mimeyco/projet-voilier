@@ -20,30 +20,30 @@
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap"
       rel="stylesheet"
     />
     <link rel="icon" type="image/x-icon" href="/img/favicon.png" />
 
-    <link rel="stylesheet" href="../style.css" />
-    <title>Article - février 2024</title>
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="navbar-container">
       <div class="social-container">
         <!-- <label class="switch">
-          <input type="checkbox" />
-          <span></span>
-        </label> -->
+            <input type="checkbox" />
+            <span></span>
+          </label> -->
         <a
           href="https://www.facebook.com/people/Fabienautourdumonde/61556007310062/"
           target="_blank"
-          ><img src="../img/fb.png" alt="icône facebook"
+          ><img src="img/fb.png" alt="icône facebook"
         /></a>
         <a
           href="https://www.instagram.com/fabien.autourdumonde/"
           target="_blank"
-          ><img src="../img/insta.png" alt="icône instagram"
+          ><img src="img/insta.png" alt="icône instagram"
         /></a>
         <!-- <a href=""><img src="img/tiktok.png" alt="icône tiktok" /></a> -->
       </div>
@@ -108,12 +108,21 @@
         <!-- <a href="" id="logo"><img src="" alt="" /></a> -->
         <nav>
           <div class="menu">
-            <a href="../index.html">Accueil</a>
-            <a href="../index.html#quiSuisJe">Qui suis-je ?</a>
-            <a href="../index.html#actuNav">Actualités</a>
-            <a href="../asso.html">Association</a>
-            <a href="../index.html#contactNav">Contact</a>
-            <a class="give-btn" href="../dons.html">Je fais un don</a>
+            <a href="index.html">Accueil</a>
+            <a href="quisuisje.html">Qui suis-je ?</a>
+            <div class="dropdown">
+              <a href="#actuNav">Actualités</a>
+              <div class="dropdown-content">
+                <a href="blog.html">Blog</a>
+                <a href="press.html">Articles de presse</a>
+                <a href="#">Articles à venir</a>
+              </div>
+            </div>
+
+            <a href="asso.html">Association</a>
+            <a href="">R&D</a>
+            <a href="contact.html">Contact</a>
+            <a class="give-btn" href="./dons.html">Je fais un don</a>
             <p>
               Départ du port de Mauguio-Carnon dans
               <span id="counting-days"></span> jours
@@ -122,57 +131,93 @@
         </nav>
       </div>
     </div>
-    <div class="landing-default-container">
-      <div class="article">
-        <h2>Février 2024</h2>
-        <p>
-          Dicton Du mois : « Si février ne vomit pas ses fièvres, le vent
-          souffle pendant toute l'année. »
-        </p>
+    <div class="landing-contact-container">
+      <h4>
+        Contactez nous également par email :
+        <span>fabien.autourdumonde@gmail.com</span> <br />
+        Ou via le formulaire de contact !
+      </h4>
 
-        <p>
-          Le Bepox 10.50 de Bernard « Rierol » qui veut dire : petit ruisseau
-          qui ne tarit jamais en catalan, change de propriétaire et devient «
-          Aqui Lou » qui veut dire : Ha enfin ! en bon patois aveyronnais. Aqui
-          Lou fait ses premiers milles vers son nouveau port d’attache entre
-          Port saint Louis du Rhône et Carnon. Malheureusement une mauvaise
-          chute au petit matin dans le cockpit m’aura rappelé à l’ordre.
-        </p>
-
-        <p>
-          Là j’ai déjà pris 4 mois de retard sur le planning, il va falloir se
-          donner pour préparer correctement le bateau et ce projet !
-        </p>
-        <div class="articles-images">
-          <div>
+      <div class="formulaire">
+        <div class="formulaire-header">
+          <h1>Contact</h1>
+        </div>
+        <div class="formulaire-body">
+          <form method="post" id="contactForm">
             <div>
-              <img
-                src="/img/articles/février/1.jpg"
-                alt="Départ de port saint-louis du rhone"
+              <label for="firstname" class="form-label"
+                >Prénom <span>*</span></label
+              >
+              <input
+                id="firstname"
+                type="text"
+                name="firstname"
+                class="form-control"
+                placeholder="Votre prenom"
               />
-              <h3>Départ du port de Saint-Louis du Rhône</h3>
+              <p class="comments"></p>
             </div>
             <div>
-              <img src="/img/articles/février/2.jpg" alt="Golfe de Fos" />
-              <h3>Golfe de Fos</h3>
-            </div>
-          </div>
-          <div>
-            <div>
-              <img
-                src="/img/articles/février/3.jpg"
-                alt="belle nuit en perspective"
+              <label for="name" class="form-label">Nom <span>*</span></label>
+              <input
+                id="name"
+                type="text"
+                name="name"
+                class="form-control"
+                placeholder="Votre nom"
               />
-              <h3>Belle nuit en perspective</h3>
+              <p class="comments"></p>
             </div>
-          </div>
+            <div>
+              <label for="email" class="form-label">Email <span>*</span></label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-control"
+                placeholder="Votre email"
+              />
+              <p class="comments"></p>
+            </div>
+            <div>
+              <label for="phone" class="form-label">Téléphone</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                class="form-control"
+                placeholder="Votre telephone"
+              />
+              <p class="comments"></p>
+            </div>
+            <div id="textArea">
+              <label for="message" class="form-label"
+                >Message <span>*</span></label
+              >
+              <textarea
+                id="message"
+                name="message"
+                class="form-control"
+                placeholder="Votre message"
+              ></textarea>
+              <p class="comments"></p>
+            </div>
+            <div>
+              <p>
+                <strong>* Ces informations sont requises.</strong>
+              </p>
+            </div>
+            <div>
+              <input type="submit" value="Envoyer" id="#submitBtn" />
+            </div>
+          </form>
         </div>
       </div>
     </div>
     <footer class="footer-default-container">
       <div class="docs-asso">
         <h2>Association loi 1901 : Mets Les Voiles</h2>
-        <a href="./docs/ de l'association.pdf" target="_blank">Statuts</a>
+        <a href="./docs/Statuts-de-MLV.pdf" target="_blank">Statuts</a>
       </div>
 
       <a href="./mentions.html">Mentions légales</a>
@@ -180,16 +225,17 @@
         <a
           href="https://www.facebook.com/people/Fabienautourdumonde/61556007310062/"
           target="_blank"
-          ><img src="../img/fb.png" alt="icône facebook"
+          ><img src="img/fb.png" alt="icône facebook"
         /></a>
         <a
           href="https://www.instagram.com/fabien.autourdumonde/"
           target="_blank"
-          ><img src="../img/insta.png" alt="icône instagram"
+          ><img src="img/insta.png" alt="icône instagram"
         /></a>
         <!-- <a href=""><img src="img/tiktok.png" alt="icône tiktok" /></a> -->
       </div>
     </footer>
+    <script type="module" src="/common.js"></script>
+    <script type="module" src="/contact.js"></script>
   </body>
-  <script type="module" src="/common.js"></script>
 </html>

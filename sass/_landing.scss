@@ -211,6 +211,21 @@
     }
   }
 }
+@media screen and (max-width: 800px) {
+  .objectifs-asso {
+    padding: 0 0 50px;
+    div {
+      div {
+        font-size: 16px;
+        padding: 0;
+        margin: 5px;
+        p {
+          margin: 10px 0;
+        }
+      }
+    }
+  }
+}
 
 // QUI SUIS JE
 
@@ -239,12 +254,32 @@
     }
   }
 }
+@media screen and (max-width: 800px) {
+  .landing-quisuisje-container {
+    padding: 150px 0 100px;
+
+    div {
+      margin: 20px 0px;
+
+      h2 {
+        font-size: 18px;
+        margin: 20px 15px;
+
+        line-height: 1.8;
+        span {
+          font-weight: 900;
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}
 
 // DONS
 
 .landing-dons-container {
   display: flex;
-  padding: 200px 0 100px;
+  padding: 150px 0 100px;
   background-color: #468ab7;
   overflow: hidden;
 
@@ -254,23 +289,29 @@
     font-weight: 550;
     color: #161a22;
   }
+  h2 {
+    align-self: flex-start;
+    font-size: 21px;
+    margin-top: 100px;
+  }
+
   ul {
     list-style: none;
-    margin-top: 30px;
+    margin-top: 10px;
     li {
       color: black;
       font-size: 18px;
-
+      font-family: Arial, Helvetica, sans-serif;
       font-weight: 500;
       margin: 30px 0 0;
       position: relative;
 
       img {
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
         position: absolute;
         left: -50px;
-        top: -50%;
+        top: -10%;
       }
       .bold {
         font-weight: bold;
@@ -287,26 +328,48 @@
       }
     }
   }
+  .photo-corner {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    top: 10%;
+    left: 5%;
+  }
+  #photo-corner-right {
+    width: 150px;
+  }
 
   .left-side {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    position: relative;
     margin: 100px 20px;
-
+    background-color: #f1faee;
+    border-radius: 5px;
+    padding: 40px 60px;
     width: 50%;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+      rgba(0, 0, 0, 0.22) 0px 15px 12px;
   }
   .right-side {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    position: relative;
     width: 50%;
+    background-color: #f1faee;
+    border-radius: 5px;
+    padding: 40px 60px;
     margin: 100px 20px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+      rgba(0, 0, 0, 0.22) 0px 15px 12px;
   }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1250px) {
   .landing-dons-container {
     flex-direction: column;
     justify-content: center;
@@ -314,19 +377,31 @@
     height: auto;
     padding-top: 70px;
     .left-side {
-      align-items: center;
-
-      button {
-        margin: 0;
-      }
+      width: 90%;
     }
     .right-side {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      width: 90%;
+
       margin: 30px;
     }
   }
+}
+@media screen and (max-width: 700px) {
+  .landing-dons-container {
+    h2 {
+      margin-top: 25px;
+      font-size: 20px;
+    }
+    .photo-corner {
+      position: relative;
+      margin-top: 20px;
+    }
+  }
+}
+
+//DONS DEPUIS PAGE ASSO
+#landing-donsasso {
+  justify-content: center;
 }
 
 //ARTICLES MENSUELS

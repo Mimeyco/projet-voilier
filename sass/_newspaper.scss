@@ -23,7 +23,7 @@
         justify-content: center;
         position: relative;
         img {
-          width: 50%;
+          width: 40%;
           height: auto;
         }
       }
@@ -31,8 +31,8 @@
         content: "";
         position: absolute;
         top: 0;
-        left: 25%;
-        width: 50%;
+        left: 30%;
+        width: 40%;
         height: 100%;
         background-color: black;
         opacity: 0.6;
@@ -97,6 +97,30 @@
           a {
             img {
               width: 80%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: "800px") {
+  .newspaper-container {
+    .flex-news {
+      height: 300px;
+      justify-content: flex-start;
+      .images-container {
+        .background-image {
+          display: none;
+        }
+        #franceBleu {
+          width: 80vw;
+          left: 20%;
+          top: 0;
+
+          figure {
+            audio {
+              width: 60%;
             }
           }
         }

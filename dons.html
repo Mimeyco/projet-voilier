@@ -106,23 +106,34 @@
         <nav>
           <div class="menu">
             <a href="index.html">Accueil</a>
-            <a href="index.html#quiSuisJe">Qui suis-je ?</a>
-            <a href="index.html#actuNav">Actualités</a>
-            <a href="asso.html">Association</a>
-            <a href="index.html#contactNav">Contact</a>
+            <a href="quisuisje.html">Qui suis-je ?</a>
+            <div class="dropdown">
+              <a>Actualités</a>
+              <div class="dropdown-content">
+                <a href="blog.html">Blog</a>
+                <a href="press.html">Articles de presse</a>
+                <a href="#">Articles à venir</a>
+              </div>
+            </div>
 
-            <p>Départ dans <span id="counting-days"></span> jours</p>
+            <a href="asso.html">Association</a>
+            <!-- <a href="">R&D</a> -->
+            <a href="contact.html">Contact</a>
+            <a class="give-btn" href="./dons.html">Je fais un don</a>
+            <p>
+              Départ du port de Mauguio-Carnon dans
+              <span id="counting-days"></span> jours
+            </p>
           </div>
         </nav>
       </div>
     </div>
     <div class="landing-dons-container">
       <div class="left-side">
-        <h1>
-          Je souhaite participer au projet personnel de Fabien : réaliser un
-          tour du monde à la voile en solitaire, sans escale et par les 3 caps
-          du sud :
-        </h1>
+        <h1>Projet personnel</h1>
+        <img src="img/me.PNG" alt="photo Fabien" class="photo-corner" />
+
+        <h2>Je souhaite donner :</h2>
         <ul>
           <li>
             <img src="img/ancre.png" alt="icône ancre" /><span class="bold"
@@ -139,10 +150,15 @@
         </ul>
       </div>
       <div class="right-side">
-        <h1>
-          Je souhaite participer au projet solidaire et humaniste afin de faire
-          découvrir la voile habitable à au moins 1000 jeunes :
-        </h1>
+        <h1>Projet solidaire</h1>
+        <img
+          src="img/asso/asso-enfants.jpg"
+          alt="photo association enfants"
+          class="photo-corner"
+          id="photo-corner-right"
+        />
+        <h2>Je souhaite donner :</h2>
+
         <ul>
           <li>
             <img src="img/ancre.png" alt="icône ancre" /><span class="bold"
@@ -192,6 +208,6 @@
         <!-- <a href=""><img src="img/tiktok.png" alt="icône tiktok" /></a> -->
       </div>
     </footer>
-    <script type="module" src="/main.js"></script>
+    <script type="module" src="/common.js"></script>
   </body>
 </html>

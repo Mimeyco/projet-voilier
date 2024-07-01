@@ -147,7 +147,11 @@
 
       .dropdown:hover .dropdown-content {
         display: block;
-        margin-top: 25px;
+        margin-top: 18px;
+      }
+      .dropdown:active .dropdown-content {
+        display: block;
+        margin-top: 18px;
       }
 
       .give-btn {

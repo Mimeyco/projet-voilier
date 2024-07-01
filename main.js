@@ -5,9 +5,9 @@ document.addEventListener("DOMContentLoaded", function () {
   let i = 1;
   setInterval(() => {
     landing.classList.remove(`background${i}`);
-    i = (i % 3) + 1;
+    i = (i % 8) + 1;
     landing.classList.add(`background${i}`);
-  }, 2000);
+  }, 3000);
 });
 
 //MODAL
@@ -54,7 +54,6 @@ directionButtons.forEach((btn) => btn.addEventListener("click", handleClick));
 function handleClick(e) {
   if (sliderData.locked) return;
   sliderData.locked = true;
-  console.log(e);
   getDirection(e.target);
 
   slideOut();

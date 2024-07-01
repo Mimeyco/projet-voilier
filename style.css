@@ -148,7 +148,11 @@
 }
 .navbar-container .navbar nav .menu .dropdown:hover .dropdown-content {
   display: block;
-  margin-top: 25px;
+  margin-top: 18px;
+}
+.navbar-container .navbar nav .menu .dropdown:active .dropdown-content {
+  display: block;
+  margin-top: 18px;
 }
 .navbar-container .navbar nav .menu .give-btn {
   border: 1px solid white;
@@ -332,15 +336,35 @@
   }
 }
 .background1 {
-  background-image: url("img/landing1.jpg");
+  background-image: url("img/landing/landing1.jpg");
 }
 
 .background2 {
-  background-image: url("img/landing2.jpg");
+  background-image: url("img/landing/landing2.jpg");
 }
 
 .background3 {
-  background-image: url("img/landing3.jpg");
+  background-image: url("img/landing/landing3.jpg");
+}
+
+.background4 {
+  background-image: url("img/landing/landing4.jpg");
+}
+
+.background5 {
+  background-image: url("img/landing/landing5.jpg");
+}
+
+.background6 {
+  background-image: url("img/landing/landing6.jpg");
+}
+
+.background7 {
+  background-image: url("img/landing/landing7.jpg");
+}
+
+.background8 {
+  background-image: url("img/landing/landing8.jpg");
 }
 
 .landing-btn {
@@ -451,15 +475,11 @@
 }
 .landing-asso-container .left-side button a {
   text-decoration: none;
-  color: black;
+  color: white;
   transition: 0.3s ease-in-out;
 }
-.landing-asso-container .left-side button:hover {
-  color: #246a73;
-  border: 2px solid #880d1e;
-}
-.landing-asso-container .left-side button:hover a:hover {
-  color: #246a73;
+.landing-asso-container .left-side button a:hover {
+  color: black;
 }
 .landing-asso-container .right-side {
   display: flex;
@@ -483,7 +503,7 @@
   margin: 0 100px;
   padding: 50px;
   border-radius: 10px;
-  background-color: white;
+  background-color: #f1faee;
 }
 .objectifs-asso div h2 {
   margin: 10px;
@@ -496,6 +516,34 @@
 .objectifs-asso div div p {
   margin: 20px 0;
   font-family: "Times New Roman", Times, serif;
+}
+
+.give-btn-asso-container {
+  background-color: #a8dadc;
+  padding: 30px 0 50px;
+  display: flex;
+  justify-content: center;
+}
+.give-btn-asso-container .give-btn {
+  text-decoration: none;
+  border: 1px solid white;
+  margin: 0 30px;
+  padding: 8px 25px;
+  border-radius: 20px;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  background: white;
+  color: black;
+  transition: 0.3s ease-in-out;
+}
+.give-btn-asso-container .give-btn:hover {
+  background: none;
+  color: white;
+}
+.give-btn-asso-container .give-btn::after {
+  display: none;
 }
 
 @media screen and (max-width: 1000px) {
@@ -557,12 +605,30 @@
   margin: 20px 50px;
 }
 .landing-quisuisje-container div img {
-  border-radius: 50%;
-  margin: 40px auto;
+  width: 80%;
+  margin: 30px auto;
+  border-radius: 5px;
+}
+.landing-quisuisje-container div h1 {
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 500;
+}
+.landing-quisuisje-container div div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.landing-quisuisje-container div div img {
+  margin: 0 10px;
+  width: 45%;
+  border-radius: 5px;
 }
 .landing-quisuisje-container div h2 {
   font-size: 22px;
   margin: 20px 25px 50px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
   line-height: 1.8;
 }
 .landing-quisuisje-container div h2 span {
@@ -602,7 +668,13 @@
 .landing-dons-container h2 {
   align-self: flex-start;
   font-size: 21px;
-  margin-top: 100px;
+  margin-top: 60px;
+}
+.landing-dons-container h3 {
+  margin-top: 80px;
+  margin-left: 20px;
+  text-align: center;
+  width: 70%;
 }
 .landing-dons-container ul {
   list-style: none;
@@ -695,6 +767,9 @@
     margin-top: 25px;
     font-size: 20px;
   }
+  .landing-dons-container h3 {
+    margin-top: 30px;
+  }
   .landing-dons-container .photo-corner {
     position: relative;
     margin-top: 20px;
@@ -708,7 +783,7 @@
   display: block;
   margin: 0 50px;
   padding: 50px;
-  background-color: white;
+  background-color: #f1faee;
   border-radius: 10px;
 }
 .article h2 {
@@ -725,10 +800,17 @@
 .article p .bold {
   font-weight: bold;
 }
+.article p span {
+  color: #1d3557;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+  font-weight: 600;
+}
 .article ul {
   margin-left: 60px;
 }
 .article ul li {
+  font-family: "Times New Roman", Times, serif;
   font-size: 20px;
 }
 .article .articles-images {
@@ -754,6 +836,24 @@
   margin-bottom: 20px;
   max-width: 60%;
   text-align: center;
+}
+.article a {
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  margin: 30px auto 0;
+  width: 300px;
+  background-color: #457b9d;
+  padding: 5px;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.article a:hover {
+  background-color: #205677;
+  transition: 0.5s;
 }
 
 @media screen and (max-width: 1000px) {
@@ -904,7 +1004,7 @@
 
 /* Modal Content/Box */
 .modal-content {
-  background-color: #fefefe;
+  background-color: #f1faee;
   margin: 5% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
@@ -914,7 +1014,7 @@
 .modal-content .descriptif-technique {
   margin: 0 50px;
   padding: 50px;
-  background-color: white;
+  background-color: #f1faee;
   border-radius: 10px;
 }
 .modal-content .descriptif-technique h2 {
@@ -1031,8 +1131,7 @@
 .actu-container .card-body h3 {
   text-align: left;
   padding-left: 15px;
-  text-decoration: underline;
-  color: grey;
+  color: #457b9d;
   font-weight: bold;
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
@@ -1072,7 +1171,7 @@
   margin: 30px auto;
   position: relative;
   overflow: hidden;
-  background: #111;
+  background: #f1faee;
   border-radius: 5px;
   display: grid;
 }
@@ -1083,8 +1182,8 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  border: 1px solid #fff;
-  background: transparent;
+  border: 1px solid black;
+  background: black;
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
@@ -1116,7 +1215,7 @@
   justify-content: center;
   align-items: center;
   padding: 50px 0;
-  background: #111;
+  background: #f1faee;
   display: none;
 }
 
@@ -1128,6 +1227,12 @@
   margin-bottom: 25px;
   color: #dfdfdf;
   text-align: center;
+}
+.content p {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: gray;
 }
 
 .content img {
@@ -1299,8 +1404,8 @@
   transition: transform 0.5s ease-in;
 }
 .contact-container .up-arrow .to-top:hover {
-  color: orangered;
-  border-color: orangered;
+  color: #e63946;
+  border-color: #e63946;
 }
 .contact-container .up-arrow .to-top:hover:before {
   transform: rotate(360deg);
@@ -1416,8 +1521,7 @@
 }
 .landing-contact-container .formulaire .formulaire-body {
   width: 100%;
-  background-color: #d9afd9;
-  background-image: linear-gradient(0deg, #d9afd9 0%, #97d9e1 100%);
+  background-color: #f1faee;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
@@ -1442,6 +1546,7 @@
   align-self: flex-start;
   margin-bottom: 5px;
   font-size: 17px;
+  font-weight: 600;
 }
 .landing-contact-container .formulaire .formulaire-body form div label span {
   position: absolute;
@@ -1456,8 +1561,7 @@
   align-self: flex-start;
   width: 15vw;
   height: 30px;
-  border-radius: 5px;
-  border: none;
+  border-radius: 5px solid black;
 }
 .landing-contact-container .formulaire .formulaire-body form div ::placeholder {
   font-size: 18px;
@@ -1481,18 +1585,22 @@
   margin: 40px auto 0px;
   width: 300px;
   border: 1px solid #ddd;
-  background: #ffa500;
-  color: #fff;
   font-weight: bold;
   text-transform: uppercase;
   padding: 18px;
   border-radius: 5px;
   cursor: pointer;
+  background: #a8dadc;
+  background-size: 350% 100%;
+  transition: all 0.4s ease-in-out;
+  color: #242038;
 }
 .landing-contact-container .formulaire .formulaire-body form div input[type=submit]:hover {
-  transition: all 0.3s ease;
-  background: #f88562;
-  border-color: #f88562;
+  background-position: 100% 0;
+  animation-name: flow;
+  animation-duration: 500ms;
+  animation-timing-function: linear;
+  color: white;
 }
 .landing-contact-container .formulaire .formulaire-body form #textArea {
   align-items: flex-start;

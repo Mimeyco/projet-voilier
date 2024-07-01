@@ -38,8 +38,8 @@
       transition: transform 0.5s ease-in;
     }
     .to-top:hover {
-      color: orangered;
-      border-color: orangered;
+      color: #e63946;
+      border-color: #e63946;
     }
     .to-top:hover:before {
       transform: rotate(360deg);
@@ -177,8 +177,8 @@
     .formulaire-body {
       width: 100%;
       // background: linear-gradient(to right, #0433b4, #5f89fc);
-      background-color: #d9afd9;
-      background-image: linear-gradient(0deg, #d9afd9 0%, #97d9e1 100%);
+      background-color: #f1faee;
+      // background-image: linear-gradient(0deg, #d9afd9 0%, #97d9e1 100%);
 
       border-radius: 10px;
       box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
@@ -206,6 +206,7 @@
             align-self: flex-start;
             margin-bottom: 5px;
             font-size: 17px;
+            font-weight: 600;
 
             span {
               position: absolute;
@@ -221,8 +222,7 @@
             align-self: flex-start;
             width: 15vw;
             height: 30px;
-            border-radius: 5px;
-            border: none;
+            border-radius: 5px solid black;
           }
           ::placeholder {
             font-size: 18px;
@@ -247,18 +247,24 @@
             margin: 40px auto 0px;
             width: 300px;
             border: 1px solid #ddd;
-            background: #ffa500;
-            color: #fff;
+
             font-weight: bold;
             text-transform: uppercase;
             padding: 18px;
             border-radius: 5px;
             cursor: pointer;
+            background: #a8dadc;
+
+            background-size: 350% 100%;
+            transition: all 0.4s ease-in-out;
+            color: #242038;
           }
           input[type="submit"]:hover {
-            transition: all 0.3s ease;
-            background: #f88562;
-            border-color: #f88562;
+            background-position: 100% 0;
+            animation-name: flow;
+            animation-duration: 500ms;
+            animation-timing-function: linear;
+            color: white;
           }
         }
         #textArea {

@@ -6,6 +6,31 @@ document
     navbar.classList.toggle("expanded");
   });
 
+// SOUS MENU
+
+const dropdown = document.querySelector(".dropdown");
+const dropdownContent = document.querySelector(".dropdown-content");
+const body = document.querySelector("body");
+const isMobile = window.matchMedia("(max-width: 767px)").matches;
+const isTablet = window.matchMedia(
+  "(min-width: 768px) and (max-width: 1024px)"
+).matches;
+document.addEventListener("DOMContentLoaded", function () {
+  if (isMobile || isTablet) {
+    dropdown.addEventListener("touchstart", (e) => {
+      dropdownContent.style.display = "block";
+      body.addEventListener("touchstart", (e) => {
+        const parent = e.target.closest(".dropdown");
+        if (!parent) {
+          dropdownContent.style.display = "none";
+        } else {
+          dropdownContent.style.display = "block";
+        }
+      });
+    });
+  }
+});
+
 // COMPTE A REBOURS DEPART
 
 function updateCountdown() {

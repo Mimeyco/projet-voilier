@@ -883,12 +883,12 @@
 .landing-default-container .newspaper-container h1 {
   font-weight: 600;
 }
-.landing-default-container .newspaper-container .flex-news .images-container {
-  width: 100%;
+.landing-default-container .newspaper-container .flex-news .images-container #franceBleu {
+  height: 240px;
 }
 
-@media screen and (max-width: 700px) {
-  .landing-default-container .newspaper-container .flex-news {
+@media screen and (max-width: 800px) {
+  #landingPressPage {
     display: block;
   }
 }
@@ -992,7 +992,7 @@
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  z-index: 15; /* Sit on top */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -1254,7 +1254,6 @@
 .newspaper-container {
   margin: 50px 0;
   max-width: 100%;
-  overflow: hidden;
 }
 .newspaper-container h1 {
   font-size: 50px;
@@ -1264,12 +1263,18 @@
 }
 .newspaper-container .flex-news {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  height: 400px;
 }
 .newspaper-container .flex-news .images-container {
   position: relative;
-  width: 45%;
   margin: 30px 0;
+  background-color: #f1faee;
+  border-radius: 5px;
+  padding: 10px;
+  width: 40%;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  overflow: hidden;
 }
 .newspaper-container .flex-news .images-container .background-image {
   width: 100%;
@@ -1302,8 +1307,27 @@
   width: 100%;
   height: auto;
 }
+.newspaper-container .flex-news .images-container .newspaper-link-wraper {
+  position: absolute;
+  top: 90%;
+  left: 30%;
+  width: 100%;
+  height: 100%;
+  z-index: 15;
+}
+.newspaper-container .flex-news .images-container .newspaper-link-wraper a {
+  text-decoration: none;
+  font-weight: bold;
+  text-decoration: underline;
+  padding: 5px;
+  color: white;
+  background-color: #1d3557;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 10;
+}
 .newspaper-container .flex-news .images-container #franceBleu {
-  background-image: url("../img/france-bleu.png");
+  background-image: url("../img/presse/france-bleu.png");
   background-size: contain;
   background-repeat: no-repeat;
   height: 265px;
@@ -1328,7 +1352,8 @@
   .newspaper-container .flex-news {
     flex-direction: column;
     align-items: flex-start;
-    height: 450px;
+    height: auto;
+    margin: 0 30px;
   }
   .newspaper-container .flex-news .images-container {
     width: 100%;
@@ -1343,27 +1368,49 @@
   .newspaper-container .flex-news .images-container .press-article {
     left: 25%;
   }
-  .newspaper-container .flex-news .images-container .press-article a img {
+  .newspaper-container .flex-news .images-container .press-article img {
     width: 80%;
+  }
+  .newspaper-container .flex-news .images-container .newspaper-link-wraper {
+    top: 90%;
+    left: 85%;
   }
 }
 @media screen and (max-width: 800px) {
+  .newspaper-container {
+    overflow: visible;
+  }
   .newspaper-container .flex-news {
-    height: 300px;
     justify-content: flex-start;
+  }
+  .newspaper-container .flex-news .images-container {
+    height: 300px;
+    margin: 5px 0;
+    overflow: hidden;
   }
   .newspaper-container .flex-news .images-container .background-image {
     display: none;
   }
+  .newspaper-container .flex-news .images-container .newspaper-link-wraper {
+    top: 10%;
+    left: 40%;
+  }
   .newspaper-container .flex-news .images-container #franceBleu {
     width: 80vw;
     left: 20%;
-    top: 0;
+    top: 10px;
+    height: 245px;
   }
   .newspaper-container .flex-news .images-container #franceBleu figure audio {
     width: 60%;
+    max-height: 45px;
   }
 }
+#AveyronaisModal .modal-content .descriptif-aveyronais {
+  display: flex;
+  flex-direction: column;
+}
+
 .contact-container {
   width: 100%;
   display: flex;

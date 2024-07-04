@@ -599,17 +599,15 @@
     }
     .flex-news {
       .images-container {
-        width: 100%;
+        #franceBleu {
+          height: 240px;
+        }
       }
     }
   }
 }
-@media screen and (max-width: "700px") {
-  .landing-default-container {
-    .newspaper-container {
-      .flex-news {
-        display: block;
-      }
-    }
+@media screen and (max-width: 800px) {
+  #landingPressPage {
+    display: block;
   }
 }

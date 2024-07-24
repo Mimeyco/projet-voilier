@@ -1,5 +1,5 @@
 .slider-container {
-  max-width: 80vw;
+  max-width: 90vw;
   margin: 30px auto;
   position: relative;
   overflow: hidden;
@@ -30,10 +30,10 @@
   pointer-events: none;
 }
 .direction-btn.right {
-  right: 10%;
+  right: 3%;
 }
 .direction-btn.left {
-  left: 10%;
+  left: 3%;
 }
 
 .slide {
@@ -60,7 +60,7 @@
   }
 }
 .content img {
-  width: 50vw;
+  width: 75vw;
 
   border-radius: 5px;
   object-fit: cover;
@@ -71,6 +71,9 @@
   .direction-btn {
     width: 25px;
     height: 25px;
+  }
+  .slider-container {
+    max-width: 100%;
   }
   .content {
     margin-bottom: 10px;

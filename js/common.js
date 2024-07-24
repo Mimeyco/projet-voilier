@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function updateCountdown() {
   // Date cible de départ (10 septembre 2024)
-  let targetDate = new Date("2024-09-10T00:00:00Z");
+  let targetDate = new Date("2024-09-21T00:00:00Z");
   let currentDate = new Date();
   let timeDifference = targetDate.getTime() - currentDate.getTime();
   let daysRemaining = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
@@ -52,22 +52,3 @@ function updateCountdown() {
 updateCountdown();
 // Mise à jour toutes les 24 heures (86400000 millisecondes)
 setInterval(updateCountdown, 86400000);
-
-//MODAL AVEYRONAIS
-
-const AveyronaisModal = document.getElementById("AveyronaisModal");
-const AveyronaisBtn = document.getElementById("AveyronaisModalTrigger");
-const Aveyronaisspan = document.getElementById("close-aveyronais");
-AveyronaisBtn.onclick = function () {
-  AveyronaisModal.style.display = "block";
-};
-
-Aveyronaisspan.onclick = function () {
-  AveyronaisModal.style.display = "none";
-};
-
-window.onclick = function (event) {
-  if (event.target == AveyronaisModal) {
-    AveyronaisModal.style.display = "none";
-  }
-};

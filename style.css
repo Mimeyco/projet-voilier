@@ -446,6 +446,9 @@
   background-color: #a8dadc;
   overflow: hidden;
 }
+.landing-default-container .descriptif-technique {
+  padding: 0 20px;
+}
 
 .landing-asso-container {
   display: flex;
@@ -634,6 +637,51 @@
 .landing-quisuisje-container div h2 span {
   font-weight: 900;
   font-size: 30px;
+}
+.landing-quisuisje-container .up-arrow {
+  margin-top: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.landing-quisuisje-container .up-arrow .to-top {
+  color: black;
+  padding-top: 60px;
+  display: block;
+  position: relative;
+  border-color: black;
+  text-decoration: none;
+  transition: all 0.3s ease-out;
+  font-size: 13px;
+  font-weight: 600;
+}
+.landing-quisuisje-container .up-arrow .to-top:before {
+  content: "▲";
+  font-size: 38px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  padding-left: 6px;
+  margin-left: -25px;
+  border: solid 3px black;
+  border-radius: 10em;
+  width: 55px;
+  height: 55px;
+  border-color: inherit;
+  transition: transform 0.5s ease-in;
+}
+.landing-quisuisje-container .up-arrow .to-top:hover {
+  color: #e63946;
+  border-color: #e63946;
+}
+.landing-quisuisje-container .up-arrow .to-top:hover:before {
+  transform: rotate(360deg);
+}
+.landing-quisuisje-container .contact-container .newsletter-container form input[type=submit] {
+  background: #f1faee;
+}
+.landing-quisuisje-container .contact-container .newsletter-container form input[type=submit]:hover {
+  color: #161a22;
 }
 
 @media screen and (max-width: 800px) {
@@ -1167,7 +1215,7 @@
 }
 
 .slider-container {
-  max-width: 80vw;
+  max-width: 90vw;
   margin: 30px auto;
   position: relative;
   overflow: hidden;
@@ -1202,11 +1250,11 @@
 }
 
 .direction-btn.right {
-  right: 10%;
+  right: 3%;
 }
 
 .direction-btn.left {
-  left: 10%;
+  left: 3%;
 }
 
 .slide {
@@ -1236,7 +1284,7 @@
 }
 
 .content img {
-  width: 50vw;
+  width: 75vw;
   border-radius: 5px;
   object-fit: cover;
   object-position: center;
@@ -1246,6 +1294,9 @@
   .direction-btn {
     width: 25px;
     height: 25px;
+  }
+  .slider-container {
+    max-width: 100%;
   }
   .content {
     margin-bottom: 10px;

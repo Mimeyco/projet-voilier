@@ -2,12 +2,18 @@
   background: no-repeat url("img/landing2.jpg");
   background-size: cover;
   width: 100%;
+  padding-top: 200px;
+
+  h1 {
+    color: white;
+    margin: 30px 0 0px 100px;
+  }
   .grid-cards {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 2em;
     margin: 0 100px;
-    padding: 100px 0;
+    padding: 50px 0 100px;
   }
 
   .grid-cards div:nth-child(1) {
@@ -30,6 +36,7 @@
     flex-direction: column;
     min-width: 15rem;
     max-width: calc(12.5rem + 8vw);
+
     background: #fff;
     border-radius: 0.75em;
     overflow: hidden;
@@ -77,6 +84,7 @@
       color: rgb(11, 11, 59);
       font-style: italic;
       font-weight: 700;
+      font-size: 13px;
       text-align: center;
       margin: 1em auto;
       padding-inline: 0.5em;
@@ -93,13 +101,53 @@
       margin-right: 15px;
     }
   }
+  .up-arrow {
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .to-top {
+      color: white;
+      padding-top: 60px;
+      display: block;
+      position: relative;
+      border-color: white;
+      text-decoration: none;
+      transition: all 0.3s ease-out;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .to-top:before {
+      content: "▲";
+      font-size: 38px;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      padding-left: 6px;
+      margin-left: -25px;
+      border: solid 3px black;
+      border-radius: 10em;
+      width: 55px;
+      height: 55px;
+      border-color: inherit;
+      transition: transform 0.5s ease-in;
+    }
+    .to-top:hover {
+      color: #e63946;
+      border-color: #e63946;
+    }
+    .to-top:hover:before {
+      transform: rotate(360deg);
+    }
+  }
 
   @media screen and (max-width: 1200px) {
-    .actu-container {
-      h1 {
-        margin: 75px auto;
-      }
+    #JdB {
+      text-align: center;
+      margin: 0;
     }
+
     .grid-cards {
       display: flex;
       flex-direction: column;

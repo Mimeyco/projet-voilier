@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     landing.classList.remove(`background${i}`);
     i = (i % 8) + 1;
     landing.classList.add(`background${i}`);
-  }, 3000);
+  }, 5000);
 });
 
 //MODAL
@@ -183,7 +183,7 @@ function slideOut() {
     el: slides[sliderData.slideInIndex],
     props: {
       display: "flex",
-      transform: `translateX(${sliderData.direction < 0 ? "100%" : "-100%"})`,
+      // transform: `translateX(${sliderData.direction < 0 ? "100%" : "-100%"})`,
       opacity: 0,
     },
   });
@@ -195,7 +195,7 @@ function slideOut() {
     props: {
       transition:
         "transform 0.4s cubic-bezier(0.74, -0.34, 1, 1.19), opacity 0.4s ease-out",
-      transform: `translateX(${sliderData.direction < 0 ? "-100%" : "100%"})`,
+      // transform: `translateX(${sliderData.direction < 0 ? "-100%" : "100%"})`,
       opacity: 0,
     },
   });
@@ -212,7 +212,7 @@ function slideIn(e) {
     el: slides[sliderData.slideInIndex],
     props: {
       transition: "transform 0.4s ease-out, opacity 0.6s ease-out",
-      transform: "translateX(0%)",
+      // transform: "translateX(0%)",
       opacity: 1,
     },
   });
@@ -235,4 +235,4 @@ function autoScroll() {
 }
 
 // Déclencher le défilement automatique toutes les secondes et stocker l'identifiant de l'intervalle
-autoScrollInterval = setInterval(autoScroll, 3000);
+autoScrollInterval = setInterval(autoScroll, 5000);

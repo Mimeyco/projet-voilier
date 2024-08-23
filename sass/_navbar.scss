@@ -313,15 +313,16 @@
     }
   }
 }
-@media screen and (max-width: 1525px) and (min-width: 1145px) {
+@media screen and (max-width: 1708px) and (min-width: 1145px) {
   .navbar-container {
-    padding: 0 50px;
+    padding: 0 30px;
     .navbar {
       nav {
         .menu {
           font-size: 14px;
           a {
             margin: 0 10px;
+            text-align: center;
           }
           .give-btn {
             font-size: 13px;

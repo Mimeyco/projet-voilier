@@ -292,15 +292,16 @@
     display: none;
   }
 }
-@media screen and (max-width: 1525px) and (min-width: 1145px) {
+@media screen and (max-width: 1708px) and (min-width: 1145px) {
   .navbar-container {
-    padding: 0 50px;
+    padding: 0 30px;
   }
   .navbar-container .navbar nav .menu {
     font-size: 14px;
   }
   .navbar-container .navbar nav .menu a {
     margin: 0 10px;
+    text-align: center;
   }
   .navbar-container .navbar nav .menu .give-btn {
     font-size: 13px;
@@ -563,13 +564,13 @@
   display: none;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1350px) {
   .landing-asso-container {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: auto;
-    padding-top: 70px;
+    padding-top: 150px;
   }
   .landing-asso-container .left-side {
     align-items: center;
@@ -585,7 +586,7 @@
   }
   .landing-asso-container .right-side img {
     position: initial;
-    width: 350px;
+    width: 60vw;
   }
   .objectifs-asso div {
     margin: 0 50px;
@@ -611,6 +612,108 @@
     margin: 10px 0;
   }
 }
+.landing-rd-container {
+  display: flex;
+  padding: 200px 0 100px;
+  background-color: #a8dadc;
+  overflow: hidden;
+}
+.landing-rd-container .rd-container {
+  display: block;
+  margin: 0 50px;
+  padding: 50px;
+  background-color: #f1faee;
+  border-radius: 10px;
+}
+.landing-rd-container .rd-container h1 {
+  margin: 10px 10px 25px 10px;
+  text-align: start;
+  font-size: 25px;
+  background-color: #f1faee;
+  color: black;
+  padding: 0;
+}
+.landing-rd-container .rd-container h3 {
+  margin: 20px;
+  text-align: start;
+  font-weight: 400;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+}
+.landing-rd-container .rd-container h3 a {
+  text-decoration: none;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+  color: #205677;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.landing-rd-container .rd-container ul li {
+  margin: 20px 0 20px 30px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+}
+.landing-rd-container .rd-container ul li a {
+  text-decoration: none;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+  color: #205677;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.landing-rd-container .rd-container ul p {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+}
+.landing-rd-container .rd-container ul .sargasses-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.landing-rd-container .rd-container ul .sargasses-img img {
+  width: 35vw;
+  margin: 10px 20px;
+}
+.landing-rd-container .rd-container ul .cetaces-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.landing-rd-container .rd-container ul .cetaces-img img {
+  width: 35vw;
+  margin: 10px 20px;
+}
+@media screen and (max-width: 1000px) {
+  .landing-rd-container {
+    padding-top: 150px;
+  }
+  .landing-rd-container .rd-container {
+    margin: 0 20px;
+    padding: 50px 20px;
+  }
+  .landing-rd-container .rd-container h3 {
+    font-size: 15px;
+  }
+  .landing-rd-container .rd-container h3 a {
+    font-size: 15px;
+  }
+  .landing-rd-container .rd-container ul li {
+    font-size: 15px;
+  }
+  .landing-rd-container .rd-container ul li a {
+    font-size: 15px;
+  }
+  .landing-rd-container .rd-container ul p {
+    font-size: 15px;
+  }
+  .landing-rd-container .rd-container ul .sargasses-img {
+    flex-direction: column;
+  }
+  .landing-rd-container .rd-container ul .sargasses-img img {
+    width: 50vw;
+  }
+}
+
 .landing-quisuisje-container {
   padding: 200px 0 100px;
   background-color: #a8dadc;

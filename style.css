@@ -1234,11 +1234,20 @@
   background: no-repeat url("img/landing2.jpg");
   background-size: cover;
   width: 100%;
-  padding-top: 200px;
+  padding-top: 100px;
 }
 .actu-container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.actu-container h1 a {
   color: white;
-  margin: 30px 0 0px 100px;
+}
+.actu-container #JdB {
+  text-align: center;
+  color: white;
+  margin: 100px 0 30px;
+  text-decoration: underline;
 }
 .actu-container .grid-cards {
   display: grid;
@@ -1367,7 +1376,6 @@
 }
 @media screen and (max-width: 1200px) {
   .actu-container #JdB {
-    text-align: center;
     margin: 0;
   }
   .actu-container .grid-cards {

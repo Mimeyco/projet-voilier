@@ -2,11 +2,21 @@
   background: no-repeat url("img/landing2.jpg");
   background-size: cover;
   width: 100%;
-  padding-top: 200px;
+  padding-top: 100px;
 
   h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    a {
+      color: white;
+    }
+  }
+
+  #JdB {
+    text-align: center;
     color: white;
-    margin: 30px 0 0px 100px;
+    margin: 100px 0 30px;
+    text-decoration: underline;
   }
   .grid-cards {
     display: grid;
@@ -144,7 +154,6 @@
 
   @media screen and (max-width: 1200px) {
     #JdB {
-      text-align: center;
       margin: 0;
     }
 

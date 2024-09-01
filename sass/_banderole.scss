@@ -21,17 +21,18 @@
       padding-top: 5px;
       padding-bottom: 5px;
       white-space: nowrap; /* pas de passage à la ligne */
-      animation: defilement-rtl 15s infinite linear;
-
+      animation: defilement-rtl 20s infinite linear;
       font-weight: 550;
       font-size: 19px;
       color: #f1faee;
       max-width: none;
-      img {
-        height: 70px;
-        width: 70px;
-
-        margin: 10px 20px;
+      a {
+        text-decoration: none;
+        margin: 0 50px;
+        width: 100px;
+        img {
+          margin: 10px 20px;
+        }
       }
     }
   }
@@ -43,5 +44,19 @@
   }
   100% {
     transform: translateX(0); /* position finale à gauche */
+  }
+}
+
+@media screen and (max-width: "800px") {
+  .banderole-container {
+    #moving-text {
+      div {
+        font-size: 15px;
+        a {
+          margin: 0 20px;
+          width: 60px;
+        }
+      }
+    }
   }
 }

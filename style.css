@@ -1486,7 +1486,8 @@
 .newspaper-container .flex-news {
   display: flex;
   justify-content: space-evenly;
-  height: 400px;
+  flex-wrap: wrap;
+  height: 800px;
 }
 .newspaper-container .flex-news .images-container {
   position: relative;
@@ -1547,6 +1548,17 @@
   cursor: pointer;
   z-index: 10;
 }
+.newspaper-container .flex-news .images-container figure {
+  margin-top: 40px;
+}
+.newspaper-container .flex-news .images-container figure figcaption {
+  margin: 0 0 10px 10px;
+  font-weight: bold;
+}
+.newspaper-container .flex-news .images-container figure audio {
+  margin: 0 10px;
+  width: 80%;
+}
 .newspaper-container .flex-news .images-container #franceBleu {
   background-image: url("../img/presse/france-bleu.png");
   background-size: contain;
@@ -1554,16 +1566,23 @@
   height: 265px;
   width: 265px;
 }
-.newspaper-container .flex-news .images-container #franceBleu figure {
-  margin-top: 40px;
+.newspaper-container .flex-news .images-container #radioTotem {
+  background-image: url("../img/presse/radiototem.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 265px;
+  width: 265px;
 }
-.newspaper-container .flex-news .images-container #franceBleu figure figcaption {
-  margin: 0 0 10px 10px;
-  font-weight: bold;
+.newspaper-container .flex-news .images-container #radioTotem figure {
+  margin-top: 20px;
 }
-.newspaper-container .flex-news .images-container #franceBleu figure audio {
-  margin: 0 10px;
-  width: 80%;
+.newspaper-container .flex-news .images-container #radioTotem figure figcaption {
+  color: white;
+  font-size: 12px;
+  margin-left: 20px;
+}
+.newspaper-container .flex-news .images-container #radioTotem figure audio {
+  margin: 20px 10px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -1616,13 +1635,15 @@
     top: 10%;
     left: 40%;
   }
-  .newspaper-container .flex-news .images-container #franceBleu {
+  .newspaper-container .flex-news .images-container #franceBleu,
+  .newspaper-container .flex-news .images-container #radioTotem {
     width: 80vw;
     left: 20%;
     top: 10px;
     height: 245px;
   }
-  .newspaper-container .flex-news .images-container #franceBleu figure audio {
+  .newspaper-container .flex-news .images-container #franceBleu figure audio,
+  .newspaper-container .flex-news .images-container #radioTotem figure audio {
     width: 60%;
     max-height: 45px;
   }
@@ -1959,7 +1980,7 @@
   padding-top: 5px;
   padding-bottom: 5px;
   white-space: nowrap; /* pas de passage à la ligne */
-  animation: defilement-rtl 20s infinite linear;
+  animation: defilement-rtl 35s infinite linear;
   font-weight: 550;
   font-size: 19px;
   color: #f1faee;

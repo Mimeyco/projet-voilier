@@ -1487,7 +1487,7 @@
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  height: 800px;
+  height: 80vh;
 }
 .newspaper-container .flex-news .images-container {
   position: relative;

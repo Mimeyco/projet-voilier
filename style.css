@@ -125,6 +125,9 @@
 .navbar-container .navbar nav .menu a:hover:after {
   transform: scaleX(1);
 }
+.navbar-container .navbar nav .menu .aperoModalTrigger:after {
+  display: none;
+}
 .navbar-container .navbar nav .menu .dropdown {
   display: flex;
 }
@@ -174,6 +177,17 @@
 .navbar-container .navbar nav .menu .give-btn::after {
   display: none;
 }
+.navbar-container .navbar nav .menu .aperoModalTrigger {
+  color: white;
+  text-transform: none;
+  font-style: italic;
+  margin-left: 100px;
+  font-size: 20px;
+}
+.navbar-container .navbar nav .menu .aperoModalTrigger span {
+  font-family: "Cute Font", sans-serif;
+  font-size: 50px;
+}
 .navbar-container .navbar nav .menu p {
   color: white;
   text-transform: none;
@@ -184,6 +198,31 @@
 .navbar-container .navbar nav .menu p span {
   font-family: "Cute Font", sans-serif;
   font-size: 50px;
+}
+
+#aperoModal .modal-content .descriptif-apero {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+#aperoModal .modal-content .descriptif-apero h2 {
+  text-align: center;
+  margin: 0 20px 20px;
+}
+#aperoModal .modal-content .descriptif-apero p {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#aperoModal .modal-content .descriptif-apero p a {
+  color: #346abf;
+  text-decoration: underline;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+#aperoModal .modal-content .descriptif-apero img {
+  width: 75%;
+  align-self: center;
+  margin: 20px;
 }
 
 @media screen and (max-width: 1144px) {
@@ -230,6 +269,18 @@
   }
   .navbar-container .less1000 .give-btn::after {
     display: none;
+  }
+  .navbar-container .less1000 .aperoModalTrigger {
+    color: white;
+    width: 40vw;
+    text-transform: none;
+    font-style: italic;
+    font-size: 13px;
+    text-align: center;
+  }
+  .navbar-container .less1000 .aperoModalTrigger span {
+    font-family: "Cute Font", sans-serif;
+    font-size: 50px;
   }
   .navbar-container .less1000 p {
     color: white;
@@ -291,6 +342,9 @@
   .navbar-container .expanded nav .menu p {
     display: none;
   }
+  .navbar-container .expanded nav .menu .aperoModalTrigger {
+    display: none;
+  }
 }
 @media screen and (max-width: 1708px) and (min-width: 1145px) {
   .navbar-container {
@@ -320,6 +374,11 @@
   }
 }
 @media screen and (max-width: 1144px) and (min-width: 666px) {
+  .navbar-container .less1000 .aperoModalTrigger {
+    font-size: 25px;
+    text-align: end;
+    margin-left: 25px;
+  }
   .navbar-container .less1000 p {
     font-size: 25px;
     text-align: end;
@@ -1091,7 +1150,7 @@
 .presentation-container .right-side h2 {
   font-size: 25px;
   font-weight: 600;
-  margin: 30px 0;
+  margin-top: 30px;
 }
 .presentation-container .right-side img {
   width: 498px;

@@ -51,10 +51,13 @@
       </div>
       <div class="less1000">
         <a class="give-btn" href="./pages/dons.html">Je fais un don</a>
-        <p>
+        <a
+          class="aperoModalTrigger"
+          style="cursor: pointer; text-decoration: underline"
+        >
           Départ dans
           <span id="counting-days"></span> jours
-        </p>
+        </a>
       </div>
       <div class="hamburger-icon">
         <svg
@@ -128,12 +131,57 @@
             <a href="/pages/r&d.html">R&D</a>
             <a href="/pages/contact.html">Contact</a>
             <a class="give-btn" href="/pages/dons.html">Je fais un don</a>
-            <p>
+            <a
+              class="aperoModalTrigger"
+              style="cursor: pointer; text-decoration: underline"
+            >
               Départ du port de Carnon (34) dans
               <span id="counting-days"></span> jours
-            </p>
+            </a>
           </div>
         </nav>
+      </div>
+    </div>
+    <!-- Modal apero -->
+    <div id="aperoModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close" id="apero-close">&times;</span>
+        <div class="descriptif-apero">
+          <h2>
+            Verre de l'amitié le 21/09/2024 à 12h00 au Pavillon de la mer,
+            parking Florence Arthaud, à proximité du bateau, puis un départ du
+            port vers 14h et le départ officiel en mer à 15 h
+          </h2>
+          <p>
+            Vers midi :
+            <a
+              href="https://www.google.com/maps/place/Carnon+Fishing+Club/@43.5464349,3.9719662,17z/data=!3m1!4b1!4m6!3m5!1s0x12b6bb69a2d37721:0x7976b901519153fe!8m2!3d43.5464349!4d3.9745411!16s%2Fg%2F11bv1clvtl?entry=tts&g_ep=EgoyMDI0MDkxMS4wKgBIAVAD"
+              target="_blank"
+              >Pavillon de la mer</a
+            >
+          </p>
+          <p>
+            Vers 15h :
+            <a
+              href="https://www.google.com/maps/place/Feu+de+la+jet%C3%A9e+Sud-Ouest/@43.5417999,3.9738115,17z/data=!4m6!3m5!1s0x12b6bb44880e1193:0xe6123b74841a9de0!8m2!3d43.5398875!4d3.9772436!16s%2Fg%2F11m_rf8mh7?entry=ttu&g_ep=EgoyMDI0MDkxMS4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+              >Pavillon de la mer</a
+            >
+          </p>
+          <p>
+            Lien de
+            <a
+              href="https://www.facebook.com/events/1270334450601522?acontext=%7B%22event_action_history%22%3A[%7B%22mechanism%22%3A%22surface%22%2C%22surface%22%3A%22groups_highlight_units%22%7D]%2C%22ref_notif_type%22%3Anull%7D"
+              target="_blank"
+              >l'évènement Facebook</a
+            >
+          </p>
+          <img
+            src="/img/Départ les 3 points Carnon.PNG"
+            alt="carte lieu verre de l'amitié"
+          />
+        </div>
       </div>
     </div>
     <div class="landing-container background1" id="landing">
@@ -166,6 +214,7 @@
       </div>
       <div class="right-side">
         <h2>Le bateau : Aqui Lou</h2>
+        <h4>(Ah, enfin, le voilà)</h4>
         <div>
           <img src="img/engrenages_icon.png" alt="icône d'engrenage" />
           <p>
@@ -690,5 +739,6 @@
     <script type="module" src="/js/common.js"></script>
     <script type="module" src="/js/modalpress.js"></script>
     <script type="module" src="/js/newsletter.js"></script>
+    <script type="module" src="/js/modalapero.js"></script>
   </body>
 </html>

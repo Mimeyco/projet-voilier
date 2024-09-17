@@ -118,6 +118,9 @@
       a:hover:after {
         transform: scaleX(1);
       }
+      .aperoModalTrigger:after {
+        display: none;
+      }
       //SOUS MENU
 
       .dropdown {
@@ -176,6 +179,18 @@
         display: none;
       }
 
+      .aperoModalTrigger {
+        color: white;
+        text-transform: none;
+        font-style: italic;
+        margin-left: 100px;
+        font-size: 20px;
+        span {
+          font-family: "Cute Font", sans-serif;
+          font-size: 50px;
+        }
+      }
+
       p {
         color: white;
         text-transform: none;
@@ -187,6 +202,37 @@
           font-family: "Cute Font", sans-serif;
           font-size: 50px;
         }
+      }
+    }
+  }
+}
+//MODAL
+
+#aperoModal {
+  .modal-content {
+    .descriptif-apero {
+      display: flex;
+      flex-direction: column;
+      margin: 10px;
+
+      h2 {
+        text-align: center;
+        margin: 0 20px 20px;
+      }
+      p {
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        a {
+          color: #346abf;
+          text-decoration: underline;
+          font-family: Arial, Helvetica, sans-serif;
+          cursor: pointer;
+        }
+      }
+      img {
+        width: 75%;
+        align-self: center;
+        margin: 20px;
       }
     }
   }
@@ -240,6 +286,19 @@
       }
       .give-btn::after {
         display: none;
+      }
+      .aperoModalTrigger {
+        color: white;
+        width: 40vw;
+        text-transform: none;
+        font-style: italic;
+        font-size: 13px;
+
+        text-align: center;
+        span {
+          font-family: "Cute Font", sans-serif;
+          font-size: 50px;
+        }
       }
 
       p {
@@ -308,6 +367,9 @@
           p {
             display: none;
           }
+          .aperoModalTrigger {
+            display: none;
+          }
         }
       }
     }
@@ -347,6 +409,11 @@
 @media screen and (max-width: 1144px) and (min-width: 666px) {
   .navbar-container {
     .less1000 {
+      .aperoModalTrigger {
+        font-size: 25px;
+        text-align: end;
+        margin-left: 25px;
+      }
       p {
         font-size: 25px;
         text-align: end;

@@ -26,18 +26,19 @@
   border: 5px solid #e63946;
   color: white;
   background: none;
-  margin: 20px 0;
+  margin: 20px;
   padding: 8px 25px;
   border-radius: 20px;
   font-size: 28px;
   font-weight: 600;
   cursor: pointer;
-
   transition: 0.3s ease-in-out;
+  text-decoration: none;
+  text-align: center;
 }
 .landing-btn:hover {
   background: white;
-  border: none;
+  border: 5px solid white;
   color: black;
 }
 

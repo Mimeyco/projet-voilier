@@ -186,7 +186,7 @@
 }
 .navbar-container .navbar nav .menu .aperoModalTrigger span {
   font-family: "Cute Font", sans-serif;
-  font-size: 50px;
+  font-size: 40px;
 }
 .navbar-container .navbar nav .menu p {
   color: white;
@@ -280,7 +280,7 @@
   }
   .navbar-container .less1000 .aperoModalTrigger span {
     font-family: "Cute Font", sans-serif;
-    font-size: 50px;
+    font-size: 40px;
   }
   .navbar-container .less1000 p {
     color: white;
@@ -292,7 +292,7 @@
   }
   .navbar-container .less1000 p span {
     font-family: "Cute Font", sans-serif;
-    font-size: 30px;
+    font-size: 40px;
   }
   .navbar-container .hamburger-icon {
     display: block;
@@ -379,13 +379,16 @@
     text-align: end;
     margin-left: 25px;
   }
+  .navbar-container .less1000 .aperoModalTrigger span {
+    font-size: 40px;
+  }
   .navbar-container .less1000 p {
     font-size: 25px;
     text-align: end;
     margin-left: 25px;
   }
   .navbar-container .less1000 p span {
-    font-size: 50px;
+    font-size: 40px;
   }
 }
 @media screen and (max-width: 480px) {

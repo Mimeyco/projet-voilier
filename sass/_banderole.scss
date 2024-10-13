@@ -40,10 +40,10 @@
 
 @keyframes defilement-rtl {
   0% {
-    transform: translateX(-100%); /* position initiale à droite */
+    transform: translateX(0); /* position initiale à droite */
   }
   100% {
-    transform: translateX(0); /* position finale à gauche */
+    transform: translateX(-100%); /* position finale à gauche */
   }
 }
 

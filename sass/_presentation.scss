@@ -19,6 +19,14 @@
       }
     }
     .itineraire {
+      a {
+        text-decoration: none;
+        cursor: pointer;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: underline;
+        color: black;
+      }
       h1 {
         text-align: center;
       }

@@ -1504,11 +1504,23 @@
   text-align: center;
   margin: 50px 0 40px;
 }
+.newspaper-container a {
+  display: block;
+  max-width: 340px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px;
+  color: black;
+  background-color: #a8dadc;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 20px auto;
+}
 .newspaper-container .flex-news {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  height: 80vh;
 }
 .newspaper-container .flex-news .images-container {
   position: relative;
@@ -1563,8 +1575,29 @@
   z-index: 15;
 }
 .newspaper-container .flex-news .images-container .newspaper-link-wraper a {
+  display: inline;
   text-decoration: none;
   font-weight: bold;
+  padding: 5px;
+  color: black;
+  background-color: #a8dadc;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 10;
+}
+.newspaper-container .flex-news .images-container .newspaper-link-outsite {
+  position: absolute;
+  top: 90%;
+  left: 65%;
+  width: 100%;
+  height: 100%;
+  z-index: 15;
+}
+.newspaper-container .flex-news .images-container .newspaper-link-outsite a {
+  display: inline;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 12px;
   padding: 5px;
   color: black;
   background-color: #a8dadc;
@@ -1608,6 +1641,28 @@
 .newspaper-container .flex-news .images-container #radioTotem figure audio {
   margin: 20px 10px;
 }
+.newspaper-container .flex-news .images-container #radioICI {
+  background-image: url("../img/presse/logo_ICI.JPG");
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+  height: 300px;
+  width: 300px;
+}
+.newspaper-container .flex-news .images-container #radioICI figure {
+  margin-top: 100px;
+}
+.newspaper-container .flex-news .images-container #radioICI figure figcaption {
+  color: white;
+  font-size: 12px;
+  margin-left: 20px;
+}
+.newspaper-container .flex-news .images-container #radioICI figure audio {
+  margin: 10px 10px;
+}
+.newspaper-container #press-page {
+  height: auto;
+}
 
 @media screen and (max-width: 1200px) {
   .newspaper-container h1 {
@@ -1638,6 +1693,9 @@
   .newspaper-container .flex-news .images-container .newspaper-link-wraper {
     top: 90%;
     left: 85%;
+  }
+  .newspaper-container .flex-news .images-container .newspaper-link-outsite {
+    left: 1%;
   }
 }
 @media screen and (max-width: 800px) {
@@ -1671,6 +1729,24 @@
   }
   .newspaper-container .flex-news .images-container #franceBleu figure audio,
   .newspaper-container .flex-news .images-container #radioTotem figure audio {
+    width: 60%;
+    max-height: 45px;
+  }
+  .newspaper-container .flex-news .images-container #france3 {
+    position: absolute;
+    top: 15%;
+    left: 0;
+  }
+  .newspaper-container .flex-news .images-container #radioICI {
+    width: 80vw;
+    left: 0%;
+    top: 50px;
+    height: 245px;
+  }
+  .newspaper-container .flex-news .images-container #radioICI figure figcaption {
+    color: black;
+  }
+  .newspaper-container .flex-news .images-container #radioICI figure audio {
     width: 60%;
     max-height: 45px;
   }

@@ -34,21 +34,21 @@ document.addEventListener("DOMContentLoaded", function () {
 // COMPTE A REBOURS DEPART
 
 function updateCountdown() {
-  // Date cible de départ (10 septembre 2024)
-  // let targetDate = new Date("2024-09-21T00:00:00Z");
-  // let currentDate = new Date();
-  // let timeDifference = targetDate.getTime() - currentDate.getTime();
-  // let daysRemaining = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
+  // Date de départ (21 septembre 2024)
+  let departDate = new Date("2024-09-21T00:00:00Z");
+  let currentDate = new Date();
+  let timeDifference = currentDate.getTime() - departDate.getTime();
+  let dayspassed = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
 
   // Affichage dans le span avec l'id "countdown"
   let countdownSpan = document.querySelectorAll("#counting-days");
   countdownSpan.forEach((e) => {
     if (e) {
-      e.textContent = "21/09/2024";
+      e.textContent = dayspassed;
     }
   });
 }
 
 updateCountdown();
 // Mise à jour toutes les 24 heures (86400000 millisecondes)
-// setInterval(updateCountdown, 86400000);
+setInterval(updateCountdown, 86400000);

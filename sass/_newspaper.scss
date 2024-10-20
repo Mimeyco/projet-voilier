@@ -8,11 +8,25 @@
     text-align: center;
     margin: 50px 0 40px;
   }
+  a {
+    display: block;
+    max-width: 340px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px;
+    color: black;
+    background-color: #a8dadc;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px auto;
+  }
+
   .flex-news {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    height: 80vh;
+
     .images-container {
       position: relative;
       margin: 30px 0;
@@ -68,8 +82,29 @@
         height: 100%;
         z-index: 15;
         a {
+          display: inline;
           text-decoration: none;
           font-weight: bold;
+          padding: 5px;
+          color: black;
+          background-color: #a8dadc;
+          border-radius: 5px;
+          cursor: pointer;
+          z-index: 10;
+        }
+      }
+      .newspaper-link-outsite {
+        position: absolute;
+        top: 90%;
+        left: 65%;
+        width: 100%;
+        height: 100%;
+        z-index: 15;
+        a {
+          display: inline;
+          text-decoration: none;
+          font-weight: bold;
+          font-size: 12px;
           padding: 5px;
           color: black;
           background-color: #a8dadc;
@@ -115,7 +150,29 @@
           }
         }
       }
+      #radioICI {
+        background-image: url("../img/presse/logo_ICI.JPG");
+        background-size: contain;
+        background-repeat: no-repeat;
+        border-radius: 5px;
+        height: 300px;
+        width: 300px;
+        figure {
+          margin-top: 100px;
+          figcaption {
+            color: white;
+            font-size: 12px;
+            margin-left: 20px;
+          }
+          audio {
+            margin: 10px 10px;
+          }
+        }
+      }
     }
+  }
+  #press-page {
+    height: auto;
   }
 }
 
@@ -152,6 +209,9 @@
           top: 90%;
           left: 85%;
         }
+        .newspaper-link-outsite {
+          left: 1%;
+        }
       }
     }
   }
@@ -183,6 +243,27 @@
           height: 245px;
 
           figure {
+            audio {
+              width: 60%;
+              max-height: 45px;
+            }
+          }
+        }
+        #france3 {
+          position: absolute;
+          top: 15%;
+          left: 0;
+        }
+        #radioICI {
+          width: 80vw;
+          left: 0%;
+          top: 50px;
+          height: 245px;
+
+          figure {
+            figcaption {
+              color: black;
+            }
             audio {
               width: 60%;
               max-height: 45px;

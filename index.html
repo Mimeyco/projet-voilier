@@ -55,8 +55,8 @@
       <div class="less1000">
         <a class="give-btn" href="./pages/dons.html">Je fais un don</a>
         <p>
-          Départ depuis le
-          <span id="counting-days"></span>
+          Parti depuis
+          <span id="counting-days"></span> jours
         </p>
       </div>
       <div class="hamburger-icon">
@@ -132,8 +132,8 @@
             <a href="/pages/contact.html">Contact</a>
             <a class="give-btn" href="/pages/dons.html">Je fais un don</a>
             <p>
-              Départ du port de Carnon (34) depuis le
-              <span id="counting-days"></span>
+              Parti du port de Carnon (34) depuis
+              <span id="counting-days"></span> jours
             </p>
           </div>
         </nav>
@@ -600,92 +600,26 @@
       <h1>La presse en parle...</h1>
       <div class="flex-news">
         <div class="images-container">
-          <p>16/04/2024</p>
+          <p>18/09/2024</p>
           <div class="background-image">
             <img
-              src="img/presse/news_background.png"
+              src="./img/presse/news_background.png"
               alt="ancienne carte du monde"
             />
           </div>
-          <div class="press-article" id="franceBleu">
-            <figure>
-              <figcaption>Interview radio</figcaption>
-              <audio
-                controls
-                src="audio/Fabien.autourdumonde France Bleu 2024 04 12 08h40.m4a"
-              ></audio>
-            </figure>
+          <div class="press-article" id="france3">
+            <video controls width="350">
+              <source
+                src="./video/JT France 3 Occitanie.mp4"
+                type="video/mp4"
+              />
+            </video>
           </div>
         </div>
-        <div class="images-container">
-          <p>16/06/2024</p>
-          <div class="background-image">
-            <img
-              src="img/presse/news_background.png"
-              alt="ancienne carte du monde"
-            />
-          </div>
-          <div class="press-article">
-            <img src="img/presse/1-aveyronais.jpeg" alt="article de presse" />
-          </div>
-          <div class="newspaper-link-wraper">
-            <a id="AveyronaisModalTrigger">Lire l'article</a>
-          </div>
-        </div>
-        <div class="images-container">
-          <p>21/08/2024</p>
-          <div class="background-image">
-            <img
-              src="img/presse/news_background.png"
-              alt="ancienne carte du monde"
-            />
-          </div>
-          <div class="press-article" id="radioTotem">
-            <figure>
-              <figcaption>Interview radio tour du monde</figcaption>
-              <audio controls src="audio/Totem tour du monde.mp3"></audio>
-            </figure>
-          </div>
-        </div>
-        <div class="images-container">
-          <p>21/08/2024</p>
+      </div>
+      <a href="./pages/press.html">Voir tous les autres articles de presse</a>
+    </div>
 
-          <div class="background-image">
-            <img
-              src="img/presse/news_background.png"
-              alt="ancienne carte du monde"
-            />
-          </div>
-          <div class="press-article" id="radioTotem">
-            <figure>
-              <figcaption>Interview radio projet 1000 jeunes</figcaption>
-              <audio controls src="audio/Totem projet 1000 jeunes.mp3"></audio>
-            </figure>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal -->
-    <div id="AveyronaisModal" class="modal">
-      <!-- Modal content -->
-      <div class="modal-content">
-        <span class="close" id="close-aveyronais">&times;</span>
-        <div class="descriptif-aveyronais">
-          <img
-            src="img/presse/1-aveyronais.jpeg"
-            alt="Une du jounral l'Aveyronais"
-          />
-          <img
-            src="img/presse/2-aveyronais.jpeg"
-            alt="contenu article Aveyronais"
-          />
-          <img
-            src="img/presse/3-aveyronais.jpeg"
-            alt="contenu article Aveyronais"
-          />
-        </div>
-      </div>
-    </div>
     <div class="contact-container" id="contactNav">
       <div class="newsletter-container">
         <form method="post" id="contactFormNewsletter">
@@ -795,6 +729,18 @@
               src="/img/banderole/logo u express Entraygues.png"
               alt="logo U Express Entraygues'"
           /></a>
+          <a
+            href="https://boucherie-montarnal.com/page-daccueil/"
+            target="_blank"
+            ><img
+              src="/img/banderole/logo boucherie montarnal.JPG"
+              alt="logo boucherie-montarnal"
+          /></a>
+          <a
+            ><img
+              src="/img/banderole/logo nord aveyron porc.jpg"
+              alt="logo nord aveyron porc"
+          /></a>
         </div>
       </div>
     </div>
@@ -812,6 +758,9 @@
           target="_blank"
           ><img src="img/insta.png" alt="icône instagram"
         /></a>
+        <a href="https://t.me/FabienAutourDuMonde" target="_blank"
+          ><img src="img/logo telegram.png" alt="icône telegram"
+        /></a>
         <!-- <a href=""><img src="img/tiktok.png" alt="icône tiktok" /></a> -->
       </div>
     </footer>
@@ -826,7 +775,6 @@
     ></script> -->
     <script type="module" src="/js/main.js"></script>
     <script type="module" src="/js/common.js"></script>
-    <script type="module" src="/js/modalpress.js"></script>
     <script type="module" src="/js/newsletter.js"></script>
     <script type="module" src="/js/modalapero.js"></script>
   </body>

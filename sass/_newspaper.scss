@@ -136,14 +136,15 @@
         background-image: url("../img/presse/radiototem.png");
         background-size: contain;
         background-repeat: no-repeat;
-        height: 265px;
-        width: 265px;
+        height: 300px;
+        width: 300px;
         figure {
-          margin-top: 20px;
+          margin-top: 10px;
           figcaption {
             color: white;
             font-size: 12px;
             margin-left: 20px;
+            width: 80%;
           }
           audio {
             margin: 20px 10px;
@@ -239,10 +240,14 @@
         #radioTotem {
           width: 80vw;
           left: 20%;
-          top: 10px;
+          top: 20px;
           height: 245px;
 
           figure {
+            figcaption {
+              width: 68%;
+              font-size: 11px;
+            }
             audio {
               width: 60%;
               max-height: 45px;

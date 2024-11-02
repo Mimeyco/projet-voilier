@@ -1020,7 +1020,6 @@
 .article .articles-images div div h3 {
   margin: 0 0 20px 25px;
   max-width: 60%;
-  align-self: self-start;
 }
 .article a {
   text-decoration: none;
@@ -1627,16 +1626,17 @@
   background-image: url("../img/presse/radiototem.png");
   background-size: contain;
   background-repeat: no-repeat;
-  height: 265px;
-  width: 265px;
+  height: 300px;
+  width: 300px;
 }
 .newspaper-container .flex-news .images-container #radioTotem figure {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .newspaper-container .flex-news .images-container #radioTotem figure figcaption {
   color: white;
   font-size: 12px;
   margin-left: 20px;
+  width: 80%;
 }
 .newspaper-container .flex-news .images-container #radioTotem figure audio {
   margin: 20px 10px;
@@ -1724,8 +1724,13 @@
   .newspaper-container .flex-news .images-container #radioTotem {
     width: 80vw;
     left: 20%;
-    top: 10px;
+    top: 20px;
     height: 245px;
+  }
+  .newspaper-container .flex-news .images-container #franceBleu figure figcaption,
+  .newspaper-container .flex-news .images-container #radioTotem figure figcaption {
+    width: 68%;
+    font-size: 11px;
   }
   .newspaper-container .flex-news .images-container #franceBleu figure audio,
   .newspaper-container .flex-news .images-container #radioTotem figure audio {

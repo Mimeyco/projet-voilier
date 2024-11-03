@@ -1761,6 +1761,11 @@
   flex-direction: column;
 }
 
+#MidiLibreNovembreModal .modal-content .descriptif-midilibrenovembre {
+  display: flex;
+  justify-content: center;
+}
+
 .contact-container {
   width: 100%;
   display: flex;

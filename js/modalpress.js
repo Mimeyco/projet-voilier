@@ -35,3 +35,28 @@ window.onclick = function (event) {
     MidiLibreModal.style.display = "none";
   }
 };
+
+//MODAL MIDI LIBRE NOVEMBRE 24
+
+const MidiLibreNovembreModal = document.getElementById(
+  "MidiLibreNovembreModal"
+);
+const MidiLibreNovembreBtn = document.getElementById(
+  "MidiLibreNovembreModalTrigger"
+);
+const MidiLibreNovembrespan = document.getElementById(
+  "close-midilibrenovembre"
+);
+MidiLibreNovembreBtn.onclick = function () {
+  MidiLibreNovembreModal.style.display = "block";
+};
+
+MidiLibreNovembrespan.onclick = function () {
+  MidiLibreNovembreModal.style.display = "none";
+};
+
+window.onclick = function (event) {
+  if (event.target == MidiLibreNovembreModal) {
+    MidiLibreNovembreModal.style.display = "none";
+  }
+};

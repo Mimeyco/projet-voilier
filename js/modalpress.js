@@ -60,3 +60,46 @@ window.onclick = function (event) {
     MidiLibreNovembreModal.style.display = "none";
   }
 };
+//MODAL MIDI LIBRE DECEMBRE 24
+
+const MidiLibreDecembreModal = document.getElementById(
+  "MidiLibreDecembreModal"
+);
+const MidiLibreDecembreBtn = document.getElementById(
+  "MidiLibreDecembreModalTrigger"
+);
+const MidiLibreDecembrespan = document.getElementById(
+  "close-midilibredecembre"
+);
+MidiLibreDecembreBtn.onclick = function () {
+  MidiLibreDecembreModal.style.display = "block";
+};
+
+MidiLibreDecembrespan.onclick = function () {
+  MidiLibreDecembreModal.style.display = "none";
+};
+
+window.onclick = function (event) {
+  if (event.target == MidiLibreDecembreModal) {
+    MidiLibreDecembreModal.style.display = "none";
+  }
+};
+
+//MODAL CMCAS DECEMBRE 24
+
+const CMCASModal = document.getElementById("CMCASModal");
+const CMCASBtn = document.getElementById("CMCASModalTrigger");
+const CMCASspan = document.getElementById("close-CMCAS");
+CMCASBtn.onclick = function () {
+  CMCASModal.style.display = "block";
+};
+
+CMCASspan.onclick = function () {
+  CMCASModal.style.display = "none";
+};
+
+window.onclick = function (event) {
+  if (event.target == CMCASModal) {
+    CMCASModal.style.display = "none";
+  }
+};

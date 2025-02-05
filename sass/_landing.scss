@@ -674,6 +674,16 @@
       font-size: 20px;
       font-weight: 600;
     }
+    #linkInArticle {
+      color: -webkit-link;
+      text-decoration: underline;
+      cursor: pointer;
+      display: inline;
+      background: none;
+      padding: 0;
+      font-weight: 600;
+      font-size: 19px;
+    }
   }
   ul {
     margin-left: 60px;

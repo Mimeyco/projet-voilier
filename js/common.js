@@ -1,7 +1,7 @@
 //NAVBAR
 const navbar = document.querySelector(".navbar");
 document
-  .querySelector(".hamburger-icon")
+  .querySelector(".hamburger-icon-svg")
   .addEventListener("click", function () {
     navbar.classList.toggle("expanded");
   });

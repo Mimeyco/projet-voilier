@@ -103,3 +103,48 @@ window.onclick = function (event) {
     CMCASModal.style.display = "none";
   }
 };
+
+//MODAL VOILE ET VOILIER 02/2025
+
+const VoileEtVoilier0225Modal = document.getElementById(
+  "VoileEtVoilier0225Modal"
+);
+const VoileEtVoilier0225Btn = document.getElementById(
+  "VoileEtVoilier0225ModalTrigger"
+);
+const VoileEtVoilier0225span = document.getElementById(
+  "close-VoileEtVoilier0225"
+);
+VoileEtVoilier0225Btn.onclick = function () {
+  VoileEtVoilier0225Modal.style.display = "block";
+};
+
+VoileEtVoilier0225span.onclick = function () {
+  VoileEtVoilier0225Modal.style.display = "none";
+};
+
+window.onclick = function (event) {
+  if (event.target == VoileEtVoilier0225Modal) {
+    VoileEtVoilier0225Modal.style.display = "none";
+  }
+};
+//MODAL CENTRE PRESSE 02/2025
+
+const CentrePresse0225Modal = document.getElementById("CentrePresse0225Modal");
+const CentrePresse0225Btn = document.getElementById(
+  "CentrePresse0225ModalTrigger"
+);
+const CentrePresse0225span = document.getElementById("close-CentrePresse0225");
+CentrePresse0225Btn.onclick = function () {
+  CentrePresse0225Modal.style.display = "block";
+};
+
+CentrePresse0225span.onclick = function () {
+  CentrePresse0225Modal.style.display = "none";
+};
+
+window.onclick = function (event) {
+  if (event.target == CentrePresse0225Modal) {
+    CentrePresse0225Modal.style.display = "none";
+  }
+};

@@ -233,8 +233,9 @@
           display: none;
         }
         .newspaper-link-wraper {
-          top: 10%;
+          top: 5%;
           left: 40%;
+          z-index: 5;
         }
         #franceBleu,
         #radioTotem {
@@ -274,6 +275,12 @@
               max-height: 45px;
             }
           }
+        }
+        #midivideo {
+          position: absolute;
+          top: 15%;
+          left: 0;
+          z-index: 10;
         }
       }
     }

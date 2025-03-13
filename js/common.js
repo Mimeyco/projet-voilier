@@ -1,7 +1,7 @@
 //NAVBAR
 const navbar = document.querySelector(".navbar");
 document
-  .querySelector(".hamburger-icon-svg")
+  .querySelector(".hamburger-icon")
   .addEventListener("click", function () {
     navbar.classList.toggle("expanded");
   });
@@ -52,3 +52,25 @@ function updateCountdown() {
 updateCountdown();
 // Mise à jour toutes les 24 heures (86400000 millisecondes)
 setInterval(updateCountdown, 86400000);
+
+//Compteur de jours de navigation
+
+function updateNavigationCountingDays() {
+  let firstDate = new Date("2025-03-01T00:00:00Z");
+  let currentDate = new Date();
+  let timeDifference = currentDate.getTime() - firstDate.getTime();
+  let dayspassed = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
+
+  // Affichage dans le span avec l'id "countdown"
+  let countnavigationspan = document.querySelectorAll(
+    "#navigation-counting-days"
+  );
+  countnavigationspan.forEach((e) => {
+    if (e) {
+      e.textContent = dayspassed + 134;
+    }
+  });
+}
+
+updateNavigationCountingDays();
+setInterval(updateNavigationCountingDays, 86400000);

@@ -6,8 +6,23 @@
 
   h1 {
     text-align: center;
-    margin-bottom: 30px;
     a {
+      color: white;
+      text-align: center;
+      border: 1px solid white;
+      margin: 0 30px;
+      padding: 8px 25px;
+      border-radius: 20px;
+      font-size: 22px;
+      text-transform: uppercase;
+      font-weight: 600;
+      cursor: pointer;
+      background: white;
+      color: black;
+      transition: 0.3s ease-in-out;
+    }
+    a:hover {
+      background: none;
       color: white;
     }
   }

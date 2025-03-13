@@ -21,11 +21,27 @@
     .itineraire {
       a {
         text-decoration: none;
-        cursor: pointer;
+        width: 35%;
         text-align: center;
-        font-family: Arial, Helvetica, sans-serif;
-        text-decoration: underline;
-        color: black;
+        height: auto;
+        margin: 0 auto;
+        font-size: 18px;
+        font-weight: bold;
+        border-radius: 5px;
+        border: none;
+        background: #a8dadc;
+        padding: 10px;
+        cursor: pointer;
+        transition: all 0.4s ease-in-out;
+        color: #242038;
+        text-transform: uppercase;
+      }
+      a:hover {
+        background-position: 100% 0;
+        animation-name: flow;
+        animation-duration: 500ms;
+        animation-timing-function: linear;
+        color: white;
       }
       h1 {
         text-align: center;
@@ -85,6 +101,12 @@
           span {
             font-size: 25px;
           }
+        }
+      }
+      .itineraire {
+        a {
+          width: 40%;
+          font-size: 16px;
         }
       }
     }

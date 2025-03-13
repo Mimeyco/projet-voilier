@@ -103,6 +103,24 @@ window.onclick = function (event) {
     CMCASModal.style.display = "none";
   }
 };
+//MODAL AVEYRONAIS 01/2025
+
+const Aveyronais0125Modal = document.getElementById("Aveyronais0125Modal");
+const Aveyronais0125Btn = document.getElementById("Aveyronais0125ModalTrigger");
+const Aveyronais0125span = document.getElementById("close-Aveyronais0125");
+Aveyronais0125Btn.onclick = function () {
+  Aveyronais0125Modal.style.display = "block";
+};
+
+Aveyronais0125span.onclick = function () {
+  Aveyronais0125Modal.style.display = "none";
+};
+
+window.onclick = function (event) {
+  if (event.target == Aveyronais0125Modal) {
+    Aveyronais0125Modal.style.display = "none";
+  }
+};
 
 //MODAL VOILE ET VOILIER 02/2025
 

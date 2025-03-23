@@ -1,4 +1,5 @@
-.slider-container {
+.slider-container,
+.slider-trajet-container {
   max-width: 90vw;
   margin: 30px auto;
   position: relative;
@@ -7,7 +8,8 @@
   border-radius: 5px;
   display: grid;
 }
-.direction-btn {
+.direction-btn,
+.direction-trajet-btn {
   position: absolute;
   z-index: 100;
   width: 50px;
@@ -22,21 +24,26 @@
   justify-content: center;
   align-items: center;
 }
-.direction-btn:hover {
+.direction-btn:hover,
+.direction-trajet-btn {
   background: #181818;
 }
-.direction-btn img {
+.direction-btn img,
+.direction-trajet-btn img {
   width: 50%;
   pointer-events: none;
 }
-.direction-btn.right {
+.direction-btn.right,
+.direction-trajet-btn.right {
   right: 3%;
 }
-.direction-btn.left {
+.direction-btn.left,
+.direction-trajet-btn.left {
   left: 3%;
 }
 
-.slide {
+.slide,
+.slide-trajet {
   grid-area: 1 / 1 / 2 / 2;
   display: flex;
   justify-content: center;
@@ -45,7 +52,8 @@
   background: #f1faee;
   display: none;
 }
-.slide.active {
+.slide.active,
+.slide-trajet.active {
   display: flex;
 }
 .content {
@@ -68,11 +76,13 @@
 }
 
 @media screen and (max-width: 900px) {
-  .direction-btn {
+  .direction-btn,
+  .direction-trajet-btn {
     width: 25px;
     height: 25px;
   }
-  .slider-container {
+  .slider-container,
+  .slider-trajet-container {
     max-width: 100%;
   }
   .content {

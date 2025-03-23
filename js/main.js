@@ -37,94 +37,108 @@ window.onclick = function (event) {
   }
 };
 
-//SLIDER
-// const slides = [...document.querySelectorAll(".slide")];
+//SLIDER TRAJETS
+const slidesTrajet = [...document.querySelectorAll(".slide-trajet")];
 
-// const sliderData = {
-//   locked: false,
-//   direction: 0,
-//   slideOutIndex: 0,
-//   slideInIndex: 0,
-// };
+const sliderTrajetData = {
+  locked: false,
+  direction: 0,
+  slideOutIndex: 0,
+  slideInIndex: 0,
+};
 
-// const directionButtons = [...document.querySelectorAll(".direction-btn")];
+const directionTrajetButtons = [
+  ...document.querySelectorAll(".direction-trajet-btn"),
+];
 
-// directionButtons.forEach((btn) => btn.addEventListener("click", handleClick));
+directionTrajetButtons.forEach((btn) =>
+  btn.addEventListener("click", handleClickTrajet)
+);
 
-// function handleClick(e) {
-//   if (sliderData.locked) return;
-//   sliderData.locked = true;
-//   getDirection(e.target);
+function handleClickTrajet(e) {
+  if (sliderTrajetData.locked) return;
+  sliderTrajetData.locked = true;
+  getDirectionTrajet(e.target);
+  slideOutTrajet();
+}
 
-//   slideOut();
-// }
+function getDirectionTrajet(btn) {
+  sliderTrajetData.direction = btn.className.includes("right") ? 1 : -1;
 
-// function getDirection(btn) {
-//   sliderData.direction = btn.className.includes("right") ? 1 : -1;
+  sliderTrajetData.slideOutIndex = slidesTrajet.findIndex((slide) =>
+    slide.classList.contains("active")
+  );
 
-//   sliderData.slideOutIndex = slides.findIndex((slide) =>
-//     slide.classList.contains("active")
-//   );
+  if (
+    sliderTrajetData.slideOutIndex + sliderTrajetData.direction >
+    slidesTrajet.length - 1
+  ) {
+    sliderTrajetData.slideInIndex = 0;
+  } else if (sliderTrajetData.slideOutIndex + sliderTrajetData.direction < 0) {
+    sliderTrajetData.slideInIndex = slidesTrajet.length - 1;
+  } else {
+    sliderTrajetData.slideInIndex =
+      sliderTrajetData.slideOutIndex + sliderTrajetData.direction;
+  }
+}
 
-//   if (sliderData.slideOutIndex + sliderData.direction > slides.length - 1) {
-//     sliderData.slideInIndex = 0;
-//   } else if (sliderData.slideOutIndex + sliderData.direction < 0) {
-//     sliderData.slideInIndex = slides.length - 1;
-//   } else {
-//     sliderData.slideInIndex = sliderData.slideOutIndex + sliderData.direction;
-//   }
-// }
+function slideOutTrajet() {
+  slideAnimation({
+    el: slidesTrajet[sliderTrajetData.slideInIndex],
+    props: {
+      display: "flex",
+      transform: `translateX(${
+        sliderTrajetData.direction < 0 ? "100%" : "-100%"
+      })`,
+      opacity: 0,
+    },
+  });
 
-// function slideOut() {
-//   slideAnimation({
-//     el: slides[sliderData.slideInIndex],
-//     props: {
-//       display: "flex",
-//       transform: `translateX(${sliderData.direction < 0 ? "100%" : "-100%"})`,
-//       opacity: 0,
-//     },
-//   });
+  slidesTrajet[sliderTrajetData.slideOutIndex].addEventListener(
+    "transitionend",
+    slideInTrajet
+  );
 
-//   slides[sliderData.slideOutIndex].addEventListener("transitionend", slideIn);
+  slideAnimationTrajet({
+    el: slidesTrajet[sliderTrajetData.slideOutIndex],
+    props: {
+      transition:
+        "transform 0.4s cubic-bezier(0.74, -0.34, 1, 1.19), opacity 0.4s ease-out",
+      transform: `translateX(${
+        sliderTrajetData.direction < 0 ? "-100%" : "100%"
+      })`,
+      opacity: 0,
+    },
+  });
+}
 
-//   slideAnimation({
-//     el: slides[sliderData.slideOutIndex],
-//     props: {
-//       transition:
-//         "transform 0.4s cubic-bezier(0.74, -0.34, 1, 1.19), opacity 0.4s ease-out",
-//       transform: `translateX(${sliderData.direction < 0 ? "-100%" : "100%"})`,
-//       opacity: 0,
-//     },
-//   });
-// }
+function slideAnimationTrajet(animationObject) {
+  for (const prop in animationObject.props) {
+    animationObject.el.style[prop] = animationObject.props[prop];
+  }
+}
 
-// function slideAnimation(animationObject) {
-//   for (const prop in animationObject.props) {
-//     animationObject.el.style[prop] = animationObject.props[prop];
-//   }
-// }
+function slideInTrajet(e) {
+  slideAnimationTrajet({
+    el: slidesTrajet[sliderTrajetData.slideInIndex],
+    props: {
+      transition: "transform 0.4s ease-out, opacity 0.6s ease-out",
+      transform: "translateX(0%)",
+      opacity: 1,
+    },
+  });
+  slidesTrajet[sliderTrajetData.slideInIndex].classList.add("active");
 
-// function slideIn(e) {
-//   slideAnimation({
-//     el: slides[sliderData.slideInIndex],
-//     props: {
-//       transition: "transform 0.4s ease-out, opacity 0.6s ease-out",
-//       transform: "translateX(0%)",
-//       opacity: 1,
-//     },
-//   });
-//   slides[sliderData.slideInIndex].classList.add("active");
+  slidesTrajet[sliderTrajetData.slideOutIndex].classList.remove("active");
+  e.target.removeEventListener("transitionend", slideIn);
+  slidesTrajet[sliderTrajetData.slideOutIndex].style.display = "none";
 
-//   slides[sliderData.slideOutIndex].classList.remove("active");
-//   e.target.removeEventListener("transitionend", slideIn);
-//   slides[sliderData.slideOutIndex].style.display = "none";
+  setTimeout(() => {
+    sliderTrajetData.locked = false;
+  }, 400);
+}
 
-//   setTimeout(() => {
-//     sliderData.locked = false;
-//   }, 400);
-// }
-
-//CHAT GPT
+//SLIDER CHAT GPT
 
 const slides = [...document.querySelectorAll(".slide")];
 

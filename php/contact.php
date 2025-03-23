@@ -10,7 +10,7 @@
      "phoneError" => "",
      "messageError" => "", 
      "isSuccess" => false];
-    $emailTo = "fabien.autourdumonde@gmail.com";
+     $emailTo = "contact@fabienautourdumonde.fr";
     if ($_SERVER["REQUEST_METHOD"]=="POST")
     {
         $array["firstname"]= verifyInput($_POST['firstname']);

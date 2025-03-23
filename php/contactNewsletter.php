@@ -1,31 +1,38 @@
 <?php
-    $array = [
-     "email" => "",
-     "emailError" => "", 
-     "isSuccess" => false];
-    $emailTo = "fabien.autourdumonde@gmail.com";
-    if ($_SERVER["REQUEST_METHOD"]=="POST")
+header('Content-Type: application/json');
+ob_start();
+$newsarray = [
+ "email" => "",
+ "emailError" => "", 
+ "isNewsletterSuccess" => false,
+ "debuggage"=> "RAS"];
+$emailTo = "contact@fabienautourdumonde.fr";
+if ($_SERVER["REQUEST_METHOD"]=="POST")
+{
+    $newsarray["email"]=verifyInput($_POST['email']);
+    $newsarray["isNewsletterSuccess"] = true;
+    $emailText = "";
+    if(!isEmail($newsarray["email"]))
     {
-        $array["email"]=verifyInput($_POST['email']);
-        $array["isSuccess"] = true;
-        $emailText = "";
-
-        if(!isEmail($array["email"]))
-        {
-            $array["emailError"]= "Renseignez un email valide svp";
-            $array["isSuccess"] = false;
-        }
-        else
-            $emailText .= "E-mail : {$array["email"]}\n";
-
-        if($array["isSuccess"])
-        {
-            $headers = "Demande d'inscription à la newsletter";
-            mail($emailTo, "Personne souhaitant s'inscrire à la newsletter", $emailText,$headers);
-        }
-        echo json_encode($array);
+        $newsarray["emailError"]= "Renseignez un email valide svp";
+        $newsarray["isNewsletterSuccess"] = false;
     }
-
+    else
+    {
+        $emailText .= "E-mail : {$newsarray["email"]}\n";
+        $newsarray["debuggage"]="Je suis dans la boucle";
+        
+        // Appel à la fonction sendemail avant l'envoi de la réponse JSON
+        if (!sendemail($emailTo, $emailText, "Demande d'inscription à la newsletter")) {
+            $newsarray["emailError"] = "L'envoi de l'email a échoué.";
+            $newsarray["isNewsletterSuccess"] = false;
+        }
+    }
+    
+    // Envoi de la réponse JSON après toutes les opérations
+    ob_end_clean();
+    echo json_encode($newsarray);
+}
 
     function isEmail($var)
     {
@@ -39,5 +46,9 @@
         $var = htmlspecialchars($var);
         return $var;
     }
+    function sendemail($emailToSend, $emailText, $headears){
+        return mail($emailToSend, "Personne souhaitant s'inscrire à la newsletter", $emailText,$headers);
+    }
 
 ?>
+

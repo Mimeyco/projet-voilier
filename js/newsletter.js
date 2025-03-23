@@ -11,14 +11,19 @@ $(function () {
       data: postdata,
       dataType: "json",
       success: function (result) {
-        if (result.isSuccess) {
+        if (result.isNewsletterSuccess) {
           $("#contactFormNewsletter").append(
             "<p class='thank-you'> Votre adresse mail a bien été envoyée. Merci ! 😉 </p>"
           );
           $("#contactFormNewsletter")[0].reset();
         } else {
-          $("#emailNewsletter + .commentsNewsletter").html(result.emailError);
+          $("#contactFormNewsletter").append(
+            "<p class='thank-you'> Veuillez renseigner un email valide svp </p>"
+          );
         }
+      },
+      error: function (jqXHR, textStatus, errorThrown) {
+        console.log("Erreur AJAX : " + textStatus + " - " + errorThrown);
       },
     });
   });

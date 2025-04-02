@@ -166,3 +166,45 @@ window.onclick = function (event) {
     CentrePresse0225Modal.style.display = "none";
   }
 };
+
+//MODAL MIDI LIBRE 08/03/25
+
+const MidiLibre080325Modal = document.getElementById("MidiLibre080325Modal");
+const MidiLibre080325Btn = document.getElementById(
+  "MidiLibre080325ModalTrigger"
+);
+const MidiLibre080325span = document.getElementById("close-midilibre080325");
+MidiLibre080325Btn.onclick = function () {
+  MidiLibre080325Modal.style.display = "block";
+};
+
+MidiLibre080325span.onclick = function () {
+  MidiLibre080325Modal.style.display = "none";
+};
+
+window.onclick = function (event) {
+  if (event.target == MidiLibre080325Modal) {
+    MidiLibre080325Modal.style.display = "none";
+  }
+};
+
+//MODAL MIDI LIBRE 29/03/25
+
+const MidiLibre290325Modal = document.getElementById("MidiLibre290325Modal");
+const MidiLibre290325Btn = document.getElementById(
+  "MidiLibre290325ModalTrigger"
+);
+const MidiLibre290325span = document.getElementById("close-midilibre290325");
+MidiLibre290325Btn.onclick = function () {
+  MidiLibre290325Modal.style.display = "block";
+};
+
+MidiLibre290325span.onclick = function () {
+  MidiLibre290325Modal.style.display = "none";
+};
+
+window.onclick = function (event) {
+  if (event.target == MidiLibre290325Modal) {
+    MidiLibre290325Modal.style.display = "none";
+  }
+};

@@ -7,7 +7,7 @@ $articles = scandir($baseDir);
 $moisOrdre = [
     "janvier" => 1, "février" => 2, "mars" => 3, "avril" => 4,
     "mai" => 5, "juin" => 6, "juillet août septembre" => 7, "octobre" => 8,
-    "novembre" => 9, "décembre" => 10, "janvier25" => 11, "fevrier25" => 12,"mars25" => 13
+    "novembre" => 9, "décembre" => 10, "janvier25" => 11, "fevrier25" => 12,"mars25" => 13,"avril25"=>14
 ];
 
 $images = [];

@@ -56,7 +56,7 @@ setInterval(updateCountdown, 86400000);
 //Compteur de jours de navigation
 
 function updateNavigationCountingDays() {
-  let firstDate = new Date("2025-03-01T00:00:00Z");
+  let firstDate = new Date("2025-04-24T00:00:00Z");
   let currentDate = new Date();
   let timeDifference = currentDate.getTime() - firstDate.getTime();
   let dayspassed = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
@@ -67,7 +67,7 @@ function updateNavigationCountingDays() {
   );
   countnavigationspan.forEach((e) => {
     if (e) {
-      e.textContent = dayspassed + 134;
+      e.textContent = dayspassed + 178;
     }
   });
 }

@@ -208,3 +208,24 @@ window.onclick = function (event) {
     MidiLibre290325Modal.style.display = "none";
   }
 };
+
+//MODAL CENTRE PRESSE 04/05/2025
+
+const CentrePresse0525Modal = document.getElementById("CentrePresse0525Modal");
+const CentrePresse0525Btn = document.getElementById(
+  "CentrePresse0525ModalTrigger"
+);
+const CentrePresse0525span = document.getElementById("close-centrepresse0525");
+CentrePresse0525Btn.onclick = function () {
+  CentrePresse0525Modal.style.display = "block";
+};
+
+CentrePresse0525span.onclick = function () {
+  CentrePresse0525Modal.style.display = "none";
+};
+
+window.onclick = function (event) {
+  if (event.target == CentrePresse0525Modal) {
+    CentrePresse0525Modal.style.display = "none";
+  }
+};

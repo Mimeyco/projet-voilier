@@ -1967,6 +1967,15 @@
   justify-content: center;
 }
 
+#CentrePresse0525Modal .modal-content .descriptif-centrepresse0525 img {
+  margin: 0 25%;
+}
+
+@media screen and (max-width: 1200px) {
+  #CentrePresse0525Modal .modal-content .descriptif-centrepresse0525 img {
+    margin: 0 0%;
+  }
+}
 .contact-container {
   width: 100%;
   display: flex;

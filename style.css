@@ -202,6 +202,66 @@
   font-size: 50px;
 }
 
+.aperoModalTrigger {
+  z-index: 10;
+  margin-left: 65%;
+  width: fit-content;
+  cursor: pointer;
+  background-color: yellow;
+  font-weight: 550;
+  text-transform: none;
+  font-style: italic;
+  font-size: 20px;
+  transition: 0.4s ease;
+  line-height: 1.3em;
+  padding: 0.05em 0.5em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  color: #fff;
+  --c1: hsl(276 51% 47% / 1);
+  --c2: hsl(36 97% 63% / 1);
+  --c-m: hsl(0 98% 55% / 1);
+  --g1: #0000 0.5em, var(--c1) calc(0.5em + 1px);
+  --g2: #0000 0.5em, var(--c2) calc(0.5em + 1px);
+  --g3: var(--c1), var(--c-m), var(--c2);
+  background: linear-gradient(90deg, var(--g3)) center, linear-gradient(110deg, var(--g1)) left, linear-gradient(-70deg, var(--g2)) right;
+  background-size: calc(100% - 2em) calc(100% - 0.15em), 2em calc(100% - 0.15em), 2em calc(100% - 0.15em);
+  background-repeat: no-repeat;
+  transform-origin: center calc(100% - 0.18em);
+}
+
+.aperoModalTrigger:hover {
+  color: #1f2020;
+  background-size: calc(100% - 2em) max(0.1em, 2px), 2em max(0.1em, 2px), 2em max(0.1em, 2px);
+  background-position-y: calc(100% - 0.18em);
+  text-shadow: 0 -0.05em 0 var(--bg), -0.05em -0.05em 0 var(--bg), -0.05em 0 0 var(--bg), 0 0.05em 0 var(--bg), 0.05em 0.05em 0 var(--bg), 0.05em 0 0 var(--bg);
+}
+
+#aperoModal .modal-content .descriptif-apero {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+#aperoModal .modal-content .descriptif-apero h2 {
+  text-align: center;
+  margin: 0 20px 20px;
+}
+#aperoModal .modal-content .descriptif-apero p {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#aperoModal .modal-content .descriptif-apero p a {
+  color: #346abf;
+  text-decoration: underline;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+#aperoModal .modal-content .descriptif-apero img {
+  width: 75%;
+  align-self: center;
+  margin: 20px;
+}
+
 @media screen and (max-width: 1144px) {
   .navbar-container {
     padding: 0;
@@ -225,6 +285,10 @@
   .navbar-container .navbar nav p span {
     font-family: "Cute Font", sans-serif;
     font-size: 40px;
+  }
+  .navbar-container .navbar nav .aperoModalTrigger {
+    font-size: 18px;
+    margin: 8px auto;
   }
   .navbar-container .less1000 {
     display: flex;
@@ -353,6 +417,10 @@
   .navbar-container .navbar nav .menu p span {
     font-size: 40px;
   }
+  .navbar-container .navbar nav .aperoModalTrigger {
+    font-size: 18px;
+    margin-left: 55%;
+  }
 }
 @media screen and (max-width: 1144px) and (min-width: 666px) {
   .navbar-container .less1000 span {
@@ -370,6 +438,10 @@
 @media screen and (max-width: 480px) {
   .navbar-container .less1000 .give-btn {
     padding-top: 5px;
+  }
+  .navbar-container .navbar nav .aperoModalTrigger {
+    font-size: 14px;
+    margin: 8px auto;
   }
 }
 /* Animation fadeInUp */

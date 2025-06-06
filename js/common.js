@@ -67,7 +67,7 @@ function updateNavigationCountingDays() {
   );
   countnavigationspan.forEach((e) => {
     if (e) {
-      e.textContent = dayspassed + 178;
+      e.textContent = dayspassed + 177;
     }
   });
 }

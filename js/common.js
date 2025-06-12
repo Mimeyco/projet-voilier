@@ -44,7 +44,7 @@ function updateCountdown() {
   let countdownSpan = document.querySelectorAll("#counting-days");
   countdownSpan.forEach((e) => {
     if (e) {
-      e.textContent = dayspassed;
+      e.textContent = 263; //dayspassed;
     }
   });
 }
@@ -67,7 +67,7 @@ function updateNavigationCountingDays() {
   );
   countnavigationspan.forEach((e) => {
     if (e) {
-      e.textContent = dayspassed + 177;
+      e.textContent = 225; //dayspassed + 177;
     }
   });
 }

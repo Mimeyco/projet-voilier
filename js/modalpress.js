@@ -35,6 +35,30 @@ window.onclick = function (event) {
     MidiLibreModal.style.display = "none";
   }
 };
+//MODAL VOILE ET VOILIER 09/2024
+
+const VoileEtVoilier0924Modal = document.getElementById(
+  "VoileEtVoilier0924Modal"
+);
+const VoileEtVoilier0924Btn = document.getElementById(
+  "VoileEtVoilier0924ModalTrigger"
+);
+const VoileEtVoilier0924span = document.getElementById(
+  "close-VoileEtVoilier0924"
+);
+VoileEtVoilier0924Btn.onclick = function () {
+  VoileEtVoilier0924Modal.style.display = "block";
+};
+
+VoileEtVoilier0924span.onclick = function () {
+  VoileEtVoilier0924Modal.style.display = "none";
+};
+
+window.onclick = function (event) {
+  if (event.target == VoileEtVoilier0924Modal) {
+    VoileEtVoilier0924Modal.style.display = "none";
+  }
+};
 
 //MODAL MIDI LIBRE NOVEMBRE 24
 
@@ -246,5 +270,65 @@ MidiLibre0525span.onclick = function () {
 window.onclick = function (event) {
   if (event.target == MidiLibre0525Modal) {
     MidiLibre0525Modal.style.display = "none";
+  }
+};
+//MODAL VOILE ET VOILIER 06/2025
+
+const VoileEtVoilier0625Modal = document.getElementById(
+  "VoileEtVoilier0625Modal"
+);
+const VoileEtVoilier0625Btn = document.getElementById(
+  "VoileEtVoilier0625ModalTrigger"
+);
+const VoileEtVoilier0625span = document.getElementById(
+  "close-VoileEtVoilier0625"
+);
+VoileEtVoilier0625Btn.onclick = function () {
+  VoileEtVoilier0625Modal.style.display = "block";
+};
+
+VoileEtVoilier0625span.onclick = function () {
+  VoileEtVoilier0625Modal.style.display = "none";
+};
+
+window.onclick = function (event) {
+  if (event.target == VoileEtVoilier0625Modal) {
+    VoileEtVoilier0625Modal.style.display = "none";
+  }
+};
+//MODAL MIDI LIBRE 12/06/2025
+
+const MidiLibre0625Modal = document.getElementById("MidiLibre0625Modal");
+const MidiLibre0625Btn = document.getElementById("MidiLibre0625ModalTrigger");
+const MidiLibre0625span = document.getElementById("close-midilibre0625");
+MidiLibre0625Btn.onclick = function () {
+  MidiLibre0625Modal.style.display = "block";
+};
+
+MidiLibre0625span.onclick = function () {
+  MidiLibre0625Modal.style.display = "none";
+};
+
+window.onclick = function (event) {
+  if (event.target == MidiLibre0625Modal) {
+    MidiLibre0625Modal.style.display = "none";
+  }
+};
+//MODAL AVEYRONAIS 06/2025
+
+const Aveyronais0625Modal = document.getElementById("Aveyronais0625Modal");
+const Aveyronais0625Btn = document.getElementById("Aveyronais0625ModalTrigger");
+const Aveyronais0625span = document.getElementById("close-Aveyronais0625");
+Aveyronais0625Btn.onclick = function () {
+  Aveyronais0625Modal.style.display = "block";
+};
+
+Aveyronais0625span.onclick = function () {
+  Aveyronais0625Modal.style.display = "none";
+};
+
+window.onclick = function (event) {
+  if (event.target == Aveyronais0625Modal) {
+    Aveyronais0625Modal.style.display = "none";
   }
 };

@@ -35,6 +35,8 @@
   transition: 0.3s ease-in-out;
   text-decoration: none;
   text-align: center;
+  position: relative;
+  left: 25%;
 }
 .landing-btn:hover {
   background: white;
@@ -143,6 +145,7 @@
 
       .landing-btn {
         font-size: 22px;
+        left: 10%;
       }
     }
   }

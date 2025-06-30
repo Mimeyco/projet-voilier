@@ -60,7 +60,7 @@
       <div class="less1000">
         <a class="give-btn" href="./dons.html">Je fais un don</a>
         <p>
-          Parti depuis
+          Est parti
           <span id="counting-days"></span> jours
         </p>
       </div>
@@ -134,7 +134,7 @@
             <a href="contact.html">Contact</a>
             <a class="give-btn" href="./dons.html">Je fais un don</a>
             <p>
-              Parti du port de Carnon (34) depuis
+              Est parti du port de Carnon (34)
               <span id="counting-days"></span> jours
             </p>
           </div>
@@ -145,6 +145,77 @@
       <div class="newspaper-container">
         <h1>La presse en parle...</h1>
         <div class="flex-news" id="press-page">
+          <div class="images-container">
+            <p>15/06/2025</p>
+            <div class="background-image">
+              <img
+                src="../img/presse/news_background.png"
+                alt="ancienne carte du monde"
+              />
+            </div>
+            <div class="press-article">
+              <img
+                src="../img/presse/Une avayronnais 0625.jpg"
+                alt="article de presse"
+              />
+            </div>
+            <div class="newspaper-link-wraper">
+              <a id="Aveyronais0625ModalTrigger">Lire l'article</a>
+            </div>
+          </div>
+          <div class="images-container">
+            <p>12/06/25</p>
+            <div class="background-image">
+              <img
+                src="../img/presse/news_background.png"
+                alt="ancienne carte du monde"
+              />
+            </div>
+            <div class="press-article">
+              <img
+                src="../img/presse/Article midi libre 12_06_25.jpg"
+                alt="article de presse"
+              />
+            </div>
+            <div class="newspaper-link-wraper">
+              <a id="MidiLibre0625ModalTrigger">Lire l'article</a>
+            </div>
+          </div>
+          <div class="images-container">
+            <p>11/06/25</p>
+            <div class="background-image">
+              <img
+                src="../img/presse/news_background.png"
+                alt="ancienne carte du monde"
+              />
+            </div>
+            <div class="press-article">
+              <img
+                src="../img/presse/logo voile et voilier.JPG"
+                alt="article de presse"
+              />
+            </div>
+            <div class="newspaper-link-wraper">
+              <a id="VoileEtVoilier0625ModalTrigger">Lire l'article</a>
+            </div>
+          </div>
+          <div class="images-container">
+            <p>11/06/2025</p>
+            <div class="background-image">
+              <img
+                src="../img/presse/news_background.png"
+                alt="ancienne carte du monde"
+              />
+            </div>
+            <div class="press-article" id="france3">
+              <video controls width="350">
+                <source
+                  src="../video/émission france 3 11062025.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+          </div>
           <div class="images-container">
             <p>29/05/25</p>
             <div class="background-image">
@@ -521,11 +592,7 @@
               />
             </div>
             <div class="newspaper-link-wraper">
-              <a
-                href="https://voilesetvoiliers.ouest-france.fr/croisiere/grande/il-part-autour-du-monde-sans-escale-par-les-3-caps-en-solitaire-avec-de-laligot-et-des-tripous-1869d01a-7721-11ef-af8b-aac5361e868f"
-                target="_blank"
-                >Lire l'article</a
-              >
+              <a id="VoileEtVoilier0924ModalTrigger">Lire l'article</a>
             </div>
           </div>
           <div class="images-container">
@@ -632,6 +699,70 @@
         </div>
       </div>
       <!-- Modal -->
+      <div id="Aveyronais0625Modal" class="modal">
+        <!-- Modal Aveyronais 06/2025 -->
+        <div class="modal-content">
+          <span class="close" id="close-Aveyronais0625">&times;</span>
+          <div class="descriptif-Aveyronais0625">
+            <img
+              src="../img/presse/Une avayronnais 0625.jpg"
+              alt="Article du journal Aveyronais 06/2025"
+            />
+            <img
+              src="../img/presse/Article aveyronnais 0625.jpg"
+              alt="Article du journal Aveyronais 06/2025"
+            />
+          </div>
+        </div>
+      </div>
+      <div id="MidiLibre0625Modal" class="modal">
+        <!-- Modal content Midi Libre 0625 -->
+        <div class="modal-content">
+          <span class="close" id="close-midilibre0625">&times;</span>
+          <div class="descriptif-midilibre0625">
+            <img
+              src="../img/presse/Article midi libre 12_06_25.jpg"
+              alt="Une du journal midilibre"
+            />
+          </div>
+        </div>
+      </div>
+      <div id="VoileEtVoilier0625Modal" class="modal">
+        <!-- Modal content Voile et Voilier 06/2025 -->
+        <div class="modal-content">
+          <span class="close" id="close-VoileEtVoilier0625">&times;</span>
+          <div class="descriptif-VoileEtVoilier0625">
+            <img
+              src="../img/presse/Voiles et voilier 11062025/Voiles et voiliers 11-06-2025_page-0001.jpg"
+              alt="Article du journal Voile et Voilier 06/2025"
+            />
+            <img
+              src="../img/presse/Voiles et voilier 11062025/Voiles et voiliers 11-06-2025_page-0002.jpg"
+              alt="Article du journal Voile et Voilier 06/2025"
+            />
+            <img
+              src="../img/presse/Voiles et voilier 11062025/Voiles et voiliers 11-06-2025_page-0003.jpg"
+              alt="Article du journal Voile et Voilier 06/2025"
+            />
+            <img
+              src="../img/presse/Voiles et voilier 11062025/Voiles et voiliers 11-06-2025_page-0004.jpg"
+              alt="Article du journal Voile et Voilier 06/2025"
+            />
+            <img
+              src="../img/presse/Voiles et voilier 11062025/Voiles et voiliers 11-06-2025_page-0005.jpg"
+              alt="Article du journal Voile et Voilier 06/2025"
+            />
+            <img
+              src="../img/presse/Voiles et voilier 11062025/Voiles et voiliers 11-06-2025_page-0006.jpg"
+              alt="Article du journal Voile et Voilier 06/2025"
+            />
+            <img
+              src="../img/presse/Voiles et voilier 11062025/Voiles et voiliers 11-06-2025_page-0007.jpg"
+              alt="Article du journal Voile et Voilier 06/2025"
+            />
+          </div>
+        </div>
+      </div>
       <div id="MidiLibre0525Modal" class="modal">
         <!-- Modal content Centre presse 040525 -->
         <div class="modal-content">
@@ -736,6 +867,58 @@
             <img
               src="../img/presse/article Midi Libre décembre 24.jpeg"
               alt="Article du 01/10/2024 paru dans le Midi Libre"
+            />
+          </div>
+        </div>
+      </div>
+      <div id="VoileEtVoilier0924Modal" class="modal">
+        <!-- Modal content Voile et Voilier 09/2024 -->
+        <div class="modal-content">
+          <span class="close" id="close-VoileEtVoilier0924">&times;</span>
+          <div class="descriptif-VoileEtVoilier0924">
+            <img
+              src="../img/presse/Voiles et voilier 092024/Voiles & voiliers 20-09-24_page-0001.jpg"
+              alt="Article du journal Voile et Voilier 09/2024"
+            />
+            <img
+              src="../img/presse/Voiles et voilier 092024/Voiles & voiliers 20-09-24_page-0002.jpg"
+              alt="Article du journal Voile et Voilier 09/2024"
+            />
+            <img
+              src="../img/presse/Voiles et voilier 092024/Voiles & voiliers 20-09-24_page-0003.jpg"
+              alt="Article du journal Voile et Voilier 09/2024"
+            />
+            <img
+              src="../img/presse/Voiles et voilier 092024/Voiles & voiliers 20-09-24_page-0004.jpg"
+              alt="Article du journal Voile et Voilier 09/2024"
+            />
+            <img
+              src="../img/presse/Voiles et voilier 092024/Voiles & voiliers 20-09-24_page-0005.jpg"
+              alt="Article du journal Voile et Voilier 09/2024"
+            />
+            <img
+              src="../img/presse/Voiles et voilier 092024/Voiles & voiliers 20-09-24_page-0006.jpg"
+              alt="Article du journal Voile et Voilier 09/2024"
+            />
+            <img
+              src="../img/presse/Voiles et voilier 092024/Voiles & voiliers 20-09-24_page-0007.jpg"
+              alt="Article du journal Voile et Voilier 09/2024"
+            />
+            <img
+              src="../img/presse/Voiles et voilier 092024/Voiles & voiliers 20-09-24_page-0008.jpg"
+              alt="Article du journal Voile et Voilier 09/2024"
+            />
+            <img
+              src="../img/presse/Voiles et voilier 092024/Voiles & voiliers 20-09-24_page-0009.jpg"
+              alt="Article du journal Voile et Voilier 09/2024"
+            />
+            <img
+              src="../img/presse/Voiles et voilier 092024/Voiles & voiliers 20-09-24_page-0010.jpg"
+              alt="Article du journal Voile et Voilier 09/2024"
+            />
+            <img
+              src="../img/presse/Voiles et voilier 092024/Voiles & voiliers 20-09-24_page-0011.jpg"
+              alt="Article du journal Voile et Voilier 09/2024"
             />
           </div>
         </div>

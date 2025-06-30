@@ -500,6 +500,8 @@
   transition: 0.3s ease-in-out;
   text-decoration: none;
   text-align: center;
+  position: relative;
+  left: 25%;
 }
 
 .landing-btn:hover {
@@ -601,6 +603,7 @@
   }
   .landing-container .intro .landing-btn {
     font-size: 22px;
+    left: 10%;
   }
 }
 .landing-default-container {

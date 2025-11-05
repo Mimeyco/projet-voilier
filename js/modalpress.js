@@ -332,3 +332,69 @@ window.onclick = function (event) {
     Aveyronais0625Modal.style.display = "none";
   }
 };
+//MODAL MIDI LIBRE 13/07/2025
+
+const MidiLibre0725Modal = document.getElementById("MidiLibre0725Modal");
+const MidiLibre0725Btn = document.getElementById("MidiLibre0725ModalTrigger");
+const MidiLibre0725span = document.getElementById("close-midilibre0725");
+MidiLibre0725Btn.onclick = function () {
+  MidiLibre0725Modal.style.display = "block";
+};
+
+MidiLibre0725span.onclick = function () {
+  MidiLibre0725Modal.style.display = "none";
+};
+
+window.onclick = function (event) {
+  if (event.target == MidiLibre0725Modal) {
+    MidiLibre0725Modal.style.display = "none";
+  }
+};
+//MODAL VOILE ET VOILIER 08/2025
+
+const VoileEtVoilier0825Modal = document.getElementById(
+  "VoileEtVoilier0825Modal"
+);
+const VoileEtVoilier0825Btn = document.getElementById(
+  "VoileEtVoilier0825ModalTrigger"
+);
+const VoileEtVoilier0825span = document.getElementById(
+  "close-VoileEtVoilier0825"
+);
+VoileEtVoilier0825Btn.onclick = function () {
+  VoileEtVoilier0825Modal.style.display = "block";
+};
+
+VoileEtVoilier0825span.onclick = function () {
+  VoileEtVoilier0825Modal.style.display = "none";
+};
+
+window.onclick = function (event) {
+  if (event.target == VoileEtVoilier0825Modal) {
+    VoileEtVoilier0825Modal.style.display = "none";
+  }
+};
+//MODAL VOILE ET VOILIER 15/08/2025
+
+const VoileEtVoilier150825Modal = document.getElementById(
+  "VoileEtVoilier150825Modal"
+);
+const VoileEtVoilier150825Btn = document.getElementById(
+  "VoileEtVoilier150825ModalTrigger"
+);
+const VoileEtVoilier150825span = document.getElementById(
+  "close-VoileEtVoilier150825"
+);
+VoileEtVoilier150825Btn.onclick = function () {
+  VoileEtVoilier150825Modal.style.display = "block";
+};
+
+VoileEtVoilier150825span.onclick = function () {
+  VoileEtVoilier150825Modal.style.display = "none";
+};
+
+window.onclick = function (event) {
+  if (event.target == VoileEtVoilier150825Modal) {
+    VoileEtVoilier150825Modal.style.display = "none";
+  }
+};

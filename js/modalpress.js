@@ -398,3 +398,22 @@ window.onclick = function (event) {
     VoileEtVoilier150825Modal.style.display = "none";
   }
 };
+
+//MODAL CCAS 09/25
+
+const CCAS0925Modal = document.getElementById("CCAS0925Modal");
+const CCAS0925Btn = document.getElementById("CCAS0925ModalTrigger");
+const CCAS0925span = document.getElementById("close-CCAS0925");
+CCAS0925Btn.onclick = function () {
+  CCAS0925Modal.style.display = "block";
+};
+
+CCAS0925span.onclick = function () {
+  CCAS0925Modal.style.display = "none";
+};
+
+window.onclick = function (event) {
+  if (event.target == CCAS0925Modal) {
+    CCAS0925Modal.style.display = "none";
+  }
+};

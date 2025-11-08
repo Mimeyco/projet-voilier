@@ -10,21 +10,22 @@ $articles = scandir($baseDir);
 //     "novembre" => 9, "décembre" => 10, "janvier25" => 11, "fevrier25" => 12,"mars25" => 13,"avril25"=>14,"mai25"=>15
 // ];
 $moisOrdre = [
-    "mai25" => 1,
-    "avril25" => 2,
-    "mars25" => 3,
-    "fevrier25" => 4,
-    "janvier25" => 5,
-    "décembre" => 6,
-    "novembre" => 7,
-    "octobre" => 8,
-    "juillet août septembre" => 9,
-    "juin" => 10,
-    "mai" => 11,
-    "avril" => 12,
-    "mars" => 13,
-    "février" => 14,
-    "janvier" => 15
+    "novembre25" => 1,
+    "mai25" => 2,
+    "avril25" => 3,
+    "mars25" => 4,
+    "fevrier25" => 5,
+    "janvier25" => 6,
+    "décembre" => 7,
+    "novembre" => 8,
+    "octobre" => 9,
+    "juillet août septembre" => 10,
+    "juin" => 11,
+    "mai" => 12,
+    "avril" => 13,
+    "mars" => 14,
+    "février" => 15,
+    "janvier" => 16
 ];
 
 $images = [];

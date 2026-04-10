@@ -9,9 +9,12 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^8.0.7"
+    "vite": "^8.0.8"
   },
   "dependencies": {
     "sass": "^1.70.0"
+  },
+  "overrides": {
+    "picomatch": "^4.0.0"
   }
 }
